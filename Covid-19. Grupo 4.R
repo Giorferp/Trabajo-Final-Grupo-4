@@ -29,3 +29,205 @@ df [df$location== "Spain",]
 df [df$location== "Turkey",]
 df [df$location== "Iran",]
 df [df$location== "India",]
+
+#Se crean nuevos df para visualizar mejor la informacion
+#Los df seran por pais 
+
+US <- data.frame(df [df$location=="United States",])
+RUS <- data.frame(df [df$ location == "Russia",])
+CHN <- data.frame(df [ df$ location == "China",])
+DEU <- data.frame(df [df$ location== "Germany",])
+CUB <- data.frame(df [df$ location == "Cuba",])
+GBR <- data.frame(df [df$ location == "Spain",])
+TUR <- data_frame(df [df$location == "Turkey",])
+IRN <- data_frame(df [df$location == "Iran",])
+IND <- data_frame(df [df$location == "India",])
+
+#Se procede a describir cada df
+
+str (US)
+str (RUS)
+str (CHN)
+str (DEU)
+str (CUB)
+str (GBR)
+str (TUR)
+str (IRN)
+str (IND)
+
+#Se decide hacer un ajuste en la informacion de cada pais
+#Por lo que se deja solo la informacion util para la investigacion
+
+CHN <- CHN %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+CUB <- CUB %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+DEU <- DEU %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+ESP <- ESP %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+GBR <- GBR %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+IND <- IND %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+IRN <- IRN %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+RUS <- RUS %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+TUR <- TUR %>% select(index, iso_code, continent, location, date, 
+                      total_cases, new_cases, new_cases_per_million,
+                      total_cases_per_million, 
+                      total_deaths, new_deaths, new_deaths_per_million, 
+                      total_deaths_per_million, 
+                      excess_mortality, excess_mortality_cumulative, 
+                      excess_mortality_cumulative_absolute, 
+                      excess_mortality_cumulative_per_million, 
+                      total_tests, new_tests, new_tests_per_thousand, 
+                      total_tests_per_thousand, positive_rate, 
+                      tests_per_case, tests_units, 
+                      total_vaccinations, new_vaccinations, 
+                      total_vaccinations_per_hundred, people_vaccinated, 
+                      people_fully_vaccinated, people_vaccinated_per_hundred, 
+                      people_fully_vaccinated_per_hundred, 
+                      population_density, population, median_age)
+
+US <- US %>% select(index, iso_code, continent, location, date, 
+                    total_cases, new_cases, new_cases_per_million,
+                    total_cases_per_million, 
+                    total_deaths, new_deaths, new_deaths_per_million, 
+                    total_deaths_per_million, 
+                    excess_mortality, excess_mortality_cumulative, 
+                    excess_mortality_cumulative_absolute, 
+                    excess_mortality_cumulative_per_million, 
+                    total_tests, new_tests, new_tests_per_thousand, 
+                    total_tests_per_thousand, positive_rate, 
+                    tests_per_case, tests_units, 
+                    total_vaccinations, new_vaccinations, 
+                    total_vaccinations_per_hundred, people_vaccinated, 
+                    people_fully_vaccinated, people_vaccinated_per_hundred, 
+                    people_fully_vaccinated_per_hundred, 
+                    population_density, population, median_age)
+
+
+#La variable de "nuevos vacunados por cien" no existe
+
