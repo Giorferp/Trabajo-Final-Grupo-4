@@ -232,3 +232,20 @@ US <- US %>% select(index, iso_code, continent, location, date,
 
 #La variable de "nuevos vacunados por cien" no existe
 
+
+#Uso de "summary" para visualizar informacion estadistica de cada pais
+
+
+summary(CHN, na.rm = TRUE)
+summary(CUB, na.rm = TRUE)
+summary(DEU, na.rm = TRUE)
+summary(ESP, na.rm = TRUE)
+summary(GBR, na.rm = TRUE)
+summary(IND, na.rm = TRUE)
+summary(IRN, na.rm = TRUE)
+summary(RUS, na.rm = TRUE)
+summary(TUR, na.rm = TRUE)
+summary(US, na.rm = TRUE)
+
+
+
