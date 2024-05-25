@@ -248,4 +248,19 @@ summary(TUR, na.rm = TRUE)
 summary(US, na.rm = TRUE)
 
 
+#Alugunos datos estadisticos de US por cada año
 
+summary (US [US$date<"2021-01-01",], na.rm = TRUE)
+summary (US [365:729,], na.rm = TRUE)
+summary (US [US$date>"2022-12-31",], na.rm = TRUE)
+
+#Alugunos datos estadisticos de DEU por año
+summary (DEU [DEU$date<"2021-01-01",], na.rm = TRUE)
+summary (DEU [365:729,], na.rm = TRUE)
+summary (DEU [DEU$date>"2022-12-31",], na.rm = TRUE)
+
+#Algunos datos estadisticos de TUR por año
+
+summary (TUR [TUR$date<"2021-01-01",], na.rm = TRUE)
+summary (TUR [365:729,], na.rm = TRUE)
+summary (TUR [TUR$date>"2022-12-31",], na.rm = TRUE)
