@@ -63,10 +63,7 @@ CHN <- CHN %>% select(index, iso_code, continent, location, date,
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
+                      total_deaths_per_million,
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -81,9 +78,6 @@ CUB <- CUB %>% select(index, iso_code, continent, location, date,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -98,9 +92,6 @@ DEU <- DEU %>% select(index, iso_code, continent, location, date,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -114,10 +105,7 @@ ESP <- ESP %>% select(index, iso_code, continent, location, date,
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
+                      total_deaths_per_million,
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -131,10 +119,7 @@ GBR <- GBR %>% select(index, iso_code, continent, location, date,
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
+                      total_deaths_per_million,
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -148,10 +133,7 @@ IND <- IND %>% select(index, iso_code, continent, location, date,
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
+                      total_deaths_per_million,
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -166,9 +148,6 @@ IRN <- IRN %>% select(index, iso_code, continent, location, date,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -183,9 +162,6 @@ RUS <- RUS %>% select(index, iso_code, continent, location, date,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -200,9 +176,6 @@ TUR <- TUR %>% select(index, iso_code, continent, location, date,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      excess_mortality, excess_mortality_cumulative, 
-                      excess_mortality_cumulative_absolute, 
-                      excess_mortality_cumulative_per_million, 
                       total_tests, new_tests, new_tests_per_thousand, 
                       total_tests_per_thousand, positive_rate, 
                       tests_per_case, tests_units, 
@@ -217,9 +190,6 @@ US <- US %>% select(index, iso_code, continent, location, date,
                     total_cases_per_million, 
                     total_deaths, new_deaths, new_deaths_per_million, 
                     total_deaths_per_million, 
-                    excess_mortality, excess_mortality_cumulative, 
-                    excess_mortality_cumulative_absolute, 
-                    excess_mortality_cumulative_per_million, 
                     total_tests, new_tests, new_tests_per_thousand, 
                     total_tests_per_thousand, positive_rate, 
                     tests_per_case, tests_units, 
@@ -252,15 +222,51 @@ summary(US, na.rm = TRUE)
 
 summary (US [US$date<"2021-01-01",], na.rm = TRUE)
 summary (US [365:729,], na.rm = TRUE)
+summary (US [730:1094,], na.rm = TRUE)
 summary (US [US$date>"2022-12-31",], na.rm = TRUE)
 
 #Alugunos datos estadisticos de DEU por año
 summary (DEU [DEU$date<"2021-01-01",], na.rm = TRUE)
 summary (DEU [365:729,], na.rm = TRUE)
+summary (DEU [730:1094,], na.rm = TRUE)
 summary (DEU [DEU$date>"2022-12-31",], na.rm = TRUE)
 
 #Algunos datos estadisticos de TUR por año
 
 summary (TUR [TUR$date<"2021-01-01",], na.rm = TRUE)
 summary (TUR [365:729,], na.rm = TRUE)
+summary (TUR [730:1094,], na.rm = TRUE)
 summary (TUR [TUR$date>"2022-12-31",], na.rm = TRUE)
+
+#Valores NA de US
+
+apply(US [US$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+#En 2020 los datos NA estan en los primeros dias del registro
+#Hasta el primer contagio, el primer deceso, primer vacunado etc
+#Parece existir un error en New Vaccinations
+apply(US [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+#No existen datos NA en 2021
+apply(US [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+#Desde el 2022-06-19 faltan valores de los tests
+#En el 2022-03-16 falta el valor de New Deaths
+apply(US [US$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+#No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
+
+
+#Valores NA de DEU
+
+apply(DEU [DEU$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DEU [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DEU [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DEU [DEU$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+
+
+#Valores NA de TUR
+
+apply(TUR [TUR$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(TUR [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(TUR [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(TUR [TUR$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+
+
+
