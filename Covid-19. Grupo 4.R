@@ -304,6 +304,10 @@ US21 <- data_frame (US [365:729,], na.rm = TRUE)
 US22 <-data.frame (US [730:1094,], na.rm = TRUE)
 #Desde el 2022-06-19 faltan valores de los tests
 #En el 2022-03-16 falta el valor de New Deaths quiza se pueda sacar un calculo con la info
+US22 <-US22 %>% mutate (new_deaths = if_else
+                        (is.na(new_deaths), 2437, new_deaths))
+US22 <-US22 %>% mutate (new_deaths_per_million = if_else
+                        (is.na(new_deaths_per_million), 7.203, new_deaths_per_million))
 
 US23 <- data.frame(US [US$date>"2022-12-31",], na.rm = TRUE)
 #No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
