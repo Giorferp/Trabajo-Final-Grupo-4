@@ -436,3 +436,168 @@ TUR23 <- data.frame(TUR [TUR$date>"2022-12-31",])
 #El caso mas complicado es en DEU 
 
 
+#Estadisticas del total de casos y nuevos casos de US, DEU y TUR por año
+
+#Estados Unidos
+Casos_US20 <- US20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                 Media_total_cases=median(total_cases),
+                                 D.Est_total_cases=sd(total_cases),
+                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                 Min_total_cases=min(total_cases),
+                                 Max_total_cases=max(total_cases),
+                                 Promedio_new_cases=mean(new_cases),
+                                 Media_new_cases=median(new_cases),
+                                 D.Est_new_cases=sd(new_cases),
+                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                 Min_new_cases=min(new_cases),
+                                 Max_new_cases=max(new_cases))
+
+
+Casos_US21 <- US21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                 Media_total_cases=median(total_cases),
+                                 D.Est_total_cases=sd(total_cases),
+                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                 Min_total_cases=min(total_cases),
+                                 Max_total_cases=max(total_cases),
+                                 Promedio_new_cases=mean(new_cases),
+                                 Media_new_cases=median(new_cases),
+                                 D.Est_new_cases=sd(new_cases),
+                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                 Min_new_cases=min(new_cases),
+                                 Max_new_cases=max(new_cases))
+
+Casos_US22 <- US22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                 Media_total_cases=median(total_cases),
+                                 D.Est_total_cases=sd(total_cases),
+                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                 Min_total_cases=min(total_cases),
+                                 Max_total_cases=max(total_cases),
+                                 Promedio_new_cases=mean(new_cases),
+                                 Media_new_cases=median(new_cases),
+                                 D.Est_new_cases=sd(new_cases),
+                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                 Min_new_cases=min(new_cases),
+                                 Max_new_cases=max(new_cases))
+
+Casos_US23 <- US23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                 Media_total_cases=median(total_cases),
+                                 D.Est_total_cases=sd(total_cases),
+                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                 Min_total_cases=min(total_cases),
+                                 Max_total_cases=max(total_cases),
+                                 Promedio_new_cases=mean(new_cases),
+                                 Media_new_cases=median(new_cases),
+                                 D.Est_new_cases=sd(new_cases),
+                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                 Min_new_cases=min(new_cases),
+                                 Max_new_cases=max(new_cases))
+
+#Alemania
+
+Casos_DEU20 <- DEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+
+Casos_DEU21 <- DEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Casos_DEU22 <- DEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Casos_DEU23 <- DEU23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+#Turquia
+
+Casos_TUR20 <- TUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+
+Casos_TUR21 <- TUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Casos_TUR22 <- TUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Casos_TUR23 <- TUR23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   Media_total_cases=median(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   Media_new_cases=median(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
