@@ -60,7 +60,7 @@ str (IND)
 #Se decide hacer un ajuste en la informacion de cada pais
 #Por lo que se deja solo la informacion util para la investigacion
 
-CHN <- CHN %>% select(index, iso_code, continent, location, date, 
+DfCHN <- CHN %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -74,7 +74,7 @@ CHN <- CHN %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-CUB <- CUB %>% select(index, iso_code, continent, location, date, 
+DfCUB <- CUB %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -88,7 +88,7 @@ CUB <- CUB %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-DEU <- DEU %>% select(index, iso_code, continent, location, date, 
+DfDEU <- DEU %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -102,7 +102,7 @@ DEU <- DEU %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-ESP <- ESP %>% select(index, iso_code, continent, location, date, 
+DfESP <- ESP %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -116,7 +116,7 @@ ESP <- ESP %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-GBR <- GBR %>% select(index, iso_code, continent, location, date, 
+DfGBR <- GBR %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -130,7 +130,7 @@ GBR <- GBR %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-IND <- IND %>% select(index, iso_code, continent, location, date, 
+DfIND <- IND %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -144,7 +144,7 @@ IND <- IND %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-IRN <- IRN %>% select(index, iso_code, continent, location, date, 
+DfIRN <- IRN %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -158,7 +158,7 @@ IRN <- IRN %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-RUS <- RUS %>% select(index, iso_code, continent, location, date, 
+DfRUS <- RUS %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -172,7 +172,7 @@ RUS <- RUS %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-TUR <- TUR %>% select(index, iso_code, continent, location, date, 
+DfTUR <- TUR %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
@@ -186,7 +186,7 @@ TUR <- TUR %>% select(index, iso_code, continent, location, date,
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
 
-US <- US %>% select(index, iso_code, continent, location, date, 
+DfUS <- US %>% select(index, iso_code, continent, location, date, 
                     total_cases, new_cases, new_cases_per_million,
                     total_cases_per_million, 
                     total_deaths, new_deaths, new_deaths_per_million, 
@@ -207,227 +207,227 @@ US <- US %>% select(index, iso_code, continent, location, date,
 #Uso de "summary" para visualizar informacion estadistica de cada pais
 
 
-summary(CHN, na.rm = TRUE)
-summary(CUB, na.rm = TRUE)
-summary(DEU, na.rm = TRUE)
-summary(ESP, na.rm = TRUE)
-summary(GBR, na.rm = TRUE)
-summary(IND, na.rm = TRUE)
-summary(IRN, na.rm = TRUE)
-summary(RUS, na.rm = TRUE)
-summary(TUR, na.rm = TRUE)
-summary(US, na.rm = TRUE)
+summary(DfCHN, na.rm = TRUE)
+summary(DfCUB, na.rm = TRUE)
+summary(DfDEU, na.rm = TRUE)
+summary(DfESP, na.rm = TRUE)
+summary(DfGBR, na.rm = TRUE)
+summary(DfIND, na.rm = TRUE)
+summary(DfIRN, na.rm = TRUE)
+summary(DfRUS, na.rm = TRUE)
+summary(DfTUR, na.rm = TRUE)
+summary(DfUS, na.rm = TRUE)
 
 
 #Alugunos datos estadisticos de US por cada año
 
-summary (US [US$date<"2021-01-01",], na.rm = TRUE)
-summary (US [365:729,], na.rm = TRUE)
-summary (US [730:1094,], na.rm = TRUE)
-summary (US [US$date>"2022-12-31",], na.rm = TRUE)
+summary (DfUS [DfUS$date<"2021-01-01",], na.rm = TRUE)
+summary (DfUS [365:729,], na.rm = TRUE)
+summary (DfUS [730:1094,], na.rm = TRUE)
+summary (DfUS [DfUS$date>"2022-12-31",], na.rm = TRUE)
 
 #Alugunos datos estadisticos de DEU por año
-summary (DEU [DEU$date<"2021-01-01",], na.rm = TRUE)
-summary (DEU [365:729,], na.rm = TRUE)
-summary (DEU [730:1094,], na.rm = TRUE)
-summary (DEU [DEU$date>"2022-12-31",], na.rm = TRUE)
+summary (DfDEU [DfDEU$date<"2021-01-01",], na.rm = TRUE)
+summary (DfDEU [365:729,], na.rm = TRUE)
+summary (DfDEU [730:1094,], na.rm = TRUE)
+summary (DfDEU [DfDEU$date>"2022-12-31",], na.rm = TRUE)
 
 #Algunos datos estadisticos de TUR por año
 
-summary (TUR [TUR$date<"2021-01-01",], na.rm = TRUE)
-summary (TUR [365:729,], na.rm = TRUE)
-summary (TUR [730:1094,], na.rm = TRUE)
-summary (TUR [TUR$date>"2022-12-31",], na.rm = TRUE)
+summary (DfTUR [DfTUR$date<"2021-01-01",], na.rm = TRUE)
+summary (DfTUR [365:729,], na.rm = TRUE)
+summary (DfTUR [730:1094,], na.rm = TRUE)
+summary (DfTUR [DfTUR$date>"2022-12-31",], na.rm = TRUE)
 
 #Valores NA de US
 
-apply(US [US$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfUS [DfUS$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #En 2020 los datos NA estan en los primeros dias del registro
 #Hasta el primer contagio, el primer deceso, primer vacunado etc
 #Parece existir un error en New Vaccinations
-apply(US [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfUS [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #No existen datos NA en 2021
-apply(US [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfUS [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #Desde el 2022-06-19 faltan valores de los tests
 #En el 2022-03-16 falta el valor de New Deaths
-apply(US [US$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfUS [DfUS$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
 
 ###Rellenar valores faltantes de US por año
 
-US20 <- data.frame (US [US$date<"2021-01-01",], na.rm = TRUE)
-US20 <-US20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
-US20 <-US20 %>% mutate (total_cases_per_million = if_else
+DfUS20 <- data.frame (DfUS [DfUS$date<"2021-01-01",])
+DfUS20 <-DfUS20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
+DfUS20 <-DfUS20 %>% mutate (total_cases_per_million = if_else
                         (is.na(total_cases_per_million), 0, total_cases_per_million))
-US20 <-US20 %>% mutate (total_deaths = if_else
+DfUS20 <-DfUS20 %>% mutate (total_deaths = if_else
                         (is.na(total_deaths), 0, total_deaths))
-US20 <-US20 %>% mutate (total_deaths_per_million = if_else
+DfUS20 <-DfUS20 %>% mutate (total_deaths_per_million = if_else
                         (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-US20 <-US20 %>% mutate (total_tests = if_else
+DfUS20 <-DfUS20 %>% mutate (total_tests = if_else
                         (is.na(total_tests), 0, total_tests))
-US20 <-US20 %>% mutate (new_tests = if_else
+DfUS20 <-DfUS20 %>% mutate (new_tests = if_else
                         (is.na(new_tests), 0, new_tests))
-US20 <-US20 %>% mutate (new_tests_per_thousand = if_else
+DfUS20 <-DfUS20 %>% mutate (new_tests_per_thousand = if_else
                         (is.na(new_tests_per_thousand), 0, new_tests_per_thousand))
-US20 <-US20 %>% mutate (total_tests_per_thousand = if_else
+DfUS20 <-DfUS20 %>% mutate (total_tests_per_thousand = if_else
                         (is.na(total_tests_per_thousand), 0, total_tests_per_thousand))
-US20 <-US20 %>% mutate (positive_rate = if_else
+DfUS20 <-DfUS20 %>% mutate (positive_rate = if_else
                         (is.na(positive_rate), 0, positive_rate))
-US20 <-US20 %>% mutate (tests_per_case = if_else
+DfUS20 <-DfUS20 %>% mutate (tests_per_case = if_else
                         (is.na(tests_per_case), 0, tests_per_case))
-US20 <-US20 %>% mutate (tests_units = if_else
+DfUS20 <-DfUS20 %>% mutate (tests_units = if_else
                         (is.na(tests_units), "tests not performed", tests_units))
-US20 <-US20 %>% mutate (total_vaccinations = if_else
+DfUS20 <-DfUS20 %>% mutate (total_vaccinations = if_else
                         (is.na(total_vaccinations), 0, total_vaccinations))
-US20 <-US20 %>% mutate (new_vaccinations = if_else
+DfUS20 <-DfUS20 %>% mutate (new_vaccinations = if_else
                         (is.na(new_vaccinations), 0, new_vaccinations))
-US20 <-US20 %>% mutate (total_vaccinations_per_hundred = if_else
+DfUS20 <-DfUS20 %>% mutate (total_vaccinations_per_hundred = if_else
                         (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
-US20 <-US20 %>% mutate (people_vaccinated = if_else
+DfUS20 <-DfUS20 %>% mutate (people_vaccinated = if_else
                         (is.na(people_vaccinated), 0, people_vaccinated))
-US20 <-US20 %>% mutate (people_fully_vaccinated = if_else
+DfUS20 <-DfUS20 %>% mutate (people_fully_vaccinated = if_else
                         (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
-US20 <-US20 %>% mutate (people_vaccinated_per_hundred = if_else
+DfUS20 <-DfUS20 %>% mutate (people_vaccinated_per_hundred = if_else
                         (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
-US20 <-US20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
+DfUS20 <-DfUS20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
                         (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 
 #Verificacion de que no existan datos NA en US20
-apply(US20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfUS20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 
 
-US21 <- data_frame (US [365:729,], na.rm = TRUE)
+DfUS21 <- data_frame (DfUS [365:729,])
 #No existen valores NA en 2021
 
 
-US22 <-data.frame (US [730:1094,], na.rm = TRUE)
+DfUS22 <-data.frame (DfUS [730:1094,])
 #Desde el 2022-06-19 faltan valores de los tests
 #En el 2022-03-16 falta el valor de New Deaths quiza se pueda sacar un calculo con la info
-US22 <-US22 %>% mutate (new_deaths = if_else
+DfUS22 <-DfUS22 %>% mutate (new_deaths = if_else
                         (is.na(new_deaths), 2437, new_deaths))
-US22 <-US22 %>% mutate (new_deaths_per_million = if_else
+DfUS22 <-DfUS22 %>% mutate (new_deaths_per_million = if_else
                         (is.na(new_deaths_per_million), 7.203, new_deaths_per_million))
-
-US23 <- data.frame(US [US$date>"2022-12-31",], na.rm = TRUE)
+apply(DfUS22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+DfUS23 <- data.frame(DfUS [DfUS$date>"2022-12-31",])
 #No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
 
 
 #Valores NA de DEU
 
-apply(DEU [DEU$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(DEU [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(DEU [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(DEU [DEU$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfDEU [DfDEU$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfDEU [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfDEU [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfDEU [DfDEU$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 #Rellenar valores NA de DEU por año
 
-DEU20 <- data.frame(DEU [DEU$date<"2021-01-01",])
+DfDEU20 <- data.frame(DfDEU [DfDEU$date<"2021-01-01",])
 
-DEU20 <-DEU20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
-DEU20 <-DEU20 %>% mutate (total_cases_per_million = if_else
+DfDEU20 <-DfDEU20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
+DfDEU20 <-DfDEU20 %>% mutate (total_cases_per_million = if_else
                           (is.na(total_cases_per_million), 0, total_cases_per_million))
-DEU20 <-DEU20 %>% mutate (total_deaths = if_else
+DfDEU20 <-DfDEU20 %>% mutate (total_deaths = if_else
                           (is.na(total_deaths), 0, total_deaths))
-US20 <-US20 %>% mutate (total_deaths = if_else
+DfUS20 <-DfUS20 %>% mutate (total_deaths = if_else
                         (is.na(total_deaths), 0, total_deaths))
-DEU20 <-DEU20 %>% mutate (total_deaths_per_million = if_else
+DfDEU20 <-DfDEU20 %>% mutate (total_deaths_per_million = if_else
                           (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-DEU20 <-DEU20 %>% mutate (tests_units = if_else
+DfDEU20 <-DfDEU20 %>% mutate (tests_units = if_else
                         (is.na(tests_units), "tests not performed", tests_units))
 #Verificacion de que no existan datos NA en DEU20
-apply(DEU20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfDEU20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #Algunos valores NA podrian ser ceros, no seria correcto rellenar con media o mediana
 
 
-DEU21 <- data.frame(DEU [365:729,])
+DfDEU21 <- data.frame(DEU [365:729,])
 
 #Falta mucha unformacion de los tests
 
-DEU22 <- data.frame(DEU [730:1094,])
+DfDEU22 <- data.frame(DfDEU [730:1094,])
 #Falta mucha unformacion de los tests
 
 
-DEU23 <- data.frame(DEU [DEU$date>"2022-12-31",])
+DfDEU23 <- data.frame(DfDEU [DfDEU$date>"2022-12-31",])
 
 
 #Valores NA de TUR
 
-apply(TUR [TUR$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(TUR [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(TUR [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-apply(TUR [TUR$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfTUR [DfTUR$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfTUR [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfTUR [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfTUR [DfTUR$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 #Rellenar valores NA de TUR por año
 
-TUR20 <- data.frame(TUR [TUR$date<"2021-01-01",])
+DfTUR20 <- data.frame(DfTUR [DfTUR$date<"2021-01-01",])
 
-TUR20 <-TUR20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
-TUR20 <-TUR20 %>% mutate (total_cases_per_million = if_else
+DfTUR20 <-DfTUR20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
+DfTUR20 <-DfTUR20 %>% mutate (total_cases_per_million = if_else
                           (is.na(total_cases_per_million), 0, total_cases_per_million))
-TUR20 <-TUR20 %>% mutate (total_deaths = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_deaths = if_else
                           (is.na(total_deaths), 0, total_deaths))
-TUR20 <-TUR20 %>% mutate (total_deaths_per_million = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_deaths_per_million = if_else
                           (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-TUR20 <-TUR20 %>% mutate (total_tests = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_tests = if_else
                           (is.na(total_tests), 0, total_tests))
-TUR20 <-TUR20 %>% mutate (new_tests = if_else
+DfTUR20 <-DfTUR20 %>% mutate (new_tests = if_else
                           (is.na(new_tests), 0, new_tests))
-TUR20 <-TUR20 %>% mutate (new_tests_per_thousand = if_else
+DfTUR20 <-DfTUR20 %>% mutate (new_tests_per_thousand = if_else
                           (is.na(new_tests_per_thousand), 0, new_tests_per_thousand))
-TUR20 <-TUR20 %>% mutate (total_tests_per_thousand = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_tests_per_thousand = if_else
                           (is.na(total_tests_per_thousand), 0, total_tests_per_thousand))
-TUR20 <-TUR20 %>% mutate (positive_rate = if_else
+DfTUR20 <-DfTUR20 %>% mutate (positive_rate = if_else
                           (is.na(positive_rate), 0, positive_rate))
-TUR20 <-TUR20 %>% mutate (tests_per_case = if_else
+DfTUR20 <-DfTUR20 %>% mutate (tests_per_case = if_else
                           (is.na(tests_per_case), 0, tests_per_case))
-TUR20 <-TUR20 %>% mutate (tests_units = if_else
+DfTUR20 <-DfTUR20 %>% mutate (tests_units = if_else
                           (is.na(tests_units), "tests not performed", tests_units))
-TUR20 <-TUR20 %>% mutate (total_vaccinations = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_vaccinations = if_else
                           (is.na(total_vaccinations), 0, total_vaccinations))
-TUR20 <-TUR20 %>% mutate (new_vaccinations = if_else
+DfTUR20 <-DfTUR20 %>% mutate (new_vaccinations = if_else
                           (is.na(new_vaccinations), 0, new_vaccinations))
-TUR20 <-TUR20 %>% mutate (total_vaccinations_per_hundred = if_else
+DfTUR20 <-DfTUR20 %>% mutate (total_vaccinations_per_hundred = if_else
                           (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
-TUR20 <-TUR20 %>% mutate (people_vaccinated = if_else
+DfTUR20 <-DfTUR20 %>% mutate (people_vaccinated = if_else
                           (is.na(people_vaccinated), 0, people_vaccinated))
-TUR20 <-TUR20 %>% mutate (people_fully_vaccinated = if_else
+DfTUR20 <-DfTUR20 %>% mutate (people_fully_vaccinated = if_else
                           (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
-TUR20 <-TUR20 %>% mutate (people_vaccinated_per_hundred = if_else
+DfTUR20 <-DfTUR20 %>% mutate (people_vaccinated_per_hundred = if_else
                           (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
-TUR20 <-TUR20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
+DfTUR20 <-DfTUR20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
                           (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 
 #Verificacion de que no existan datos NA en TUR20
-apply(TUR20, MARGIN = 2, function(x) sum(is.na(x))) %>% view() 
+apply(DfTUR20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 ###No hay ningun dato de los Vacunados pues empezaron en 2021
 
 
-TUR21 <- data.frame(TUR [365:729,])
-TUR21 <-TUR21 %>% mutate (total_vaccinations = if_else
+DfTUR21 <- data.frame(DfTUR [365:729,])
+DfTUR21 <-DfTUR21 %>% mutate (total_vaccinations = if_else
                           (is.na(total_vaccinations), 0, total_vaccinations))
-TUR21 <-TUR21 %>% mutate (new_vaccinations = if_else
+DfTUR21 <-DfTUR21 %>% mutate (new_vaccinations = if_else
                           (is.na(new_vaccinations), 0, new_vaccinations))
-TUR21 <-TUR21 %>% mutate (total_vaccinations_per_hundred = if_else
+DfTUR21 <-DfTUR21 %>% mutate (total_vaccinations_per_hundred = if_else
                           (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
-TUR21 <-TUR21 %>% mutate (people_vaccinated = if_else
+DfTUR21 <-DfTUR21 %>% mutate (people_vaccinated = if_else
                           (is.na(people_vaccinated), 0, people_vaccinated))
-TUR21 <-TUR21 %>% mutate (people_fully_vaccinated = if_else
+DfTUR21 <-DfTUR21 %>% mutate (people_fully_vaccinated = if_else
                           (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
-TUR21 <-TUR21 %>% mutate (people_vaccinated_per_hundred = if_else
+DfTUR21 <-DfTUR21 %>% mutate (people_vaccinated_per_hundred = if_else
                           (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
-TUR21 <-TUR21 %>% mutate (people_fully_vaccinated_per_hundred = if_else
+DfTUR21 <-DfTUR21 %>% mutate (people_fully_vaccinated_per_hundred = if_else
                           (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 #Verificacion de que no existan datos NA en TUR21
-apply(TUR21, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+apply(DfTUR21, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
-TUR22 <- data.frame(TUR [730:1094,])
+DfTUR22 <- data.frame(DfTUR [730:1094,])
 #Falta dato de vacunacion en 2022-01-04
 #A partir de 2022-05-31 falta datos de tests
 #Faltan algunos deatos de vacunaciones que podrian o no ser ceros
 
 
-TUR23 <- data.frame(TUR [TUR$date>"2022-12-31",])
+DfTUR23 <- data.frame(DfTUR [DfTUR$date>"2022-12-31",])
 #No hay informacion sobre tests ni vacunas en 2023, podrian o no ser ceros
 
 
@@ -439,7 +439,7 @@ TUR23 <- data.frame(TUR [TUR$date>"2022-12-31",])
 #Estadisticas del total de casos y nuevos casos de US, DEU y TUR por año
 
 #Estados Unidos
-Casos_US20 <- US20 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Media_total_cases=median(total_cases),
                                  D.Est_total_cases=sd(total_cases),
                                  CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -453,7 +453,7 @@ Casos_US20 <- US20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Max_new_cases=max(new_cases))
 
 
-Casos_US21 <- US21 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Media_total_cases=median(total_cases),
                                  D.Est_total_cases=sd(total_cases),
                                  CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -466,7 +466,7 @@ Casos_US21 <- US21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Min_new_cases=min(new_cases),
                                  Max_new_cases=max(new_cases))
 
-Casos_US22 <- US22 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Media_total_cases=median(total_cases),
                                  D.Est_total_cases=sd(total_cases),
                                  CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -479,7 +479,7 @@ Casos_US22 <- US22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Min_new_cases=min(new_cases),
                                  Max_new_cases=max(new_cases))
 
-Casos_US23 <- US23 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_cases=mean(total_cases),
                                  Media_total_cases=median(total_cases),
                                  D.Est_total_cases=sd(total_cases),
                                  CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -494,7 +494,7 @@ Casos_US23 <- US23 %>% summarise(Promedio_total_cases=mean(total_cases),
 
 #Alemania
 
-Casos_DEU20 <- DEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -508,7 +508,7 @@ Casos_DEU20 <- DEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Max_new_cases=max(new_cases))
 
 
-Casos_DEU21 <- DEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -521,7 +521,7 @@ Casos_DEU21 <- DEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Min_new_cases=min(new_cases),
                                    Max_new_cases=max(new_cases))
 
-Casos_DEU22 <- DEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -534,7 +534,7 @@ Casos_DEU22 <- DEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Min_new_cases=min(new_cases),
                                    Max_new_cases=max(new_cases))
 
-Casos_DEU23 <- DEU23 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -549,7 +549,7 @@ Casos_DEU23 <- DEU23 %>% summarise(Promedio_total_cases=mean(total_cases),
 
 #Turquia
 
-Casos_TUR20 <- TUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -563,7 +563,7 @@ Casos_TUR20 <- TUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Max_new_cases=max(new_cases))
 
 
-Casos_TUR21 <- TUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -576,7 +576,7 @@ Casos_TUR21 <- TUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Min_new_cases=min(new_cases),
                                    Max_new_cases=max(new_cases))
 
-Casos_TUR22 <- TUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
@@ -589,7 +589,7 @@ Casos_TUR22 <- TUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Min_new_cases=min(new_cases),
                                    Max_new_cases=max(new_cases))
 
-Casos_TUR23 <- TUR23 %>% summarise(Promedio_total_cases=mean(total_cases),
+Casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_cases=mean(total_cases),
                                    Media_total_cases=median(total_cases),
                                    D.Est_total_cases=sd(total_cases),
                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
