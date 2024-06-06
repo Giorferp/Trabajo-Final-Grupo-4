@@ -1,6 +1,7 @@
-#Llamado a tidyverse 
+#Llamado a librerias
 
 library(tidyverse)
+library(dplyr)
 library(readr)
 Covid_G4_Base_de_Datos <- read_csv("BBDD/Covid G4 Base de Datos.csv")
 #Cambio de nombre a la base de datos
@@ -61,144 +62,114 @@ str (IND)
 #Por lo que se deja solo la informacion util para la investigacion
 
 DfCHN <- CHN %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million,
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million, 
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfCUB <- CUB %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million,
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfDEU <- DEU %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million, 
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfESP <- ESP %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million,
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million,
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfGBR <- GBR %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million,
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million,
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfIND <- IND %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million,
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million,
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfIRN <- IRN %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million, 
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfRUS <- RUS %>% select(index, iso_code, continent, location, date, 
-                      total_cases, new_cases, new_cases_per_million,
-                      total_cases_per_million, 
-                      total_deaths, new_deaths, new_deaths_per_million, 
-                      total_deaths_per_million, 
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
-                      total_vaccinations, new_vaccinations, 
-                      total_vaccinations_per_hundred, people_vaccinated, 
-                      people_fully_vaccinated, people_vaccinated_per_hundred, 
-                      people_fully_vaccinated_per_hundred, 
-                      population_density, population, median_age)
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million, 
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
 
 DfTUR <- TUR %>% select(index, iso_code, continent, location, date, 
+                        total_cases, new_cases, new_cases_per_million,
+                        total_cases_per_million, 
+                        total_deaths, new_deaths, new_deaths_per_million, 
+                        total_deaths_per_million, 
+                        total_vaccinations, new_vaccinations, 
+                        total_vaccinations_per_hundred, people_vaccinated, 
+                        people_fully_vaccinated, people_vaccinated_per_hundred, 
+                        people_fully_vaccinated_per_hundred, 
+                        population_density, population, median_age)
+
+DfUS <- US %>% select(index, iso_code, continent, location, date, 
                       total_cases, new_cases, new_cases_per_million,
                       total_cases_per_million, 
                       total_deaths, new_deaths, new_deaths_per_million, 
                       total_deaths_per_million, 
-                      total_tests, new_tests, new_tests_per_thousand, 
-                      total_tests_per_thousand, positive_rate, 
-                      tests_per_case, tests_units, 
                       total_vaccinations, new_vaccinations, 
                       total_vaccinations_per_hundred, people_vaccinated, 
                       people_fully_vaccinated, people_vaccinated_per_hundred, 
                       people_fully_vaccinated_per_hundred, 
                       population_density, population, median_age)
-
-DfUS <- US %>% select(index, iso_code, continent, location, date, 
-                    total_cases, new_cases, new_cases_per_million,
-                    total_cases_per_million, 
-                    total_deaths, new_deaths, new_deaths_per_million, 
-                    total_deaths_per_million, 
-                    total_tests, new_tests, new_tests_per_thousand, 
-                    total_tests_per_thousand, positive_rate, 
-                    tests_per_case, tests_units, 
-                    total_vaccinations, new_vaccinations, 
-                    total_vaccinations_per_hundred, people_vaccinated, 
-                    people_fully_vaccinated, people_vaccinated_per_hundred, 
-                    people_fully_vaccinated_per_hundred, 
-                    population_density, population, median_age)
 
 
 #La variable de "nuevos vacunados por cien" no existe
@@ -248,49 +219,34 @@ apply(DfUS [DfUS$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>%
 apply(DfUS [365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #No existen datos NA en 2021
 apply(DfUS [730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-#Desde el 2022-06-19 faltan valores de los tests
 #En el 2022-03-16 falta el valor de New Deaths
 apply(DfUS [DfUS$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% view()
-#No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
+#No hay valores de vaccinations
 
 ###Rellenar valores faltantes de US por año
 
 DfUS20 <- data.frame (DfUS [DfUS$date<"2021-01-01",])
 DfUS20 <-DfUS20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
 DfUS20 <-DfUS20 %>% mutate (total_cases_per_million = if_else
-                        (is.na(total_cases_per_million), 0, total_cases_per_million))
+                            (is.na(total_cases_per_million), 0, total_cases_per_million))
 DfUS20 <-DfUS20 %>% mutate (total_deaths = if_else
-                        (is.na(total_deaths), 0, total_deaths))
+                            (is.na(total_deaths), 0, total_deaths))
 DfUS20 <-DfUS20 %>% mutate (total_deaths_per_million = if_else
-                        (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-DfUS20 <-DfUS20 %>% mutate (total_tests = if_else
-                        (is.na(total_tests), 0, total_tests))
-DfUS20 <-DfUS20 %>% mutate (new_tests = if_else
-                        (is.na(new_tests), 0, new_tests))
-DfUS20 <-DfUS20 %>% mutate (new_tests_per_thousand = if_else
-                        (is.na(new_tests_per_thousand), 0, new_tests_per_thousand))
-DfUS20 <-DfUS20 %>% mutate (total_tests_per_thousand = if_else
-                        (is.na(total_tests_per_thousand), 0, total_tests_per_thousand))
-DfUS20 <-DfUS20 %>% mutate (positive_rate = if_else
-                        (is.na(positive_rate), 0, positive_rate))
-DfUS20 <-DfUS20 %>% mutate (tests_per_case = if_else
-                        (is.na(tests_per_case), 0, tests_per_case))
-DfUS20 <-DfUS20 %>% mutate (tests_units = if_else
-                        (is.na(tests_units), "tests not performed", tests_units))
+                            (is.na(total_deaths_per_million), 0, total_deaths_per_million))
 DfUS20 <-DfUS20 %>% mutate (total_vaccinations = if_else
-                        (is.na(total_vaccinations), 0, total_vaccinations))
+                            (is.na(total_vaccinations), 0, total_vaccinations))
 DfUS20 <-DfUS20 %>% mutate (new_vaccinations = if_else
-                        (is.na(new_vaccinations), 0, new_vaccinations))
+                            (is.na(new_vaccinations), 0, new_vaccinations))
 DfUS20 <-DfUS20 %>% mutate (total_vaccinations_per_hundred = if_else
-                        (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+                            (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfUS20 <-DfUS20 %>% mutate (people_vaccinated = if_else
-                        (is.na(people_vaccinated), 0, people_vaccinated))
+                            (is.na(people_vaccinated), 0, people_vaccinated))
 DfUS20 <-DfUS20 %>% mutate (people_fully_vaccinated = if_else
-                        (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
+                            (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
 DfUS20 <-DfUS20 %>% mutate (people_vaccinated_per_hundred = if_else
-                        (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
+                            (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 DfUS20 <-DfUS20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
-                        (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
+                            (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 
 #Verificacion de que no existan datos NA en US20
 apply(DfUS20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
@@ -302,15 +258,13 @@ DfUS21 <- data_frame (DfUS [365:729,])
 
 
 DfUS22 <-data.frame (DfUS [730:1094,])
-#Desde el 2022-06-19 faltan valores de los tests
 #En el 2022-03-16 falta el valor de New Deaths quiza se pueda sacar un calculo con la info
 DfUS22 <-DfUS22 %>% mutate (new_deaths = if_else
-                        (is.na(new_deaths), 2437, new_deaths))
+                            (is.na(new_deaths), 2437, new_deaths))
 DfUS22 <-DfUS22 %>% mutate (new_deaths_per_million = if_else
-                        (is.na(new_deaths_per_million), 7.203, new_deaths_per_million))
+                            (is.na(new_deaths_per_million), 7.203, new_deaths_per_million))
 apply(DfUS22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 DfUS23 <- data.frame(DfUS [DfUS$date>"2022-12-31",])
-#No hay tests en 2023 y a partir de 2023-05-09 no hay valores de vaccinations
 
 
 #Valores NA de DEU
@@ -323,29 +277,32 @@ apply(DfDEU [DfDEU$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %
 #Rellenar valores NA de DEU por año
 
 DfDEU20 <- data.frame(DfDEU [DfDEU$date<"2021-01-01",])
-
 DfDEU20 <-DfDEU20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
 DfDEU20 <-DfDEU20 %>% mutate (total_cases_per_million = if_else
-                          (is.na(total_cases_per_million), 0, total_cases_per_million))
+                              (is.na(total_cases_per_million), 0, total_cases_per_million))
 DfDEU20 <-DfDEU20 %>% mutate (total_deaths = if_else
-                          (is.na(total_deaths), 0, total_deaths))
+                              (is.na(total_deaths), 0, total_deaths))
 DfUS20 <-DfUS20 %>% mutate (total_deaths = if_else
-                        (is.na(total_deaths), 0, total_deaths))
+                            (is.na(total_deaths), 0, total_deaths))
 DfDEU20 <-DfDEU20 %>% mutate (total_deaths_per_million = if_else
-                          (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-DfDEU20 <-DfDEU20 %>% mutate (tests_units = if_else
-                        (is.na(tests_units), "tests not performed", tests_units))
+                              (is.na(total_deaths_per_million), 0, total_deaths_per_million))
+
 #Verificacion de que no existan datos NA en DEU20
 apply(DfDEU20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 #Algunos valores NA podrian ser ceros, no seria correcto rellenar con media o mediana
+DfDEU20 [1:24,6:20] <- 0
+DfDEU20 [25,6:7] <- 1
+DfDEU20 [26,7] <- 1
+DfDEU20 [25:26,8] <- 0.011
+DfDEU20 [25,9] <- 0.011
+DfDEU20 [1:359,14:20] <- 0
+DfDEU20 [360,15] <- 24427
 
+DfDEU21 <- data.frame(DfDEU [365:729,])
 
-DfDEU21 <- data.frame(DEU [365:729,])
-
-#Falta mucha unformacion de los tests
 
 DfDEU22 <- data.frame(DfDEU [730:1094,])
-#Falta mucha unformacion de los tests
+
 
 
 DfDEU23 <- data.frame(DfDEU [DfDEU$date>"2022-12-31",])
@@ -364,39 +321,25 @@ DfTUR20 <- data.frame(DfTUR [DfTUR$date<"2021-01-01",])
 
 DfTUR20 <-DfTUR20 %>% mutate(total_cases = if_else(is.na(total_cases), 0, total_cases))
 DfTUR20 <-DfTUR20 %>% mutate (total_cases_per_million = if_else
-                          (is.na(total_cases_per_million), 0, total_cases_per_million))
+                              (is.na(total_cases_per_million), 0, total_cases_per_million))
 DfTUR20 <-DfTUR20 %>% mutate (total_deaths = if_else
-                          (is.na(total_deaths), 0, total_deaths))
+                              (is.na(total_deaths), 0, total_deaths))
 DfTUR20 <-DfTUR20 %>% mutate (total_deaths_per_million = if_else
-                          (is.na(total_deaths_per_million), 0, total_deaths_per_million))
-DfTUR20 <-DfTUR20 %>% mutate (total_tests = if_else
-                          (is.na(total_tests), 0, total_tests))
-DfTUR20 <-DfTUR20 %>% mutate (new_tests = if_else
-                          (is.na(new_tests), 0, new_tests))
-DfTUR20 <-DfTUR20 %>% mutate (new_tests_per_thousand = if_else
-                          (is.na(new_tests_per_thousand), 0, new_tests_per_thousand))
-DfTUR20 <-DfTUR20 %>% mutate (total_tests_per_thousand = if_else
-                          (is.na(total_tests_per_thousand), 0, total_tests_per_thousand))
-DfTUR20 <-DfTUR20 %>% mutate (positive_rate = if_else
-                          (is.na(positive_rate), 0, positive_rate))
-DfTUR20 <-DfTUR20 %>% mutate (tests_per_case = if_else
-                          (is.na(tests_per_case), 0, tests_per_case))
-DfTUR20 <-DfTUR20 %>% mutate (tests_units = if_else
-                          (is.na(tests_units), "tests not performed", tests_units))
+                              (is.na(total_deaths_per_million), 0, total_deaths_per_million))
 DfTUR20 <-DfTUR20 %>% mutate (total_vaccinations = if_else
-                          (is.na(total_vaccinations), 0, total_vaccinations))
+                              (is.na(total_vaccinations), 0, total_vaccinations))
 DfTUR20 <-DfTUR20 %>% mutate (new_vaccinations = if_else
-                          (is.na(new_vaccinations), 0, new_vaccinations))
+                              (is.na(new_vaccinations), 0, new_vaccinations))
 DfTUR20 <-DfTUR20 %>% mutate (total_vaccinations_per_hundred = if_else
-                          (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+                              (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfTUR20 <-DfTUR20 %>% mutate (people_vaccinated = if_else
-                          (is.na(people_vaccinated), 0, people_vaccinated))
+                              (is.na(people_vaccinated), 0, people_vaccinated))
 DfTUR20 <-DfTUR20 %>% mutate (people_fully_vaccinated = if_else
-                          (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
+                              (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
 DfTUR20 <-DfTUR20 %>% mutate (people_vaccinated_per_hundred = if_else
-                          (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
+                              (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 DfTUR20 <-DfTUR20 %>% mutate (people_fully_vaccinated_per_hundred = if_else
-                          (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
+                              (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 
 #Verificacion de que no existan datos NA en TUR20
 apply(DfTUR20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
@@ -405,199 +348,195 @@ apply(DfTUR20, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 DfTUR21 <- data.frame(DfTUR [365:729,])
 DfTUR21 <-DfTUR21 %>% mutate (total_vaccinations = if_else
-                          (is.na(total_vaccinations), 0, total_vaccinations))
+                              (is.na(total_vaccinations), 0, total_vaccinations))
 DfTUR21 <-DfTUR21 %>% mutate (new_vaccinations = if_else
-                          (is.na(new_vaccinations), 0, new_vaccinations))
+                              (is.na(new_vaccinations), 0, new_vaccinations))
 DfTUR21 <-DfTUR21 %>% mutate (total_vaccinations_per_hundred = if_else
-                          (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+                              (is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfTUR21 <-DfTUR21 %>% mutate (people_vaccinated = if_else
-                          (is.na(people_vaccinated), 0, people_vaccinated))
+                              (is.na(people_vaccinated), 0, people_vaccinated))
 DfTUR21 <-DfTUR21 %>% mutate (people_fully_vaccinated = if_else
-                          (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
+                              (is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
 DfTUR21 <-DfTUR21 %>% mutate (people_vaccinated_per_hundred = if_else
-                          (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
+                              (is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 DfTUR21 <-DfTUR21 %>% mutate (people_fully_vaccinated_per_hundred = if_else
-                          (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
+                              (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 #Verificacion de que no existan datos NA en TUR21
 apply(DfTUR21, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 DfTUR22 <- data.frame(DfTUR [730:1094,])
 #Falta dato de vacunacion en 2022-01-04
 #A partir de 2022-05-31 falta datos de tests
-#Faltan algunos deatos de vacunaciones que podrian o no ser ceros
+#Faltan algunos datos de vacunaciones que podrian o no ser ceros
 
 
 DfTUR23 <- data.frame(DfTUR [DfTUR$date>"2022-12-31",])
-#No hay informacion sobre tests ni vacunas en 2023, podrian o no ser ceros
-
-
-#Que hacer con los datos NA de los paises en cada fecha
-#Algunos corresponden a valores 0 pero otros no
-#El caso mas complicado es en DEU 
-
+#No hay informacion sobre vacunas en 2023, podrian o no ser ceros
 
 #Estadisticas del total de casos y nuevos casos de US, DEU y TUR por año
 
 #Estados Unidos
 Casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                 Media_total_cases=median(total_cases),
-                                 D.Est_total_cases=sd(total_cases),
-                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                 Min_total_cases=min(total_cases),
-                                 Max_total_cases=max(total_cases),
-                                 Promedio_new_cases=mean(new_cases),
-                                 Media_new_cases=median(new_cases),
-                                 D.Est_new_cases=sd(new_cases),
-                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                 Min_new_cases=min(new_cases),
-                                 Max_new_cases=max(new_cases))
+                                     Media_total_cases=median(total_cases),
+                                     D.Est_total_cases=sd(total_cases),
+                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total_cases=min(total_cases),
+                                     Max_total_cases=max(total_cases),
+                                     Promedio_new_cases=mean(new_cases),
+                                     Media_new_cases=median(new_cases),
+                                     D.Est_new_cases=sd(new_cases),
+                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new_cases=min(new_cases),
+                                     Max_new_cases=max(new_cases))
 
 
 Casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                 Media_total_cases=median(total_cases),
-                                 D.Est_total_cases=sd(total_cases),
-                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                 Min_total_cases=min(total_cases),
-                                 Max_total_cases=max(total_cases),
-                                 Promedio_new_cases=mean(new_cases),
-                                 Media_new_cases=median(new_cases),
-                                 D.Est_new_cases=sd(new_cases),
-                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                 Min_new_cases=min(new_cases),
-                                 Max_new_cases=max(new_cases))
+                                     Media_total_cases=median(total_cases),
+                                     D.Est_total_cases=sd(total_cases),
+                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total_cases=min(total_cases),
+                                     Max_total_cases=max(total_cases),
+                                     Promedio_new_cases=mean(new_cases),
+                                     Media_new_cases=median(new_cases),
+                                     D.Est_new_cases=sd(new_cases),
+                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new_cases=min(new_cases),
+                                     Max_new_cases=max(new_cases))
 
 Casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                 Media_total_cases=median(total_cases),
-                                 D.Est_total_cases=sd(total_cases),
-                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                 Min_total_cases=min(total_cases),
-                                 Max_total_cases=max(total_cases),
-                                 Promedio_new_cases=mean(new_cases),
-                                 Media_new_cases=median(new_cases),
-                                 D.Est_new_cases=sd(new_cases),
-                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                 Min_new_cases=min(new_cases),
-                                 Max_new_cases=max(new_cases))
+                                     Media_total_cases=median(total_cases),
+                                     D.Est_total_cases=sd(total_cases),
+                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total_cases=min(total_cases),
+                                     Max_total_cases=max(total_cases),
+                                     Promedio_new_cases=mean(new_cases),
+                                     Media_new_cases=median(new_cases),
+                                     D.Est_new_cases=sd(new_cases),
+                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new_cases=min(new_cases),
+                                     Max_new_cases=max(new_cases))
 
 Casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                 Media_total_cases=median(total_cases),
-                                 D.Est_total_cases=sd(total_cases),
-                                 CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                 Min_total_cases=min(total_cases),
-                                 Max_total_cases=max(total_cases),
-                                 Promedio_new_cases=mean(new_cases),
-                                 Media_new_cases=median(new_cases),
-                                 D.Est_new_cases=sd(new_cases),
-                                 CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                 Min_new_cases=min(new_cases),
-                                 Max_new_cases=max(new_cases))
+                                     Media_total_cases=median(total_cases),
+                                     D.Est_total_cases=sd(total_cases),
+                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total_cases=min(total_cases),
+                                     Max_total_cases=max(total_cases),
+                                     Promedio_new_cases=mean(new_cases),
+                                     Media_new_cases=median(new_cases),
+                                     D.Est_new_cases=sd(new_cases),
+                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new_cases=min(new_cases),
+                                     Max_new_cases=max(new_cases))
 
 #Alemania
 
 Casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 
 Casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 Casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 Casos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 #Turquia
 
 Casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 
 Casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 Casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
 
 Casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   Media_total_cases=median(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   Media_new_cases=median(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+                                       Media_total_cases=median(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       Media_new_cases=median(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
+
+
