@@ -259,7 +259,14 @@ DfUS21 <- data_frame (DfUS [365:729,])
 
 
 DfUS22 <-data.frame (DfUS [730:1094,])
+#Inconsistencia de datos en 2022-03-15, al dia siguiente hay menos muertos totales
+
 apply(DfUS22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+DfUS22 <-DfUS22 %>% mutate (new_deaths = if_else
+                            (is.na(new_deaths), 0, new_deaths))
+DfUS22 <-DfUS22 %>% mutate (new_deaths_per_million = if_else
+                            (is.na(new_deaths_per_million), 0, new_deaths_per_million))
+
 DfUS23 <- data.frame(DfUS [DfUS$date>"2022-12-31",])
 
 
@@ -305,11 +312,8 @@ DfDEU21 <-DfDEU21 %>% mutate (people_fully_vaccinated = if_else
 DfDEU21 <-DfDEU21 %>% mutate (people_fully_vaccinated_per_hundred = if_else
                               (is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
 
-DfDEU22 <- data.frame(DfUS [730:1094,])
-DfUS22 <-DfUS22 %>% mutate (new_deaths = if_else
-                            (is.na(new_deaths), 2437, new_deaths))
-DfUS22 <-DfUS22 %>% mutate (new_deaths_per_million = if_else
-                            (is.na(new_deaths_per_million), 7.203, new_deaths_per_million))
+DfDEU22 <- data.frame(DfDEU [730:1094,])
+apply(DfDEU22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 
 DfDEU23 <- data.frame(DfDEU [DfDEU$date>"2022-12-31",])
