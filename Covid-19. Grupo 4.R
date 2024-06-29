@@ -2450,6 +2450,8 @@ sum(is.na(ESP23))
 
 ESP20 <- mutate(ESP20, new_vaccinations_per_hundred=new_vaccinations/population*100)
 ESP21 <- mutate(ESP21, new_vaccinations_per_hundred=new_vaccinations/population*100)
+ESP22 <- mutate(ESP22, new_vaccinations_per_hundred=new_vaccinations/population*100)
+ESP23 <- mutate(ESP23, new_vaccinations_per_hundred=new_vaccinations/population*100)
 
 #Estadisticos por año 
 #España Casos
