@@ -3017,3 +3017,35 @@ DfCHN23 <- DfCHN23 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated
 DfCHN23 <- DfCHN23 %>% mutate(people_fully_vaccinated =if_else(is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
 DfCHN23 <- DfCHN23 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 DfCHN23 <- DfCHN23 %>% mutate(people_fully_vaccinated_per_hundred =if_else(is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
+
+      apply(DfRUS [DfRUS$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
+
+DfRUS20 <- data.frame(DfRUS [DfRUS$date<"2021-01-01",], na.rm = TRUE)
+DfRUS20 <- DfRUS20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
+DfRUS20 <- DfRUS20 %>% mutate(total_cases_per_million =if_else(is.na(total_cases_per_million), 0, total_cases_per_million))
+DfRUS20 <- DfRUS20 %>% mutate(total_deaths =if_else(is.na(total_deaths), 0, total_deaths))
+DfRUS20 <- DfRUS20 %>% mutate(total_deaths_per_million =if_else(is.na(total_deaths_per_million), 0, total_deaths_per_million))
+DfRUS20 <- DfRUS20 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
+DfRUS20 <- DfRUS20 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
+DfRUS20 <- DfRUS20 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+
+apply(DfRUS[365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
+DfRUS21 <- data.frame(DfRUS [365:729,])
+DfRUS21 <- DfRUS21 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
+DfRUS21 <- DfRUS21 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+
+apply(DfRUS[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
+DfRUS22 <- data.frame(DfRUS [730:1094,])
+
+library(dplyr)
+DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
+DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+DfRUS22 <- DfRUS22 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
+
+apply(DfRUS [DfRUS$date>"2022-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
+DfRUS23 <- data.frame(DfRUS[DfRUS$date>"2022-12-31",])
+DfRUS23 <- DfRUS23 %>% mutate(new_cases =if_else(is.na(new_cases), 0, new_cases))
+DfRUS23 <- DfRUS23 %>% mutate(new_cases_per_million =if_else(is.na(new_cases_per_million), 0, new_cases_per_million))
+DfRUS23 <- DfRUS23 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
+DfRUS23 <- DfRUS23 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
+DfRUS23 <- DfRUS23 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
