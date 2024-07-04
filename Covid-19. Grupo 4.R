@@ -3327,6 +3327,577 @@ Tasa_de_decesos_GBR23 <- GBR23 %>% summarise(Promedio_total_deaths=mean(total_de
                                              Min_new_deaths=min(new_deaths_per_million),
                                              Max_new_deaths=max(new_deaths_per_million))
 
+#Comenzamos con el analisis de India y el reemplazo de sus valores NA´s
+
+IND20 <- data.frame (DfIND [01:364,])
+IND21 <- data.frame (DfIND [365:729,])
+IND22 <- data.frame (DfIND [730:1094,])
+IND23 <- data.frame (DfIND [1095:1270,])
+
+
+#2020
+#Verificamos cuantos NA's hay en este ano
+
+sum(is.na(IND20))
+
+#En el año no tenemos registros de casos de covid y muertes en todo el mes de enero
+#los valores NA´s son 0
+#Mes Enero
+#Casos 
+IND20 [01:27,05] <- 0
+IND20 [01:27,08] <- 0.000
+#Muertes
+IND20 [01:70,09] <- 0
+IND20 [01:70,12] <- 0.000
+#Vacunados
+IND20 [01:364,13] <- 0
+IND20 [01:364,14] <- 0
+IND20 [01:364,15] <- 0.000
+IND20 [01:364,16] <- 0
+IND20 [01:364,17] <- 0.000
+#Dias 31 y 32 se acomoda porque hay un error de transcripcion
+IND20 [31,05] <- 5
+IND20 [31,06] <- 0
+IND20 [31,07] <- 0.000
+IND20 [31,08] <- 0.004
+#Dias 32 y 33
+IND20 [32,05] <- 5
+IND20 [32,06] <- 0
+IND20 [32,07] <- 0.000
+IND20 [32,08] <- 0.004
+#Dia 33
+IND20 [33,05] <- 7
+IND20 [33,06] <- 2
+IND20 [33,08] <- 0.005
+#Dia 60
+IND20 [60,05] <- 7
+IND20 [60,06] <- 0
+IND20 [60,07] <- 0.000
+IND20 [60,08] <- 0.004
+#Dia 61
+IND20 [61,06] <- 2
+
+#Ahora verificamos que no nos quede ningun valor NA´s
+sum(is.na(IND20))
+
+#2021
+#Verificamos cuantos valores NA´s tenemos en este año
+sum(is.na(IND21))
+
+#Dias del 01 al 15
+IND21 [01:15,13] <- 0
+IND21 [01:15,14] <- 0
+IND21 [01:15,15] <- 0.000
+IND21 [01:15,16] <- 0
+IND21 [01:15,17] <- 0.000
+#Dias 45 y 46
+IND21 [45,13] <- 8516771
+IND21 [45,14] <- 0
+IND21 [45,15] <- 0.57
+IND21 [45,16] <- 8044786
+IND21 [45,17] <- 0.57
+IND21 [46,14] <- (8516771-8516771)
+#Dia 110
+IND21 [110,13] <- 127129113
+IND21 [110,14] <- 0
+IND21 [110,15] <- 8.97
+IND21 [110,16] <- 109659181
+IND21 [110,17] <- 7.74
+#Dia 111
+IND21 [111,14] <- (129646105-127129113)
+#Dias 113 al 114
+IND21 [113:114,13] <- 132754608
+IND21 [113:114,14] <- 0
+IND21 [113:114,15] <- 9.37
+IND21 [113:114,16] <- 113584269
+IND21 [113:114,17] <- 8.01
+#Dia 115
+IND21 [115,14] <- (139185173-132754608)
+#Dia 141
+IND21 [141,13] <- 187886885
+IND21 [141,14] <- 0
+IND21 [141,15] <- 13.26
+IND21 [141,16] <- 146624652
+IND21 [141,17] <- 10.35
+#Dia 142
+IND21 [142,14] <- (190842497-187886885)
+#Dia 190
+IND21 [190,13] <- 368991222
+IND21 [190,14] <- 0
+IND21 [190,15] <- 26.04
+IND21 [190,16] <- 298678913
+IND21 [190,17] <- 21.08
+#Dia 191
+IND21 [191,14] <- (376032586-368991222)
+#Dia 199
+IND21 [199,13] <- 404931715
+IND21 [199,14] <- 0
+IND21 [199,15] <- 28.57
+IND21 [199,16] <- 321893762
+IND21 [199,17] <- 22.71
+#Dia 200
+IND21 [200,14] <- (411846401-404931715)
+#Dia 212
+IND21 [212,13] <- 461518479
+IND21 [212,14] <- 0
+IND21 [212,15] <- 32.57
+IND21 [212,16] <- 359820313
+IND21 [212,17] <- 25.39
+#Dia 213
+IND21 [213,14] <- (472223639-461518479)
+#Dia 214
+IND21 [214,13] <- 472223639
+IND21 [214,14] <- 0
+IND21 [214,15] <- 33.32
+IND21 [214,16] <- 367994586
+IND21 [214,17] <- 25.97
+#Dia 215
+IND21 [215,14] <- (485286570-472223639)
+#Dia 224
+IND21 [224,13] <- 523671019
+IND21 [224,14] <- 0
+IND21 [224,15] <- 36.95
+IND21 [224,16] <- 406980329
+IND21 [224,17] <- 28.72
+#Dia 225
+IND21 [225,14] <- (536189903-523671019)
+#Dia 227
+IND21 [227,13] <- 543846290
+IND21 [227,14] <- 0
+IND21 [227,15] <- 38.38
+IND21 [227,16] <- 422575401
+IND21 [227,17] <- 29.82
+#Dia 228
+IND21 [228,14] <- (550520038-543846290)
+sum(is.na(IND21))
+#2022
+#Verificamos los valores NA´s
+sum(is.na(IND22))
+
+#Dia 92 al 93
+IND22 [92:93,13] <- 1843313964
+IND22 [92:93,14] <- 0
+IND22 [92:93,15] <- 130.07
+IND22 [92:93,16] <- 989520028
+IND22 [92:93,17] <- 69.82
+#Dia 94
+IND22 [94,14] <- (1847000842-1843313964)
+#Dia 106 al 107
+IND22 [106:107,13] <- 1862475218
+IND22 [106:107,14] <- 0
+IND22 [106:107,15] <- 131.42
+IND22 [106:107,16] <- 997038307
+IND22 [106:107,17] <- 70.35
+#Dia 108
+IND22 [108,14] <- (1865530788-1862475218)
+#Dia 113
+IND22 [113,13] <- 1872146953
+IND22 [113,14] <- 0
+IND22 [113,15] <- 132.10
+IND22 [113,16] <- 999458254
+IND22 [113,17] <- 70.52
+#Dia 114
+IND22 [114,14] <- (1875857737-1872146953)
+#Dia 190
+IND22 [190,13] <- 1984334136
+IND22 [190,14] <- 0
+IND22 [190,15] <- 140.02
+IND22 [190,16] <- 1017673041
+IND22 [190,17] <- 71.81
+#Dia 191
+IND22 [191,14] <- (1986908392-1984334136)
+#Dia 197 al 198
+IND22 [197:198,13] <- 1996965088
+IND22 [197:198,14] <- 0
+IND22 [197:198,15] <- 140.91
+IND22 [197:198,16] <- 1018896980
+IND22 [197:198,17] <- 71.90
+#Dia 199
+IND22 [199,14] <- (2001968030-1996965088)
+#Dia 215
+IND22 [215,13] <- 2046516773
+IND22 [215,14] <- 0
+IND22 [215,15] <- 144.41
+IND22 [215,16] <- 1021500031
+IND22 [215,17] <- 72.08
+#Dia 216
+IND22 [216,14] <- (2052900354-2046516773)
+#Dia 286
+IND22 [286,13] <- 2191338497
+IND22 [286,14] <- 0
+IND22 [286,15] <- 154.63
+IND22 [286,16] <- 1026581890
+IND22 [286,17] <- 72.44
+#Dia 287
+IND22 [287,14] <- (2192191132-2191338497)
+#Dia 304
+IND22 [304,13] <- 2196335748
+IND22 [304,14] <- 0
+IND22 [304,15] <- 154.98
+IND22 [304,16] <- 1026856716
+IND22 [304,17] <- 72.46
+#Dia 305
+IND22 [305,14] <- (2196483169-2196335748)
+#Dia 319 en este dia se encntro una inconlcuencia que tiene menos casos totales que el dia anterior
+#Lo colocamos igual al dia 318 
+IND22 [318:319,05] <- 44666377
+IND22 [318:319,06] <- 0
+IND22 [318:319,07] <- 0.5180000
+IND22 [318:319,08] <- 31517.94
+#Dia 320
+IND22 [320,06] <- 299
+#Verificamos que no quede algun valor NA
+sum(is.na(IND22))
+
+#2023
+#Contamos los valores NA's que tenemos en este año
+sum(is.na(IND23))
+
+#Dia 77
+IND23 [77,13] <- 2206462789
+IND23 [77,14] <- 0
+IND23 [77,15] <- 155.69
+IND23 [77,16] <- 1027385887
+IND23 [77,17] <- 72.50
+#Dia 78
+IND23 [78,14] <- (2206477662-2206462789)
+#Dia 99
+IND23 [99,13] <- 2206595334
+IND23 [99,14] <- 0
+IND23 [99,15] <- 155.70
+IND23 [99,16] <- 1027401427
+IND23 [99,17] <- 72.50
+#Dia 100
+IND23 [100,14] <- (2206596119-2206595334)
+#Dia 158
+IND23 [158,13] <- 2206698880
+IND23 [158,14] <- 0
+IND23 [158,15] <- 155.71
+IND23 [158,16] <- 1027409573
+IND23 [158,17] <- 72.50
+#Dia 159
+IND23 [159,14] <- (2206700691-2206698880)
+#Dias 173 al176
+IND23 [173:176,05] <- 44993543
+IND23 [173:176,06] <- 0
+IND23 [173:176,07] <- 0.000
+IND23 [173:176,08] <- 31748.80
+IND23 [173:176,09] <- 531896
+IND23 [173:176,10] <- 0
+IND23 [173:176,11] <- 0.000
+IND23 [173:176,12] <- 375.322
+
+#Creacion de la variable new_vaccinations_per_hundred para cada pais
+
+IND20 <- mutate(IND20, new_vaccinations_per_hundred=new_vaccinations/population*100)
+IND21 <- mutate(IND21, new_vaccinations_per_hundred=new_vaccinations/population*100)
+IND22 <- mutate(IND22, new_vaccinations_per_hundred=new_vaccinations/population*100)
+IND23 <- mutate(IND23, new_vaccinations_per_hundred=new_vaccinations/population*100)
+
+#Estadisticos por año 
+
+#Casos
+Casos_IND20 <- IND20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Tasa_de_casos_IND20 <- IND20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
+                                           D.Est_total_cases=sd(total_cases_per_million),
+                                           CV_total_cases=
+                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                           Min_total_cases=min(total_cases_per_million),
+                                           Max_total_cases=max(total_cases_per_million),
+                                           Promedio_new_cases=mean(new_cases_per_million),
+                                           D.Est_new_cases=sd(new_cases_per_million),
+                                           CV_new_cases=
+                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                           Min_new_cases=min(new_cases_per_million),
+                                           Max_new_cases=max(new_cases_per_million))
+
+
+Casos_IND21 <- IND21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Tasa_de_casos_IND21 <- IND21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
+                                           D.Est_total_cases=sd(total_cases_per_million),
+                                           CV_total_cases=
+                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                           Min_total_cases=min(total_cases_per_million),
+                                           Max_total_cases=max(total_cases_per_million),
+                                           Promedio_new_cases=mean(new_cases_per_million),
+                                           D.Est_new_cases=sd(new_cases_per_million),
+                                           CV_new_cases=
+                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                           Min_new_cases=min(new_cases_per_million),
+                                           Max_new_cases=max(new_cases_per_million))
+
+Casos_IND22 <- IND22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Tasa_de_casos_IND22 <- IND22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
+                                           D.Est_total_cases=sd(total_cases_per_million),
+                                           CV_total_cases=
+                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                           Min_total_cases=min(total_cases_per_million),
+                                           Max_total_cases=max(total_cases_per_million),
+                                           Promedio_new_cases=mean(new_cases_per_million),
+                                           D.Est_new_cases=sd(new_cases_per_million),
+                                           CV_new_cases=
+                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                           Min_new_cases=min(new_cases_per_million),
+                                           Max_new_cases=max(new_cases_per_million))
+
+
+Casos_IND23 <- IND23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                   D.Est_total_cases=sd(total_cases),
+                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total_cases=min(total_cases),
+                                   Max_total_cases=max(total_cases),
+                                   Promedio_new_cases=mean(new_cases),
+                                   D.Est_new_cases=sd(new_cases),
+                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new_cases=min(new_cases),
+                                   Max_new_cases=max(new_cases))
+
+Tasa_de_casos_IND23 <- IND23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
+                                           D.Est_total_cases=sd(total_cases_per_million),
+                                           CV_total_cases=
+                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                           Min_total_cases=min(total_cases_per_million),
+                                           Max_total_cases=max(total_cases_per_million),
+                                           Promedio_new_cases=mean(new_cases_per_million),
+                                           D.Est_new_cases=sd(new_cases_per_million),
+                                           CV_new_cases=
+                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                           Min_new_cases=min(new_cases_per_million),
+                                           Max_new_cases=max(new_cases_per_million))
+
+#Vacunaciones 
+Vacunas_IND20 <- IND20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                     D.Est_total_vaccinations=sd(total_vaccinations),
+                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total_vaccinations=min(total_vaccinations),
+                                     Max_total_vaccinations=max(total_vaccinations),
+                                     Promedio_new_vaccinations=mean(new_vaccinations),
+                                     D.Est_new_vaccinations=sd(new_vaccinations),
+                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new_vaccinations=min(new_vaccinations),
+                                     Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_IND20 <- IND20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
+                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
+                                             CV_total_vaccinations=
+                                               sd(total_vaccinations_per_hundred)/
+                                               mean(total_vaccinations_per_hundred)*100,
+                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
+                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
+                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
+                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
+                                             CV_new_vaccinations=
+                                               sd(new_vaccinations_per_hundred)/
+                                               mean(new_vaccinations_per_hundred)*100,
+                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
+                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+
+Vacunas_IND21 <- IND21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                     D.Est_total_vaccinations=sd(total_vaccinations),
+                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total_vaccinations=min(total_vaccinations),
+                                     Max_total_vaccinations=max(total_vaccinations),
+                                     Promedio_new_vaccinations=mean(new_vaccinations),
+                                     D.Est_new_vaccinations=sd(new_vaccinations),
+                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new_vaccinations=min(new_vaccinations),
+                                     Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_IND21 <- IND21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
+                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
+                                             CV_total_vaccinations=
+                                               sd(total_vaccinations_per_hundred)/
+                                               mean(total_vaccinations_per_hundred)*100,
+                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
+                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
+                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
+                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
+                                             CV_new_vaccinations=
+                                               sd(new_vaccinations_per_hundred)/
+                                               mean(new_vaccinations_per_hundred)*100,
+                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
+                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+
+Vacunas_IND22 <- IND22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                     D.Est_total_vaccinations=sd(total_vaccinations),
+                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total_vaccinations=min(total_vaccinations),
+                                     Max_total_vaccinations=max(total_vaccinations),
+                                     Promedio_new_vaccinations=mean(new_vaccinations),
+                                     D.Est_new_vaccinations=sd(new_vaccinations),
+                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new_vaccinations=min(new_vaccinations),
+                                     Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_IND22 <- IND22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
+                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
+                                             CV_total_vaccinations=
+                                               sd(total_vaccinations_per_hundred)/
+                                               mean(total_vaccinations_per_hundred)*100,
+                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
+                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
+                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
+                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
+                                             CV_new_vaccinations=
+                                               sd(new_vaccinations_per_hundred)/
+                                               mean(new_vaccinations_per_hundred)*100,
+                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
+                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+
+Vacunas_IND23 <- IND23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                     D.Est_total_vaccinations=sd(total_vaccinations),
+                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total_vaccinations=min(total_vaccinations),
+                                     Max_total_vaccinations=max(total_vaccinations),
+                                     Promedio_new_vaccinations=mean(new_vaccinations),
+                                     D.Est_new_vaccinations=sd(new_vaccinations),
+                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new_vaccinations=min(new_vaccinations),
+                                     Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_IND23 <- IND23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
+                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
+                                             CV_total_vaccinations=
+                                               sd(total_vaccinations_per_hundred)/
+                                               mean(total_vaccinations_per_hundred)*100,
+                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
+                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
+                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
+                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
+                                             CV_new_vaccinations=
+                                               sd(new_vaccinations_per_hundred)/
+                                               mean(new_vaccinations_per_hundred)*100,
+                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
+                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+
+#Decesos
+
+Decesos_IND20 <- IND20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
+                                     D.Est_total_deaths=sd(total_deaths),
+                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total_deaths=min(total_deaths),
+                                     Max_total_deaths=max(total_deaths),
+                                     Promedio_new_deaths=mean(new_deaths),
+                                     D.Est_new_deaths=sd(new_deaths),
+                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new_deaths=min(new_deaths),
+                                     Max_new_deaths=max(new_deaths))
+
+Tasa_de_decesos_IND20 <- IND20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
+                                             D.Est_total_deaths=sd(total_deaths_per_million),
+                                             CV_total_deaths=
+                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                             Min_total_deaths=min(total_deaths_per_million),
+                                             Max_total_deaths=max(total_deaths_per_million),
+                                             Promedio_new_deaths=mean(new_deaths_per_million),
+                                             D.Est_new_deaths=sd(new_deaths_per_million),
+                                             CV_new_deaths=
+                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                             Min_new_deaths=min(new_deaths_per_million),
+                                             Max_new_deaths=max(new_deaths_per_million))
+
+Decesos_IND21 <- IND21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
+                                     D.Est_total_deaths=sd(total_deaths),
+                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total_deaths=min(total_deaths),
+                                     Max_total_deaths=max(total_deaths),
+                                     Promedio_new_deaths=mean(new_deaths),
+                                     D.Est_new_deaths=sd(new_deaths),
+                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new_deaths=min(new_deaths),
+                                     Max_new_deaths=max(new_deaths))
+
+Tasa_de_decesos_IND21 <- IND21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
+                                             D.Est_total_deaths=sd(total_deaths_per_million),
+                                             CV_total_deaths=
+                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                             Min_total_deaths=min(total_deaths_per_million),
+                                             Max_total_deaths=max(total_deaths_per_million),
+                                             Promedio_new_deaths=mean(new_deaths_per_million),
+                                             D.Est_new_deaths=sd(new_deaths_per_million),
+                                             CV_new_deaths=
+                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                             Min_new_deaths=min(new_deaths_per_million),
+                                             Max_new_deaths=max(new_deaths_per_million))
+
+Decesos_IND22 <- IND22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
+                                     D.Est_total_deaths=sd(total_deaths),
+                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total_deaths=min(total_deaths),
+                                     Max_total_deaths=max(total_deaths),
+                                     Promedio_new_deaths=mean(new_deaths),
+                                     D.Est_new_deaths=sd(new_deaths),
+                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new_deaths=min(new_deaths),
+                                     Max_new_deaths=max(new_deaths))
+
+Tasa_de_decesos_IND22 <- IND22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
+                                             D.Est_total_deaths=sd(total_deaths_per_million),
+                                             CV_total_deaths=
+                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                             Min_total_deaths=min(total_deaths_per_million),
+                                             Max_total_deaths=max(total_deaths_per_million),
+                                             Promedio_new_deaths=mean(new_deaths_per_million),
+                                             D.Est_new_deaths=sd(new_deaths_per_million),
+                                             CV_new_deaths=
+                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                             Min_new_deaths=min(new_deaths_per_million),
+                                             Max_new_deaths=max(new_deaths_per_million))
+
+Decesos_IND23 <- IND23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
+                                     D.Est_total_deaths=sd(total_deaths),
+                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total_deaths=min(total_deaths),
+                                     Max_total_deaths=max(total_deaths),
+                                     Promedio_new_deaths=mean(new_deaths),
+                                     D.Est_new_deaths=sd(new_deaths),
+                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new_deaths=min(new_deaths),
+                                     Max_new_deaths=max(new_deaths))
+
+Tasa_de_decesos_IND23 <- IND23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
+                                             D.Est_total_deaths=sd(total_deaths_per_million),
+                                             CV_total_deaths=
+                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                             Min_total_deaths=min(total_deaths_per_million),
+                                             Max_total_deaths=max(total_deaths_per_million),
+                                             Promedio_new_deaths=mean(new_deaths_per_million),
+                                             D.Est_new_deaths=sd(new_deaths_per_million),
+                                             CV_new_deaths=
+                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                             Min_new_deaths=min(new_deaths_per_million),
+                                             Max_new_deaths=max(new_deaths_per_million))
+
 
 #Se muestran los NA en el primer año de Covid en CHN
 apply(CHN[CHN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
