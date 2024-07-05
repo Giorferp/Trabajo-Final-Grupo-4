@@ -4055,3 +4055,93 @@ DfCUB23 <- DfCUB23 %>% mutate(new_deaths_per_million =if_else(is.na(new_deaths_p
 DfCUB23 <- DfCUB23 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 DfCUB23 <- DfCUB23 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfCUB23 <- DfCUB23 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+
+      # Estadísticas descriptivas  y tasas de DfCHN por año
+#Casos
+casos_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
+
+Tasa_de_casos_DfCHN20 <-DfCHN20 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                              D.Est_total_cases=sd(total_cases),
+                                              CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                              Min_total_cases=min(total_cases),
+                                              Max_total_cases=max(total_cases),
+                                              Promedio_new_cases=mean(new_cases),
+                                              D.Est_new_cases=sd(new_cases),
+                                              CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                              Min_new_cases=min(new_cases),
+                                              Max_new_cases=max(new_cases))
+
+casos_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
+
+Tasa_de_casos_DfCHN21<-DfCHN21 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                    D.Est_total_cases=sd(total_cases),
+                                    CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                    Min_total_cases=min(total_cases),
+                                    Max_total_cases=max(total_cases),
+                                    Promedio_new_cases=mean(new_cases),
+                                    D.Est_new_cases=sd(new_cases),
+                                    CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                    Min_new_cases=min(new_cases),
+                                    Max_new_cases=max(new_cases))
+
+casos_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
+
+Tasa_de_casos_DfCHN22<-DfCHN22 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                             D.Est_total_cases=sd(total_cases),
+                                             CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                             Min_total_cases=min(total_cases),
+                                             Max_total_cases=max(total_cases),
+                                             Promedio_new_cases=mean(new_cases),
+                                             D.Est_new_cases=sd(new_cases),
+                                             CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                             Min_new_cases=min(new_cases),
+                                             Max_new_cases=max(new_cases))
+
+casos_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                       D.Est_total_cases=sd(total_cases),
+                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total_cases=min(total_cases),
+                                       Max_total_cases=max(total_cases),
+                                       Promedio_new_cases=mean(new_cases),
+                                       D.Est_new_cases=sd(new_cases),
+                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new_cases=min(new_cases),
+                                       Max_new_cases=max(new_cases))
+
+Tasa_de_casos_DfCHN23<- DfCHN23 %>% summarise(Promedio_total_cases=mean(total_cases),
+                                              D.Est_total_cases=sd(total_cases),
+                                              CV_total_cases=sd(total_cases)/mean(total_cases)*100,
+                                              Min_total_cases=min(total_cases),
+                                              Max_total_cases=max(total_cases),
+                                              Promedio_new_cases=mean(new_cases),
+                                              D.Est_new_cases=sd(new_cases),
+                                              CV_new_cases=sd(new_cases)/mean(new_cases)*100,
+                                              Min_new_cases=min(new_cases),
+                                              Max_new_cases=max(new_cases))
