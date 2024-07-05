@@ -4243,3 +4243,93 @@ Tasa_de_decesos_DfCHN23<-DfCHN23 %>% summarise(Promedio_total_deaths=mean(total_
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
                                                Min_new_deaths=min(new_deaths_per_million),
                                                Max_new_deaths=max(new_deaths_per_million))
+
+#Vacunaciones
+
+Vacunas_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                         D.Est_total_vaccinations=sd(total_vaccinations),
+                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total_vaccinations=min(total_vaccinations),
+                                         Max_total_vaccinations=max(total_vaccinations),
+                                         Promedio_new_vaccinations=mean(new_vaccinations),
+                                         D.Est_new_vaccinations=sd(new_vaccinations),
+                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new_vaccinations=min(new_vaccinations),
+                                         Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_DfCHN20<-DfCHN20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                               D.Est_total_vaccinations=sd(total_vaccinations),
+                                               CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                               Min_total_vaccinations=min(total_vaccinations),
+                                               Max_total_vaccinations=max(total_vaccinations),
+                                               Promedio_new_vaccinations=mean(new_vaccinations),
+                                               D.Est_new_vaccinations=sd(new_vaccinations),
+                                               CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                               Min_new_vaccinations=min(new_vaccinations),
+                                               Max_new_vaccinations=max(new_vaccinations))
+
+Vacunas_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                         D.Est_total_vaccinations=sd(total_vaccinations),
+                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total_vaccinations=min(total_vaccinations),
+                                         Max_total_vaccinations=max(total_vaccinations),
+                                         Promedio_new_vaccinations=mean(new_vaccinations),
+                                         D.Est_new_vaccinations=sd(new_vaccinations),
+                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new_vaccinations=min(new_vaccinations),
+                                         Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_DfCHN21<-DfCHN21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                               D.Est_total_vaccinations=sd(total_vaccinations),
+                                               CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                               Min_total_vaccinations=min(total_vaccinations),
+                                               Max_total_vaccinations=max(total_vaccinations),
+                                               Promedio_new_vaccinations=mean(new_vaccinations),
+                                               D.Est_new_vaccinations=sd(new_vaccinations),
+                                               CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                               Min_new_vaccinations=min(new_vaccinations),
+                                               Max_new_vaccinations=max(new_vaccinations))
+
+Vacunas_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                         D.Est_total_vaccinations=sd(total_vaccinations),
+                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total_vaccinations=min(total_vaccinations),
+                                         Max_total_vaccinations=max(total_vaccinations),
+                                         Promedio_new_vaccinations=mean(new_vaccinations),
+                                         D.Est_new_vaccinations=sd(new_vaccinations),
+                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new_vaccinations=min(new_vaccinations),
+                                         Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_DfCHN22<-DfCHN22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                               D.Est_total_vaccinations=sd(total_vaccinations),
+                                               CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                               Min_total_vaccinations=min(total_vaccinations),
+                                               Max_total_vaccinations=max(total_vaccinations),
+                                               Promedio_new_vaccinations=mean(new_vaccinations),
+                                               D.Est_new_vaccinations=sd(new_vaccinations),
+                                               CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                               Min_new_vaccinations=min(new_vaccinations),
+                                               Max_new_vaccinations=max(new_vaccinations))
+
+Vacunas_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                         D.Est_total_vaccinations=sd(total_vaccinations),
+                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total_vaccinations=min(total_vaccinations),
+                                         Max_total_vaccinations=max(total_vaccinations),
+                                         Promedio_new_vaccinations=mean(new_vaccinations),
+                                         D.Est_new_vaccinations=sd(new_vaccinations),
+                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new_vaccinations=min(new_vaccinations),
+                                         Max_new_vaccinations=max(new_vaccinations))
+
+Tasa_de_vacunas_DfCHN23<-DfCHN23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
+                                               D.Est_total_vaccinations=sd(total_vaccinations),
+                                               CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                               Min_total_vaccinations=min(total_vaccinations),
+                                               Max_total_vaccinations=max(total_vaccinations),
+                                               Promedio_new_vaccinations=mean(new_vaccinations),
+                                               D.Est_new_vaccinations=sd(new_vaccinations),
+                                               CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                               Min_new_vaccinations=min(new_vaccinations),
+                                               Max_new_vaccinations=max(new_vaccinations))
