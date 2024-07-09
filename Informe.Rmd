@@ -1,0 +1,51 @@
+---
+title: "Impacto del Covid-19 en algunos de los países productores de vacunas"
+author: "Fermin Giovanni, Pinto Miguel, Vileras Alondra"
+date: "2024-07-03"
+output: pdf_document
+theme: journal
+code_folding: hide
+---
+Introducción 
+
+El presente informe tiene como objetivo analizar y comparar el impacto que tuvo
+la pandemia producida por el Covid-19  durante los años 2020, 2021, 2022 y 2023
+en algunos de los países productores de vacunas. Para esto se utilizará el
+cálculo, análisis y comparación de algunas medidas estadísticas en variables 
+tales como el total de contagios, total de decesos y total de vacunados; al 
+igual que las nuevas apariciones de contagios, decesos y vacunados que hubo día
+a día durante los cuatro años mencionados anteriormente.
+
+Estadísticas de cada país
+
+Alemania 2020:
+```{r}
+library(tidyverse)
+library(rmarkdown)
+library(tidyr)
+library(readr)
+library(tinytex)
+```
+
+```{r}
+read.csv(Covid_G4_Base_de_Datos)
+```
+
+
+Reino Unido
+
+España
+
+Rusia
+
+Estados Unidos
+
+Cuba
+
+Turquía 
+
+Irán 
+
+India
+
+China
