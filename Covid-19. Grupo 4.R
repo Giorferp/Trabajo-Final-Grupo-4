@@ -3,7 +3,8 @@
 library(tidyverse)
 library(dplyr)
 library(readr)
-Covid_G4_Base_de_Datos <- read_csv("BBDD/Covid G4 Base de Datos.csv")
+Covid_G4_Base_de_Datos <-
+  read_csv ("GitHub/Trabajo-Final-Grupo-4/BBDD/Covid G4 Base de Datos.csv")
 #Cambio de nombre a la base de datos
 
 df <- Covid_G4_Base_de_Datos
