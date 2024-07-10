@@ -3769,7 +3769,7 @@ DfRUS21 <- DfRUS21 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(tota
 apply(DfRUS[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 DfRUS22 <- data.frame(DfRUS [730:1094,])
 
-library(dplyr)
+
 DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfRUS22 <- DfRUS22 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
@@ -3804,7 +3804,7 @@ apply(DfIRN[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 DfIRN22 <- data.frame(DfIRN[730:1094,])
 DfIRN22 <- DfIRN22 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 
-library(dplyr)
+
 
 DfIRN22 <- DfIRN22 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfIRN22 <- DfIRN22 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
@@ -3816,7 +3816,7 @@ DfIRN23 <- DfIRN23 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinatio
 DfIRN23 <- DfIRN23 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 
 
-library(dplyr)
+
 
 
 apply(DfCUB[DfCUB$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
