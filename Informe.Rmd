@@ -16,8 +16,6 @@ tales como el total de contagios, total de decesos y total de vacunados; al
 igual que las nuevas apariciones de contagios, decesos y vacunados que hubo día
 a día durante los cuatro años mencionados anteriormente.
 
-Estadísticas de cada país
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -3780,27 +3778,90 @@ TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
 
 
 ```
+**Inicios de la Pandemia**
+El 25 de noviembre del año 2019, China comienza a detectar un patógeno que
+comenzaba a exparsise entre los habitantes de Wuhan. No fue sino tiempo después,
+el 30 de diciembre de 2019, que China informa al medio internacional sobre la 
+aparición de una enfermedad que atacaba al sistema respiratorio.
+El virus originado en la ciudad de Wuhan (China) rápidamente comenzó
+a tener el interés de la comunidad internacional.
+El 11, 20 y 27 de enero del año 2020, España, Estados Unidos y Alemania reportan los primeros casos de Covid-19 en sus territorios, por lo que el 30 de enero del mismo año la Organización Mundial de la Salud emite una declaración de emergencia de salud pública de importancia internacional. Posteriormente, otros países se fueron realizando sus reportes. El 30 de enero se reportó el primer caso en India, un día después en Rusia, el 1 de febrero en Reino Unido, 21 de febrero en Irán, 3 de marzo en Cuba, 10 de marzo en turquía, etc.
+**China**
 
-**Alemania 2020:**
+**España**
+
+**Estados Unidos**
+
+**Alemania**
+**2020**
+Tras el reporte del nuevo virus por parte de China, Alemania comienza sus 
+investigaciones, y desarrollan tests rápidos para identificar a los portadores
+del virus chino.
+El primer contagio de Covid-19 en Alemania, ocurrió el 27 de enero del año 2020, un empleado de la compañia Starnberg (quienes poseen estrechos lazos con China) resulta positivo para las prubas de Covid-19. Posterior al evento, Alemania registra su primer deceso el 8 de marzo de ese año.
+A contininuación se muestra un resumen de lo registrado en Alemania en 2020:
+
 ```{r, echo=TRUE}
 TablaDEU20
 ```
 
+La rápida expansión del Covid-19 a inicios de año, en Alemania, se debió a la
+celebración de Carnavales alemanes, lo que produjo contagios en distintos estados del país. 
+A mediados de año Alemania registra un incremento en los nuevos casos de Covid-19, superando así los mil casos diarios y obligando al Estado a tomar medidas de confinamiento con las que pudieran tener una economía activa.
+En diciembre de 2020 se comienzan las vacunaciones, pues Alemania anuncia su campaña de vacunación por parte de Pfizer.
 
-Reino Unido
+**2021**
 
-España
+Resumen de lo registrado por Alemania en 2021:
 
-Rusia
+```{r, echo=TRUE}
+TablaDEU21
+```
 
-Estados Unidos
+A penas iniciaba el año cuando el gobierno alemán decide endurecer el confinamiento y los casos de Covid-19 siguen en ascenso.
+Para mediados de año el 50% de los alemanes ya habían recibido por lo menos la primera vacuna contra el Covid-19, sin embargo, Alemania comienza a contar contagios de cinco cifras al día a partir de octubre.
+A pesar de que a mediados de año Alemania poseía por lo menos al 50% de su población vacunada. Al transcurrir el tiempo a penas logran superar el 70% para finales de año, esto provocado por la desconfianza que generaba la vacunación.
+2021 finaliza con más de 100.000 muertos registrados en Alemania
 
-Cuba
+**2022**
+Resumen de lo registrado por Alemania en 2022:
+```{r, echo=TRUE}
+TablaDEU22
+```
 
-Turquía 
+Alemania anuncia superar los 150 millones de vacunados en su población, sin embargo esto representa al 75% de los vacunados a inicios de año.
+A pesar del logro, los contagios de Covid-19 no hacen más que aumentar, esto debido a la aparición de la nueva variante de Covid, la cual fue denominada como variante Ómicron, y hace que las cifras de contagios diarios aumenten a seis.
+El estado anuncia nuevas campañas de vacunación desde inicios de año, sin embargo solo logran aumentar un 2% en su total de vacunados.
 
-Irán 
+Berlín (dpa) - La pandemia del coronavirus ha terminado, según el virólogo Christian Drosten. "Estamos asistiendo este invierno a la primera oleada endémica de Sars-CoV-2, lo cual significa, a mi juicio, que ha terminado la pandemia"
 
-India
+**2023**
+Resumen de lo registrado en Alemania en 2023:
+```{r, echo=TRUE}
+TablaDEU23
+```
 
-China
+Para 2023 Alemania comienza a relajar las restricciones, se deja de utilizar los cubrebocas a pesar de el incremento de casos en los primeros meses del año.
+Los nuevos casos registrados de Covid-19 comienzan a disminuir a partir del segundo trimestre del año.
+El 77.8% de la población fue vacunada hasta el último registro, 64876299 personas vacunadas en total.
+
+**India**
+2021
+Aparición de la variante Delta
+**Rusia**
+
+**Reino Unido**
+
+**Irán**
+
+**Cuba**
+
+**Turquía**
+
+**Desempeño de los países**
+
+Algunas fuentes indican lo siguente: 
+Pero con 1295 muertes, el índice de letalidad de Alemania se situó en 1,4 por ciento en comparación con el 12 por ciento en Italia; alrededor del 10 por ciento en España, Francia y el Reino Unido; 4 por ciento en China, y 2,5 por ciento en Estados Unidos. Incluso Corea del Sur, el país modelo en cuanto a aplanar la curva, tiene una tasa de letalidad más alta: 1,7 por ciento.
+Los expertos sostienen que hay varias respuestas a estas preguntas: una combinación de tergiversaciones estadísticas y diferencias muy reales en la forma en que el país ha manejado la pandemia.
+La edad promedio de las personas contagiadas en Alemania es menor que en muchos otros países. Según Kräusslich, muchos de los primeros pacientes contrajeron el virus en centros para esquiar de Austria e Italia, así que eran relativamente jóvenes y sanos.
+(Bennhold, Por qué la tasa de mortalidad de Alemania es tan baja, 2021)
+
