@@ -2776,35 +2776,41 @@ Tasa_de_decesos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_deaths_pe
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
 
-#Con los siguientes graficos representamos el analisis:
-#España en los 4 años de pandemia
+#LLamado de Librerias
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(ggpmisc)
 
+#Graficos del analisis
+
+#Graficos España
 #2020
-#Casos
+#Total de casos y Nuevos casos de españa en el 2020
 
 ggplot(ESP20, aes(x = date, y = total_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Casos totales") +
   ggtitle("Casos totales del 2020", subtitle = "Total de casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))    
-  
+
 ggplot(ESP20, aes(x = date, y = new_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Nuevos casos") +
   ggtitle("Nuevos casos del 2020", subtitle = "Nuevos casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
-  theme(panel.border = element_rect(fill = "transparent", # Necesario para agregar el borde
-                                    color = "#212121",            # Color del borde
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",
                                     size = 1))
 
-#Decesos
+#Total de muertes y Nuevas muertes
 
 ggplot(ESP20, aes(x = date, y = total_deaths)) +
   geom_area(fill = "#2E7D32", alpha = 0.7) +
@@ -2816,7 +2822,7 @@ ggplot(ESP20, aes(x = date, y = total_deaths)) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))
-  
+
 ggplot(ESP20, aes(x = date, y = new_deaths)) +
   geom_area(fill = "#2E7D32", alpha = 0.7) +
   geom_line(fill = "#088158") +
@@ -2836,27 +2842,28 @@ ggplot(ESP20, aes(x = date, y = new_deaths)) +
 #2021
 #Casos diarios 
 ggplot(ESP21, aes(x = date, y = total_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Casos totales") +
   ggtitle("Casos totales del 2020", subtitle = "Total de casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))    
 
 ggplot(ESP21, aes(x = date, y = new_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Nuevos casos") +
   ggtitle("Nuevos casos del 2020", subtitle = "Nuevos casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
-  theme(panel.border = element_rect(fill = "transparent", # Necesario para agregar el borde
-                                    color = "#212121",            # Color del borde
-                                    size = 1))
- 
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
+  theme(panel.border = element_rect(fill = "transparent",
+                                    color = "#212121",      
+                                    size = 1)) +
+  stat_peaks(geom = "point", span = 15, color = "#6551CC", size = 2)
+
 #Decesos diarios
 
 ggplot(ESP21, aes(x = date, y = total_deaths)) +
@@ -2884,23 +2891,23 @@ ggplot(ESP21, aes(x = date, y = new_deaths)) +
 #Vacunados diarios
 
 ggplot(ESP21, aes(x = date, y = total_vaccinations)) +
-  geom_area(fill = "#689F38", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Total de vacunas") +
   ggtitle("Total de vacunas del 2021", subtitle = "Total de Vacunas por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))
 
 ggplot(ESP21, aes(x = date, y = new_vaccinations)) +
-  geom_area(fill = "#689F38", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Nuevas vacunas") +
   ggtitle("Nuevas vacunas del 2021", subtitle = "Nuevas vacunas por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))
@@ -2909,25 +2916,25 @@ ggplot(ESP21, aes(x = date, y = new_vaccinations)) +
 
 #Casos diarios 
 ggplot(ESP22, aes(x = date, y = total_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Casos totales") +
   ggtitle("Casos totales del 2022", subtitle = "Total de casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))    
 
 ggplot(ESP22, aes(x = date, y = new_cases)) +
-  geom_area(fill = "#98DF8A", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Nuevos casos") +
   ggtitle("Nuevos casos del 2022", subtitle = "Nuevos casos por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
-  theme(panel.border = element_rect(fill = "transparent", # Necesario para agregar el borde
-                                    color = "#212121",            # Color del borde
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",
                                     size = 1))
 
 #Decesos diarios
@@ -2957,23 +2964,96 @@ ggplot(ESP22, aes(x = date, y = new_deaths)) +
 #Vacunados diarios
 
 ggplot(ESP22, aes(x = date, y = total_vaccinations)) +
-  geom_area(fill = "#689F38", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Total de vacunas") +
   ggtitle("Total de vacunas del 2022", subtitle = "Total de Vacunas por día") + 
-  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))
 
 ggplot(ESP22, aes(x = date, y = new_vaccinations)) +
-  geom_area(fill = "#689F38", alpha = 0.7) +
-  geom_line(fill = "#088158") +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
   scale_x_date(date_breaks = "3 months") +
   labs(x = "Meses", y = "Nuevas vacunas") +
   ggtitle("Nuevas vacunas del 2022", subtitle = "Nuevas vacunas por día") + 
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#2023
+
+#Total de casos y nuevos casos
+ggplot(ESP23, aes(x = date, y = total_cases)) +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Casos totales") +
+  ggtitle("Casos totales del 2023", subtitle = "Total de casos por día") + 
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))    
+
+ggplot(ESP23, aes(x = date, y = new_cases)) +
+  geom_area(fill = "#6551CC", alpha = 0.7) +
+  geom_line(fill = "#260F99") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Nuevos casos") +
+  ggtitle("Nuevos casos del 2023", subtitle = "Nuevos casos por día") + 
+  theme(panel.background = element_rect(fill = "#EDE7F6")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",
+                                    size = 1))
+
+#Total de muertes y Nuevas muertes
+
+ggplot(ESP23, aes(x = date, y = total_deaths)) +
+  geom_area(fill = "#2E7D32", alpha = 0.7) +
+  geom_line(fill = "#088158") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Decesos totales") +
+  ggtitle("Decesos totales del 2023", subtitle = "Total de Decesos por día") + 
   theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+ggplot(ESP23, aes(x = date, y = new_deaths)) +
+  geom_area(fill = "#2E7D32", alpha = 0.7) +
+  geom_line(fill = "#088158") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Nuevas muertes") +
+  ggtitle("Nuevas muertes del 2023", subtitle = "Nuevas muertes por día") + 
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#Total de vacunas y nuevas vacunas
+
+ggplot(ESP23, aes(x = date, y = total_vaccinations)) +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Total de vacunas") +
+  ggtitle("Total de vacunas del 2023", subtitle = "Total de Vacunas por día") + 
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+ggplot(ESP23, aes(x = date, y = new_vaccinations)) +
+  geom_area(fill = "#B26F2C", alpha = 0.7) +
+  geom_line(fill = "#99540F") +
+  scale_x_date(date_breaks = "3 months") +
+  labs(x = "Meses", y = "Nuevas vacunas") +
+  ggtitle("Nuevas vacunas del 2023", subtitle = "Nuevas vacunas por día") + 
+  theme(panel.background = element_rect(fill = "#F2DACE")) +
   theme(panel.border = element_rect(fill = "transparent", 
                                     color = "#212121",           
                                     size = 1))
