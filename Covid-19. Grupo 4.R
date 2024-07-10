@@ -256,7 +256,13 @@ DfUS22 <-DfUS22 %>% mutate (new_deaths_per_million = if_else
                             (is.na(new_deaths_per_million), 0, new_deaths_per_million))
 
 DfUS23 <- data.frame(DfUS [DfUS$date>"2022-12-31",])
-
+DfUS23 [130:172,13] <- 676728782
+DfUS23 [130:172,14] <- 0
+DfUS23 [130:172,15] <- 203.83
+DfUS23 [130:172,16] <- 270227181
+DfUS23 [130:172,17] <- 81.39
+DfUS23 [130:172,18] <- 338289856
+DfUS23 [130:172,19] <- 0.003473648
 
 #Valores NA de DEU
 
@@ -298,8 +304,16 @@ DfDEU22 <- data.frame(DfDEU [730:1094,])
 apply(DfDEU22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 
-DfDEU23 <- data.frame(DfDEU [DfDEU$date>"2022-12-31",])
+DfDEU23 <- data.frame(DfDEU [1095:1266,])
 DfDEU23 [172,6:7] <- 0
+DfDEU23 [74:172,13] <- 192221468
+DfDEU23 [74:172,14] <- 0
+DfDEU23 [74:172,15] <- 230.56
+DfDEU23 [74:172,16] <- 64876299
+DfDEU23 [74:172,17] <- 77.8
+
+
+
 
 #Valores NA de TUR
 
@@ -459,6 +473,13 @@ DfTUR22 [306:325,17] <- 67.89
 #Dia 326
 DfTUR22 [326,14] <- (152543341 - 152475057)
 
+DfTUR22 [327:365,13] <- 152543341
+DfTUR22 [327:365,14] <- 0
+DfTUR22 [327:365,15] <- 178.75
+DfTUR22 [327:365,16] <- 57941051
+DfTUR22 [327:365,17] <- 67.89
+DfTUR22 [327:365,18] <- 85341248
+DfTUR22 [327:365,19] <- 0.0800128913
 
 DfTUR23 <- data.frame(DfTUR [DfTUR$date>"2022-12-31",])
 
@@ -1384,8 +1405,7 @@ Tasa_de_decesos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_death
                                                  Min_new=min(new_deaths_per_million),
                                                  Max_new=max(new_deaths_per_million))
 
-TablaDEU20 <- rbind(Casos = Casos_DfDEU20, Dcesos = Decesos_DfDEU20,
-                    Vacunados = Vacunas_DfDEU20)
+
 
 #Graficos correspondientes a DEU, TUR y US
 
@@ -3889,7 +3909,68 @@ Tasa_de_decesos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_deaths_pe
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
                                              Min_new=min(new_deaths_per_million),
                                              Max_new=max(new_deaths_per_million))
+#Tablas
+TablaDEU20 <- rbind(Casos = Casos_DfDEU20, Decesos = Decesos_DfDEU20,
+                    Vacunados = Vacunas_DfDEU20)
 
+
+TablaDEU21 <- rbind(Casos = Casos_DfDEU21, Decesos = Decesos_DfDEU21,
+                    Vacunados = Vacunas_DfDEU21)
+
+TablaDEU22 <- rbind(Casos = Casos_DfDEU22, Decesos = Decesos_DfDEU22,
+                    Vacunados = Vacunas_DfDEU22)
+
+TablaDEU23 <- rbind(Casos = Casos_DfDEU23, Decesos = Decesos_DfDEU23,
+                    Vacunados = Vacunas_DfDEU23)
+
+TablaTUR20 <- rbind(Casos = Casos_DfTUR20, Decesos = Decesos_DfTUR20,
+                    Vacunados = Vacunas_DfTUR20)
+
+
+TablaTUR21 <- rbind(Casos = Casos_DfTUR21, Decesos = Decesos_DfTUR21,
+                    Vacunados = Vacunas_DfTUR21)
+
+TablaTUR22 <- rbind(Casos = Casos_DfTUR22, Decesos = Decesos_DfTUR22,
+                    Vacunados = Vacunas_DfTUR22)
+
+TablaTUR23 <- rbind(Casos = Casos_DfTUR23, Decesos = Decesos_DfTUR23,
+                    Vacunados = Vacunas_DfTUR23)
+
+TablaESP20 <- rbind(Casos = Casos_ESP20, Decesos = Decesos_ESP20,
+                    Vacunados = Vacunas_ESP20)
+
+TablaESP21 <- rbind(Casos = Casos_ESP21, Decesos = Decesos_ESP21,
+                    Vacunados = Vacunas_ESP21)
+
+TablaESP22 <- rbind(Casos = Casos_ESP22, Decesos = Decesos_ESP22,
+                    Vacunados = Vacunas_ESP22)
+
+TablaESP23 <- rbind(Casos = Casos_ESP23, Decesos = Decesos_ESP23,
+                    Vacunados = Vacunas_ESP23)
+
+TablaGBR20 <- rbind(Casos = Casos_GBR20, Decesos = Decesos_GBR20,
+                    Vacunados = Vacunas_GBR20)
+
+TablaGBR21 <- rbind(Casos = Casos_GBR21, Decesos = Decesos_GBR21,
+                    Vacunados = Vacunas_GBR21)
+
+TablaGBR22 <- rbind(Casos = Casos_GBR22, Decesos = Decesos_GBR22,
+                    Vacunados = Vacunas_GBR22)
+
+TablaGBR23 <- rbind(Casos = Casos_GBR23, Decesos = Decesos_GBR23,
+                    Vacunados = Vacunas_GBR23)
+
+TablaIND20 <- rbind(Casos = Casos_IND20, Decesos = Decesos_IND20,
+                    Vacunados = Vacunas_IND20)
+
+TablaIND21 <- rbind(Casos = Casos_IND21, Decesos = Decesos_IND21,
+                    Vacunados = Vacunas_IND21)
+
+TablaIND22 <- rbind(Casos = Casos_IND22, Decesos = Decesos_IND22,
+                    Vacunados = Vacunas_IND22)
+
+TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
+                    Vacunados = Vacunas_IND23)
 
 #Se muestran los NA en el primer año de Covid en CHN
 apply(CHN[CHN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
@@ -3902,6 +3983,7 @@ CHN <- CHN %>% select(index, iso_code, continent, location, date,
                       total_deaths_per_million, 
                       total_vaccinations, new_vaccinations, 
                       total_vaccinations_per_hundred, population)
+
 # Cambio de valores NA en China en el primer año
 DfCHN20 <- data.frame (CHN [CHN$date<"2021-01-01",], na.rm = TRUE)
 DfCHN20 <- CHN20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
@@ -5169,3 +5251,6 @@ Tasa_de_decesos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total_deaths=mean(total_
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
                                                Min_new_deaths=min(new_deaths_per_million),
                                                Max_new_deaths=max(new_deaths_per_million))
+
+
+
