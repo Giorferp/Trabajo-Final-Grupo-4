@@ -482,912 +482,910 @@ DfTUR23 <- mutate(DfTUR23, new_vaccinations_per_hundred=new_vaccinations/populat
 #Estadisticas de DfUS, DfDEU y DfTURpor año
 
 #Estados Unidos, Casos
-Casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
+Casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
 
-Casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
+Casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
+Casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
+Casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 #Estados Unidos Vacunaciones 
-Vacunas_DfUS20 <- DfUS20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                       D.Est_total_vaccinations=sd(total_vaccinations),
-                                       CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                       Min_total_vaccinations=min(total_vaccinations),
-                                       Max_total_vaccinations=max(total_vaccinations),
-                                       Promedio_new_vaccinations=mean(new_vaccinations),
-                                       D.Est_new_vaccinations=sd(new_vaccinations),
-                                       CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                       Min_new_vaccinations=min(new_vaccinations),
-                                       Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfUS20 <- DfUS20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                               D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                               CV_total_vaccinations=
+Tasa_de_vacunas_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
                                                  sd(total_vaccinations_per_hundred)/
                                                  mean(total_vaccinations_per_hundred)*100,
-                                               Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                               Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                               Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                               D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                               CV_new_vaccinations=
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
                                                  sd(new_vaccinations_per_hundred)/
                                                  mean(new_vaccinations_per_hundred)*100,
-                                               Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                               Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfUS21 <- DfUS21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                       D.Est_total_vaccinations=sd(total_vaccinations),
-                                       CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                       Min_total_vaccinations=min(total_vaccinations),
-                                       Max_total_vaccinations=max(total_vaccinations),
-                                       Promedio_new_vaccinations=mean(new_vaccinations),
-                                       D.Est_new_vaccinations=sd(new_vaccinations),
-                                       CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                       Min_new_vaccinations=min(new_vaccinations),
-                                       Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfUS21 <- DfUS21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                               D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                               CV_total_vaccinations=
+Tasa_de_vacunas_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
                                                  sd(total_vaccinations_per_hundred)/
                                                  mean(total_vaccinations_per_hundred)*100,
-                                               Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                               Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                               Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                               D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                               CV_new_vaccinations=
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
                                                  sd(new_vaccinations_per_hundred)/
                                                  mean(new_vaccinations_per_hundred)*100,
-                                               Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                               Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfUS22 <- DfUS22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                       D.Est_total_vaccinations=sd(total_vaccinations),
-                                       CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                       Min_total_vaccinations=min(total_vaccinations),
-                                       Max_total_vaccinations=max(total_vaccinations),
-                                       Promedio_new_vaccinations=mean(new_vaccinations),
-                                       D.Est_new_vaccinations=sd(new_vaccinations),
-                                       CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                       Min_new_vaccinations=min(new_vaccinations),
-                                       Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfUS22 <- DfUS22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                               D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                               CV_total_vaccinations=
+Tasa_de_vacunas_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
                                                  sd(total_vaccinations_per_hundred)/
                                                  mean(total_vaccinations_per_hundred)*100,
-                                               Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                               Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                               Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                               D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                               CV_new_vaccinations=
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
                                                  sd(new_vaccinations_per_hundred)/
                                                  mean(new_vaccinations_per_hundred)*100,
-                                               Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                               Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfUS23 <- DfUS23 [1:129,] %>% summarise (Promedio_total_vaccinations=mean(total_vaccinations),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations),
-                                                 CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations),
-                                                 Max_total_vaccinations=max(total_vaccinations),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations),
-                                                 CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations),
-                                                 Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfUS23 <- DfUS23 [1:129,] %>% summarise(Promedio_total_vaccinations=
-                                                          mean(total_vaccinations_per_hundred),
-                                                        D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                        CV_total_vaccinations=
-                                                          sd(total_vaccinations_per_hundred)/
-                                                          mean(total_vaccinations_per_hundred)*100,
-                                                        Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                        Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                        Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                        D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                        CV_new_vaccinations=
-                                                          sd(new_vaccinations_per_hundred)/
-                                                          mean(new_vaccinations_per_hundred)*100,
-                                                        Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                        Max_new_vaccinations=max(new_vaccinations_per_hundred))
-
-
-
+Tasa_de_vacunas_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 #Estados Unidos, Decesos
 
-Decesos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                       D.Est_total_deaths=sd(total_deaths),
-                                       CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                       Min_total_deaths=min(total_deaths),
-                                       Max_total_deaths=max(total_deaths),
-                                       Promedio_new_deaths=mean(new_deaths),
-                                       D.Est_new_deaths=sd(new_deaths),
-                                       CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                       Min_new_deaths=min(new_deaths),
-                                       Max_new_deaths=max(new_deaths))
+Decesos_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfUS20 <- DfUS20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                               D.Est_total_deaths=sd(total_deaths_per_million),
-                                               CV_total_deaths=
+Tasa_de_decesos_DfUS20 <- DfUS20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
                                                  sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                               Min_total_deaths=min(total_deaths_per_million),
-                                               Max_total_deaths=max(total_deaths_per_million),
-                                               Promedio_new_deaths=mean(new_deaths_per_million),
-                                               D.Est_new_deaths=sd(new_deaths_per_million),
-                                               CV_new_deaths=
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                               Min_new_deaths=min(new_deaths_per_million),
-                                               Max_new_deaths=max(new_deaths_per_million))
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                       D.Est_total_deaths=sd(total_deaths),
-                                       CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                       Min_total_deaths=min(total_deaths),
-                                       Max_total_deaths=max(total_deaths),
-                                       Promedio_new_deaths=mean(new_deaths),
-                                       D.Est_new_deaths=sd(new_deaths),
-                                       CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                       Min_new_deaths=min(new_deaths),
-                                       Max_new_deaths=max(new_deaths))
+Decesos_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfUS21 <- DfUS21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                               D.Est_total_deaths=sd(total_deaths_per_million),
-                                               CV_total_deaths=
+Tasa_de_decesos_DfUS21 <- DfUS21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
                                                  sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                               Min_total_deaths=min(total_deaths_per_million),
-                                               Max_total_deaths=max(total_deaths_per_million),
-                                               Promedio_new_deaths=mean(new_deaths_per_million),
-                                               D.Est_new_deaths=sd(new_deaths_per_million),
-                                               CV_new_deaths=
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                               Min_new_deaths=min(new_deaths_per_million),
-                                               Max_new_deaths=max(new_deaths_per_million))
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                       D.Est_total_deaths=sd(total_deaths),
-                                       CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                       Min_total_deaths=min(total_deaths),
-                                       Max_total_deaths=max(total_deaths),
-                                       Promedio_new_deaths=mean(new_deaths),
-                                       D.Est_new_deaths=sd(new_deaths),
-                                       CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                       Min_new_deaths=min(new_deaths),
-                                       Max_new_deaths=max(new_deaths))
+Decesos_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfUS22 <- DfUS22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                               D.Est_total_deaths=sd(total_deaths_per_million),
-                                               CV_total_deaths=
+Tasa_de_decesos_DfUS22 <- DfUS22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
                                                  sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                               Min_total_deaths=min(total_deaths_per_million),
-                                               Max_total_deaths=max(total_deaths_per_million),
-                                               Promedio_new_deaths=mean(new_deaths_per_million),
-                                               D.Est_new_deaths=sd(new_deaths_per_million),
-                                               CV_new_deaths=
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                               Min_new_deaths=min(new_deaths_per_million),
-                                               Max_new_deaths=max(new_deaths_per_million))
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                       D.Est_total_deaths=sd(total_deaths),
-                                       CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                       Min_total_deaths=min(total_deaths),
-                                       Max_total_deaths=max(total_deaths),
-                                       Promedio_new_deaths=mean(new_deaths),
-                                       D.Est_new_deaths=sd(new_deaths),
-                                       CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                       Min_new_deaths=min(new_deaths),
-                                       Max_new_deaths=max(new_deaths))
+Decesos_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfUS23 <- DfUS23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                               D.Est_total_deaths=sd(total_deaths_per_million),
-                                               CV_total_deaths=
+Tasa_de_decesos_DfUS23 <- DfUS23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
                                                  sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                               Min_total_deaths=min(total_deaths_per_million),
-                                               Max_total_deaths=max(total_deaths_per_million),
-                                               Promedio_new_deaths=mean(new_deaths_per_million),
-                                               D.Est_new_deaths=sd(new_deaths_per_million),
-                                               CV_new_deaths=
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                               Min_new_deaths=min(new_deaths_per_million),
-                                               Max_new_deaths=max(new_deaths_per_million))
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 #Alemania, Casos
 
-Casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
-                                                 sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
-                                                 sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+Tasa_de_casos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
 
-Tasa_de_casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
-                                                 sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
-                                                 sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+Casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Tasa_de_casos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Tasa_de_casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
-                                                 sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
-                                                 sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+Casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Casos_DfDEU23 <- DfDEU23[1:172,] %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Tasa_de_casos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Tasa_de_casos_DfDEU23 <- DfDEU23[1:172,] %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
-                                                 sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
-                                                 sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+Casos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
+
+Tasa_de_casos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
 #Vacunas en Alemania
 
-Vacunas_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                         D.Est_total_vaccinations=sd(total_vaccinations),
-                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                         Min_total_vaccinations=min(total_vaccinations),
-                                         Max_total_vaccinations=max(total_vaccinations),
-                                         Promedio_new_vaccinations=mean(new_vaccinations),
-                                         D.Est_new_vaccinations=sd(new_vaccinations),
-                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                         Min_new_vaccinations=min(new_vaccinations),
-                                         Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
-                                                   sd(total_vaccinations_per_hundred)/
-                                                   mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
-                                                   sd(new_vaccinations_per_hundred)/
-                                                   mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_vacunas_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                         D.Est_total_vaccinations=sd(total_vaccinations),
-                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                         Min_total_vaccinations=min(total_vaccinations),
-                                         Max_total_vaccinations=max(total_vaccinations),
-                                         Promedio_new_vaccinations=mean(new_vaccinations),
-                                         D.Est_new_vaccinations=sd(new_vaccinations),
-                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                         Min_new_vaccinations=min(new_vaccinations),
-                                         Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
-                                                   sd(total_vaccinations_per_hundred)/
-                                                   mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
-                                                   sd(new_vaccinations_per_hundred)/
-                                                   mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_vacunas_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                         D.Est_total_vaccinations=sd(total_vaccinations),
-                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                         Min_total_vaccinations=min(total_vaccinations),
-                                         Max_total_vaccinations=max(total_vaccinations),
-                                         Promedio_new_vaccinations=mean(new_vaccinations),
-                                         D.Est_new_vaccinations=sd(new_vaccinations),
-                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                         Min_new_vaccinations=min(new_vaccinations),
-                                         Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
-                                                   sd(total_vaccinations_per_hundred)/
-                                                   mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
-                                                   sd(new_vaccinations_per_hundred)/
-                                                   mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_vacunas_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
+Vacunas_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Vacunas_DfDEU23 <- DfDEU23 [1:97,] %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations),
-                                                 CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations),
-                                                 Max_total_vaccinations=max(total_vaccinations),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations),
-                                                 CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations),
-                                                 Max_new_vaccinations=max(new_vaccinations))
-
-Tasa_de_vacunas_DfDEU23 <- DfDEU23 [1:97,] %>% summarise(Promedio_total_vaccinations=
-                                                           mean(total_vaccinations_per_hundred),
-                                                         D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                         CV_total_vaccinations=
-                                                           sd(total_vaccinations_per_hundred)/
-                                                           mean(total_vaccinations_per_hundred)*100,
-                                                         Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                         Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                         Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                         D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                         CV_new_vaccinations=
-                                                           sd(new_vaccinations_per_hundred)/
-                                                           mean(new_vaccinations_per_hundred)*100,
-                                                         Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                         Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_vacunas_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
 #Alemania, Decesos
 
-Decesos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
-                                                   sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
-                                                   sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_DfDEU20 <- DfDEU20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
-                                                   sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
-                                                   sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_DfDEU21 <- DfDEU21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
-                                                   sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
-                                                   sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_DfDEU22 <- DfDEU22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_DfDEU23 <- DfDEU23[1:172,] %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfDEU23 <- DfDEU23[1:172,] %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
-                                                   sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
-                                                   sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_DfDEU23 <- DfDEU23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
+
 #Turquia, Casos
+Casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_cases),
+                                       D.Est_total=sd(total_cases),
+                                       CV_total=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total=min(total_cases),
+                                       Max_total=max(total_cases),
+                                       Promedio_new=mean(new_cases),
+                                       D.Est_new=sd(new_cases),
+                                       CV_new=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new=min(new_cases),
+                                       Max_new=max(new_cases))
 
-Casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
-
-Tasa_de_casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
+Tasa_de_casos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                               D.Est_total=sd(total_cases_per_million),
+                                               CV_total=
                                                  sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
+                                               Min_total=min(total_cases_per_million),
+                                               Max_total=max(total_cases_per_million),
+                                               Promedio_new=mean(new_cases_per_million),
+                                               D.Est_new=sd(new_cases_per_million),
+                                               CV_new=
                                                  sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+                                               Min_new=min(new_cases_per_million),
+                                               Max_new=max(new_cases_per_million))
 
 
-Casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_cases),
+                                       D.Est_total=sd(total_cases),
+                                       CV_total=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total=min(total_cases),
+                                       Max_total=max(total_cases),
+                                       Promedio_new=mean(new_cases),
+                                       D.Est_new=sd(new_cases),
+                                       CV_new=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new=min(new_cases),
+                                       Max_new=max(new_cases))
 
-Tasa_de_casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
+Tasa_de_casos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                               D.Est_total=sd(total_cases_per_million),
+                                               CV_total=
                                                  sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
+                                               Min_total=min(total_cases_per_million),
+                                               Max_total=max(total_cases_per_million),
+                                               Promedio_new=mean(new_cases_per_million),
+                                               D.Est_new=sd(new_cases_per_million),
+                                               CV_new=
                                                  sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+                                               Min_new=min(new_cases_per_million),
+                                               Max_new=max(new_cases_per_million))
 
-Casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_cases),
+                                       D.Est_total=sd(total_cases),
+                                       CV_total=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total=min(total_cases),
+                                       Max_total=max(total_cases),
+                                       Promedio_new=mean(new_cases),
+                                       D.Est_new=sd(new_cases),
+                                       CV_new=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new=min(new_cases),
+                                       Max_new=max(new_cases))
 
-Tasa_de_casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
+Tasa_de_casos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                               D.Est_total=sd(total_cases_per_million),
+                                               CV_total=
                                                  sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
+                                               Min_total=min(total_cases_per_million),
+                                               Max_total=max(total_cases_per_million),
+                                               Promedio_new=mean(new_cases_per_million),
+                                               D.Est_new=sd(new_cases_per_million),
+                                               CV_new=
                                                  sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
+                                               Min_new=min(new_cases_per_million),
+                                               Max_new=max(new_cases_per_million))
 
-Casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                       D.Est_total_cases=sd(total_cases),
-                                       CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                       Min_total_cases=min(total_cases),
-                                       Max_total_cases=max(total_cases),
-                                       Promedio_new_cases=mean(new_cases),
-                                       D.Est_new_cases=sd(new_cases),
-                                       CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                       Min_new_cases=min(new_cases),
-                                       Max_new_cases=max(new_cases))
+Casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_cases),
+                                       D.Est_total=sd(total_cases),
+                                       CV_total=sd(total_cases)/mean(total_cases)*100,
+                                       Min_total=min(total_cases),
+                                       Max_total=max(total_cases),
+                                       Promedio_new=mean(new_cases),
+                                       D.Est_new=sd(new_cases),
+                                       CV_new=sd(new_cases)/mean(new_cases)*100,
+                                       Min_new=min(new_cases),
+                                       Max_new=max(new_cases))
 
-Tasa_de_casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                               D.Est_total_cases=sd(total_cases_per_million),
-                                               CV_total_cases=
+Tasa_de_casos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                               D.Est_total=sd(total_cases_per_million),
+                                               CV_total=
                                                  sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                               Min_total_cases=min(total_cases_per_million),
-                                               Max_total_cases=max(total_cases_per_million),
-                                               Promedio_new_cases=mean(new_cases_per_million),
-                                               D.Est_new_cases=sd(new_cases_per_million),
-                                               CV_new_cases=
+                                               Min_total=min(total_cases_per_million),
+                                               Max_total=max(total_cases_per_million),
+                                               Promedio_new=mean(new_cases_per_million),
+                                               D.Est_new=sd(new_cases_per_million),
+                                               CV_new=
                                                  sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                               Min_new_cases=min(new_cases_per_million),
-                                               Max_new_cases=max(new_cases_per_million))
-#Vacunaciones en Turquia
+                                               Min_new=min(new_cases_per_million),
+                                               Max_new=max(new_cases_per_million))
 
-Vacunas_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                         D.Est_total_vaccinations=sd(total_vaccinations),
-                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                         Min_total_vaccinations=min(total_vaccinations),
-                                         Max_total_vaccinations=max(total_vaccinations),
-                                         Promedio_new_vaccinations=mean(new_vaccinations),
-                                         D.Est_new_vaccinations=sd(new_vaccinations),
-                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                         Min_new_vaccinations=min(new_vaccinations),
-                                         Max_new_vaccinations=max(new_vaccinations))
+#Vacunas en Turquia
 
-Tasa_de_vacunas_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
+Vacunas_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                         D.Est_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total=min(total_vaccinations),
+                                         Max_total=max(total_vaccinations),
+                                         Promedio_new=mean(new_vaccinations),
+                                         D.Est_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new=min(new_vaccinations),
+                                         Max_new=max(new_vaccinations))
+
+Tasa_de_vacunas_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                                 D.Est_total=sd(total_vaccinations_per_hundred),
+                                                 CV_total=
                                                    sd(total_vaccinations_per_hundred)/
                                                    mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
+                                                 Min_total=min(total_vaccinations_per_hundred),
+                                                 Max_total=max(total_vaccinations_per_hundred),
+                                                 Promedio_new=mean(new_vaccinations_per_hundred),
+                                                 D.Est_new=sd(new_vaccinations_per_hundred),
+                                                 CV_new=
                                                    sd(new_vaccinations_per_hundred)/
                                                    mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                                 Min_new=min(new_vaccinations_per_hundred),
+                                                 Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                         D.Est_total_vaccinations=sd(total_vaccinations),
-                                         CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                         Min_total_vaccinations=min(total_vaccinations),
-                                         Max_total_vaccinations=max(total_vaccinations),
-                                         Promedio_new_vaccinations=mean(new_vaccinations),
-                                         D.Est_new_vaccinations=sd(new_vaccinations),
-                                         CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                         Min_new_vaccinations=min(new_vaccinations),
-                                         Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                         D.Est_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total=min(total_vaccinations),
+                                         Max_total=max(total_vaccinations),
+                                         Promedio_new=mean(new_vaccinations),
+                                         D.Est_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new=min(new_vaccinations),
+                                         Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
+Tasa_de_vacunas_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                                 D.Est_total=sd(total_vaccinations_per_hundred),
+                                                 CV_total=
                                                    sd(total_vaccinations_per_hundred)/
                                                    mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
+                                                 Min_total=min(total_vaccinations_per_hundred),
+                                                 Max_total=max(total_vaccinations_per_hundred),
+                                                 Promedio_new=mean(new_vaccinations_per_hundred),
+                                                 D.Est_new=sd(new_vaccinations_per_hundred),
+                                                 CV_new=
                                                    sd(new_vaccinations_per_hundred)/
                                                    mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                                 Min_new=min(new_vaccinations_per_hundred),
+                                                 Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_DfTUR22 <- DfTUR22 [1:326,] %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                                  D.Est_total_vaccinations=sd(total_vaccinations),
-                                                  CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                                  Min_total_vaccinations=min(total_vaccinations),
-                                                  Max_total_vaccinations=max(total_vaccinations),
-                                                  Promedio_new_vaccinations=mean(new_vaccinations),
-                                                  D.Est_new_vaccinations=sd(new_vaccinations),
-                                                  CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                                  Min_new_vaccinations=min(new_vaccinations),
-                                                  Max_new_vaccinations=max(new_vaccinations))
+Vacunas_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                         D.Est_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total=min(total_vaccinations),
+                                         Max_total=max(total_vaccinations),
+                                         Promedio_new=mean(new_vaccinations),
+                                         D.Est_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new=min(new_vaccinations),
+                                         Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_DfTUR22 <- DfTUR22 [1:326,] %>% summarise(Promedio_total_vaccinations=
-                                                            mean(total_vaccinations_per_hundred),
-                                                          D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                          CV_total_vaccinations=
-                                                            sd(total_vaccinations_per_hundred)/
-                                                            mean(total_vaccinations_per_hundred)*100,
-                                                          Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                          Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                          Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                          D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                          CV_new_vaccinations=
-                                                            sd(new_vaccinations_per_hundred)/
-                                                            mean(new_vaccinations_per_hundred)*100,
-                                                          Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                          Max_new_vaccinations=max(new_vaccinations_per_hundred))
-
-Vacunas_DfTUR23 <- DfTUR23 %>%  summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                          D.Est_total_vaccinations=sd(total_vaccinations),
-                                          CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                          Min_total_vaccinations=min(total_vaccinations),
-                                          Max_total_vaccinations=max(total_vaccinations),
-                                          Promedio_new_vaccinations=mean(new_vaccinations),
-                                          D.Est_new_vaccinations=sd(new_vaccinations),
-                                          CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                          Min_new_vaccinations=min(new_vaccinations),
-                                          Max_new_vaccinations=max(new_vaccinations))
-
-Tasa_de_vacunas_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                                 D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                                 CV_total_vaccinations=
+Tasa_de_vacunas_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                                 D.Est_total=sd(total_vaccinations_per_hundred),
+                                                 CV_total=
                                                    sd(total_vaccinations_per_hundred)/
                                                    mean(total_vaccinations_per_hundred)*100,
-                                                 Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                                 Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                                 Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                                 D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                                 CV_new_vaccinations=
+                                                 Min_total=min(total_vaccinations_per_hundred),
+                                                 Max_total=max(total_vaccinations_per_hundred),
+                                                 Promedio_new=mean(new_vaccinations_per_hundred),
+                                                 D.Est_new=sd(new_vaccinations_per_hundred),
+                                                 CV_new=
                                                    sd(new_vaccinations_per_hundred)/
                                                    mean(new_vaccinations_per_hundred)*100,
-                                                 Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                                 Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                                 Min_new=min(new_vaccinations_per_hundred),
+                                                 Max_new=max(new_vaccinations_per_hundred))
+
+Vacunas_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                         D.Est_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                         Min_total=min(total_vaccinations),
+                                         Max_total=max(total_vaccinations),
+                                         Promedio_new=mean(new_vaccinations),
+                                         D.Est_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                         Min_new=min(new_vaccinations),
+                                         Max_new=max(new_vaccinations))
+
+Tasa_de_vacunas_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                                 D.Est_total=sd(total_vaccinations_per_hundred),
+                                                 CV_total=
+                                                   sd(total_vaccinations_per_hundred)/
+                                                   mean(total_vaccinations_per_hundred)*100,
+                                                 Min_total=min(total_vaccinations_per_hundred),
+                                                 Max_total=max(total_vaccinations_per_hundred),
+                                                 Promedio_new=mean(new_vaccinations_per_hundred),
+                                                 D.Est_new=sd(new_vaccinations_per_hundred),
+                                                 CV_new=
+                                                   sd(new_vaccinations_per_hundred)/
+                                                   mean(new_vaccinations_per_hundred)*100,
+                                                 Min_new=min(new_vaccinations_per_hundred),
+                                                 Max_new=max(new_vaccinations_per_hundred))
 
 #Turquia, Decesos
 
-Decesos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_deaths),
+                                         D.Est_total=sd(total_deaths),
+                                         CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                         Min_total=min(total_deaths),
+                                         Max_total=max(total_deaths),
+                                         Promedio_new=mean(new_deaths),
+                                         D.Est_new=sd(new_deaths),
+                                         CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                         Min_new=min(new_deaths),
+                                         Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
+Tasa_de_decesos_DfTUR20 <- DfTUR20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                                 D.Est_total=sd(total_deaths_per_million),
+                                                 CV_total=
                                                    sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
+                                                 Min_total=min(total_deaths_per_million),
+                                                 Max_total=max(total_deaths_per_million),
+                                                 Promedio_new=mean(new_deaths_per_million),
+                                                 D.Est_new=sd(new_deaths_per_million),
+                                                 CV_new=
                                                    sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+                                                 Min_new=min(new_deaths_per_million),
+                                                 Max_new=max(new_deaths_per_million))
 
-Decesos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_deaths),
+                                         D.Est_total=sd(total_deaths),
+                                         CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                         Min_total=min(total_deaths),
+                                         Max_total=max(total_deaths),
+                                         Promedio_new=mean(new_deaths),
+                                         D.Est_new=sd(new_deaths),
+                                         CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                         Min_new=min(new_deaths),
+                                         Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
+Tasa_de_decesos_DfTUR21 <- DfTUR21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                                 D.Est_total=sd(total_deaths_per_million),
+                                                 CV_total=
                                                    sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
+                                                 Min_total=min(total_deaths_per_million),
+                                                 Max_total=max(total_deaths_per_million),
+                                                 Promedio_new=mean(new_deaths_per_million),
+                                                 D.Est_new=sd(new_deaths_per_million),
+                                                 CV_new=
                                                    sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+                                                 Min_new=min(new_deaths_per_million),
+                                                 Max_new=max(new_deaths_per_million))
 
-Decesos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_deaths),
+                                         D.Est_total=sd(total_deaths),
+                                         CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                         Min_total=min(total_deaths),
+                                         Max_total=max(total_deaths),
+                                         Promedio_new=mean(new_deaths),
+                                         D.Est_new=sd(new_deaths),
+                                         CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                         Min_new=min(new_deaths),
+                                         Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
+Tasa_de_decesos_DfTUR22 <- DfTUR22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                                 D.Est_total=sd(total_deaths_per_million),
+                                                 CV_total=
                                                    sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
+                                                 Min_total=min(total_deaths_per_million),
+                                                 Max_total=max(total_deaths_per_million),
+                                                 Promedio_new=mean(new_deaths_per_million),
+                                                 D.Est_new=sd(new_deaths_per_million),
+                                                 CV_new=
                                                    sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+                                                 Min_new=min(new_deaths_per_million),
+                                                 Max_new=max(new_deaths_per_million))
 
-Decesos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                         D.Est_total_deaths=sd(total_deaths),
-                                         CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                         Min_total_deaths=min(total_deaths),
-                                         Max_total_deaths=max(total_deaths),
-                                         Promedio_new_deaths=mean(new_deaths),
-                                         D.Est_new_deaths=sd(new_deaths),
-                                         CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                         Min_new_deaths=min(new_deaths),
-                                         Max_new_deaths=max(new_deaths))
+Decesos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_deaths),
+                                         D.Est_total=sd(total_deaths),
+                                         CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                         Min_total=min(total_deaths),
+                                         Max_total=max(total_deaths),
+                                         Promedio_new=mean(new_deaths),
+                                         D.Est_new=sd(new_deaths),
+                                         CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                         Min_new=min(new_deaths),
+                                         Max_new=max(new_deaths))
 
-Tasa_de_decesos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                                 D.Est_total_deaths=sd(total_deaths_per_million),
-                                                 CV_total_deaths=
+Tasa_de_decesos_DfTUR23 <- DfTUR23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                                 D.Est_total=sd(total_deaths_per_million),
+                                                 CV_total=
                                                    sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                                 Min_total_deaths=min(total_deaths_per_million),
-                                                 Max_total_deaths=max(total_deaths_per_million),
-                                                 Promedio_new_deaths=mean(new_deaths_per_million),
-                                                 D.Est_new_deaths=sd(new_deaths_per_million),
-                                                 CV_new_deaths=
+                                                 Min_total=min(total_deaths_per_million),
+                                                 Max_total=max(total_deaths_per_million),
+                                                 Promedio_new=mean(new_deaths_per_million),
+                                                 D.Est_new=sd(new_deaths_per_million),
+                                                 CV_new=
                                                    sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                                 Min_new_deaths=min(new_deaths_per_million),
-                                                 Max_new_deaths=max(new_deaths_per_million))
+                                                 Min_new=min(new_deaths_per_million),
+                                                 Max_new=max(new_deaths_per_million))
+
+TablaDEU20 <- rbind(Casos = Casos_DfDEU20, Dcesos = Decesos_DfDEU20,
+                    Vacunados = Vacunas_DfDEU20)
 
 #Graficos correspondientes a DEU, TUR y US
 
@@ -2460,306 +2458,303 @@ ESP23 <- mutate(ESP23, new_vaccinations_per_hundred=new_vaccinations/population*
 
 #Estadisticos por año 
 #España Casos
-Casos_ESP20 <- ESP20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_ESP20 <- ESP20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
-
-
-Casos_ESP21 <- ESP21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
-
-Tasa_de_casos_ESP21 <- ESP21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
-
-Casos_ESP22 <- ESP22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
-
-Tasa_de_casos_ESP22 <- ESP22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
 
-Casos_ESP23 <- ESP23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                     D.Est_total_cases=sd(total_cases),
-                                     CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                     Min_total_cases=min(total_cases),
-                                     Max_total_cases=max(total_cases),
-                                     Promedio_new_cases=mean(new_cases),
-                                     D.Est_new_cases=sd(new_cases),
-                                     CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                     Min_new_cases=min(new_cases),
-                                     Max_new_cases=max(new_cases))
+Casos_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_ESP23 <- ESP23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                             D.Est_total_cases=sd(total_cases_per_million),
-                                             CV_total_cases=
+Tasa_de_casos_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
                                                sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                             Min_total_cases=min(total_cases_per_million),
-                                             Max_total_cases=max(total_cases_per_million),
-                                             Promedio_new_cases=mean(new_cases_per_million),
-                                             D.Est_new_cases=sd(new_cases_per_million),
-                                             CV_new_cases=
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
                                                sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                             Min_new_cases=min(new_cases_per_million),
-                                             Max_new_cases=max(new_cases_per_million))
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-#Vacunaciones 
-Vacunas_ESP20 <-ESP20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                    D.Est_total_vaccinations=sd(total_vaccinations),
-                                    CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                    Min_total_vaccinations=min(total_vaccinations),
-                                    Max_total_vaccinations=max(total_vaccinations),
-                                    Promedio_new_vaccinations=mean(new_vaccinations),
-                                    D.Est_new_vaccinations=sd(new_vaccinations),
-                                    CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                    Min_new_vaccinations=min(new_vaccinations),
-                                    Max_new_vaccinations=max(new_vaccinations))
+Casos_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_vacunas_ESP20 <- ESP20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_casos_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Vacunas_ESP21 <- ESP21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Casos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_vacunas_ESP21 <- ESP21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_casos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
+#ESP Vacunaciones 
+Vacunas_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Vacunas_ESP22 <-ESP22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                    D.Est_total_vaccinations=sd(total_vaccinations),
-                                    CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                    Min_total_vaccinations=min(total_vaccinations),
-                                    Max_total_vaccinations=max(total_vaccinations),
-                                    Promedio_new_vaccinations=mean(new_vaccinations),
-                                    D.Est_new_vaccinations=sd(new_vaccinations),
-                                    CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                    Min_new_vaccinations=min(new_vaccinations),
-                                    Max_new_vaccinations=max(new_vaccinations))
+Tasa_de_vacunas_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Tasa_de_vacunas_ESP22 <- ESP22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Vacunas_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Vacunas_ESP23 <- ESP23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Tasa_de_vacunas_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Tasa_de_vacunas_ESP23 <- ESP23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Vacunas_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-#Decesos
+Tasa_de_vacunas_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Decesos_ESP20 <- ESP20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Vacunas_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_decesos_ESP20 <- ESP20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_vacunas_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
+#ESP, Decesos
 
-Decesos_ESP21 <- ESP21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_ESP21 <- ESP21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_ESP20 <- ESP20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_ESP22 <- ESP22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_ESP22 <- ESP22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_ESP21 <- ESP21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_ESP23 <- ESP23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_ESP23 <- ESP23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_ESP22 <- ESP22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
+
+Decesos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
+
+Tasa_de_decesos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
 #Con los siguientes graficos representamos el analisis:
 #España en los 4 años de pandemia
@@ -3029,306 +3024,303 @@ GBR23 <- mutate(GBR23, new_vaccinations_per_hundred=new_vaccinations/population*
 #Reino Unido
 
 #Casos
-Casos_GBR20 <- GBR20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_GBR20 <- GBR20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
-
-
-Casos_GBR21 <- GBR21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
-
-Tasa_de_casos_GBR21 <- GBR21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
-
-Casos_GBR22 <- GBR22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
-
-Tasa_de_casos_GBR22 <- GBR22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
+Tasa_de_casos_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
 
-Casos_GBR23 <- GBR23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_casos_GBR23 <- GBR23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
-                                             sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
-                                             sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
+Tasa_de_casos_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-#Vacunaciones 
-Vacunas_GBR20 <- GBR20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                    D.Est_total_vaccinations=sd(total_vaccinations),
-                                    CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                    Min_total_vaccinations=min(total_vaccinations),
-                                    Max_total_vaccinations=max(total_vaccinations),
-                                    Promedio_new_vaccinations=mean(new_vaccinations),
-                                    D.Est_new_vaccinations=sd(new_vaccinations),
-                                    CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                    Min_new_vaccinations=min(new_vaccinations),
-                                    Max_new_vaccinations=max(new_vaccinations))
+Casos_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_vacunas_GBR20 <- GBR20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_casos_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
 
-Vacunas_GBR21 <- GBR21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Casos_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_cases),
+                                     D.Est_total=sd(total_cases),
+                                     CV_total=sd(total_cases)/mean(total_cases)*100,
+                                     Min_total=min(total_cases),
+                                     Max_total=max(total_cases),
+                                     Promedio_new=mean(new_cases),
+                                     D.Est_new=sd(new_cases),
+                                     CV_new=sd(new_cases)/mean(new_cases)*100,
+                                     Min_new=min(new_cases),
+                                     Max_new=max(new_cases))
 
-Tasa_de_vacunas_GBR21 <- GBR21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Tasa_de_casos_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                             D.Est_total=sd(total_cases_per_million),
+                                             CV_total=
+                                               sd(total_cases_per_million)/mean(total_cases_per_million)*100,
+                                             Min_total=min(total_cases_per_million),
+                                             Max_total=max(total_cases_per_million),
+                                             Promedio_new=mean(new_cases_per_million),
+                                             D.Est_new=sd(new_cases_per_million),
+                                             CV_new=
+                                               sd(new_cases_per_million)/mean(new_cases_per_million)*100,
+                                             Min_new=min(new_cases_per_million),
+                                             Max_new=max(new_cases_per_million))
+#GBR Vacunaciones 
+Vacunas_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Vacunas_GBR22 <- GBR22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                    D.Est_total_vaccinations=sd(total_vaccinations),
-                                    CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                    Min_total_vaccinations=min(total_vaccinations),
-                                    Max_total_vaccinations=max(total_vaccinations),
-                                    Promedio_new_vaccinations=mean(new_vaccinations),
-                                    D.Est_new_vaccinations=sd(new_vaccinations),
-                                    CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                    Min_new_vaccinations=min(new_vaccinations),
-                                    Max_new_vaccinations=max(new_vaccinations))
+Tasa_de_vacunas_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Tasa_de_vacunas_GBR22 <- GBR22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Vacunas_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Vacunas_GBR23 <- GBR23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Tasa_de_vacunas_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Tasa_de_vacunas_GBR23 <- GBR23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
-                                               sd(total_vaccinations_per_hundred)/
-                                               mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
-                                               sd(new_vaccinations_per_hundred)/
-                                               mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+Vacunas_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-#Decesos
+Tasa_de_vacunas_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
 
-Decesos_GBR20 <- GBR20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Vacunas_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                       D.Est_total=sd(total_vaccinations),
+                                       CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                       Min_total=min(total_vaccinations),
+                                       Max_total=max(total_vaccinations),
+                                       Promedio_new=mean(new_vaccinations),
+                                       D.Est_new=sd(new_vaccinations),
+                                       CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                       Min_new=min(new_vaccinations),
+                                       Max_new=max(new_vaccinations))
 
-Tasa_de_decesos_GBR20 <- GBR20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_vacunas_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                               D.Est_total=sd(total_vaccinations_per_hundred),
+                                               CV_total=
+                                                 sd(total_vaccinations_per_hundred)/
+                                                 mean(total_vaccinations_per_hundred)*100,
+                                               Min_total=min(total_vaccinations_per_hundred),
+                                               Max_total=max(total_vaccinations_per_hundred),
+                                               Promedio_new=mean(new_vaccinations_per_hundred),
+                                               D.Est_new=sd(new_vaccinations_per_hundred),
+                                               CV_new=
+                                                 sd(new_vaccinations_per_hundred)/
+                                                 mean(new_vaccinations_per_hundred)*100,
+                                               Min_new=min(new_vaccinations_per_hundred),
+                                               Max_new=max(new_vaccinations_per_hundred))
+#GBR, Decesos
 
-Decesos_GBR21 <- GBR21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_GBR21 <- GBR21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_GBR20 <- GBR20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_GBR22 <- GBR22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_GBR22 <- GBR22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_GBR21 <- GBR21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
-Decesos_GBR23 <- GBR23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
 
-Tasa_de_decesos_GBR23 <- GBR23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
-                                               sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
-                                               sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+Tasa_de_decesos_GBR22 <- GBR22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
+
+Decesos_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_deaths),
+                                       D.Est_total=sd(total_deaths),
+                                       CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                       Min_total=min(total_deaths),
+                                       Max_total=max(total_deaths),
+                                       Promedio_new=mean(new_deaths),
+                                       D.Est_new=sd(new_deaths),
+                                       CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                       Min_new=min(new_deaths),
+                                       Max_new=max(new_deaths))
+
+Tasa_de_decesos_GBR23 <- GBR23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                               D.Est_total=sd(total_deaths_per_million),
+                                               CV_total=
+                                                 sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
+                                               Min_total=min(total_deaths_per_million),
+                                               Max_total=max(total_deaths_per_million),
+                                               Promedio_new=mean(new_deaths_per_million),
+                                               D.Est_new=sd(new_deaths_per_million),
+                                               CV_new=
+                                                 sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
+                                               Min_new=min(new_deaths_per_million),
+                                               Max_new=max(new_deaths_per_million))
 
 #Comenzamos con el analisis de India y el reemplazo de sus valores NA´s
 
@@ -3600,306 +3592,303 @@ IND23 <- mutate(IND23, new_vaccinations_per_hundred=new_vaccinations/population*
 #Estadisticos por año 
 
 #Casos
-Casos_IND20 <- IND20 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_cases),
+                                   D.Est_total=sd(total_cases),
+                                   CV_total=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total=min(total_cases),
+                                   Max_total=max(total_cases),
+                                   Promedio_new=mean(new_cases),
+                                   D.Est_new=sd(new_cases),
+                                   CV_new=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new=min(new_cases),
+                                   Max_new=max(new_cases))
 
-Tasa_de_casos_IND20 <- IND20 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
+Tasa_de_casos_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                           D.Est_total=sd(total_cases_per_million),
+                                           CV_total=
                                              sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
+                                           Min_total=min(total_cases_per_million),
+                                           Max_total=max(total_cases_per_million),
+                                           Promedio_new=mean(new_cases_per_million),
+                                           D.Est_new=sd(new_cases_per_million),
+                                           CV_new=
                                              sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
+                                           Min_new=min(new_cases_per_million),
+                                           Max_new=max(new_cases_per_million))
 
 
-Casos_IND21 <- IND21 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_cases),
+                                   D.Est_total=sd(total_cases),
+                                   CV_total=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total=min(total_cases),
+                                   Max_total=max(total_cases),
+                                   Promedio_new=mean(new_cases),
+                                   D.Est_new=sd(new_cases),
+                                   CV_new=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new=min(new_cases),
+                                   Max_new=max(new_cases))
 
-Tasa_de_casos_IND21 <- IND21 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
+Tasa_de_casos_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                           D.Est_total=sd(total_cases_per_million),
+                                           CV_total=
                                              sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
+                                           Min_total=min(total_cases_per_million),
+                                           Max_total=max(total_cases_per_million),
+                                           Promedio_new=mean(new_cases_per_million),
+                                           D.Est_new=sd(new_cases_per_million),
+                                           CV_new=
                                              sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
+                                           Min_new=min(new_cases_per_million),
+                                           Max_new=max(new_cases_per_million))
 
-Casos_IND22 <- IND22 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
+Casos_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_cases),
+                                   D.Est_total=sd(total_cases),
+                                   CV_total=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total=min(total_cases),
+                                   Max_total=max(total_cases),
+                                   Promedio_new=mean(new_cases),
+                                   D.Est_new=sd(new_cases),
+                                   CV_new=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new=min(new_cases),
+                                   Max_new=max(new_cases))
 
-Tasa_de_casos_IND22 <- IND22 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
+Tasa_de_casos_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                           D.Est_total=sd(total_cases_per_million),
+                                           CV_total=
                                              sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
+                                           Min_total=min(total_cases_per_million),
+                                           Max_total=max(total_cases_per_million),
+                                           Promedio_new=mean(new_cases_per_million),
+                                           D.Est_new=sd(new_cases_per_million),
+                                           CV_new=
                                              sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
+                                           Min_new=min(new_cases_per_million),
+                                           Max_new=max(new_cases_per_million))
 
+Casos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_cases),
+                                   D.Est_total=sd(total_cases),
+                                   CV_total=sd(total_cases)/mean(total_cases)*100,
+                                   Min_total=min(total_cases),
+                                   Max_total=max(total_cases),
+                                   Promedio_new=mean(new_cases),
+                                   D.Est_new=sd(new_cases),
+                                   CV_new=sd(new_cases)/mean(new_cases)*100,
+                                   Min_new=min(new_cases),
+                                   Max_new=max(new_cases))
 
-Casos_IND23 <- IND23 %>% summarise(Promedio_total_cases=mean(total_cases),
-                                   D.Est_total_cases=sd(total_cases),
-                                   CV_total_cases=sd(total_cases)/mean(total_cases)*100,
-                                   Min_total_cases=min(total_cases),
-                                   Max_total_cases=max(total_cases),
-                                   Promedio_new_cases=mean(new_cases),
-                                   D.Est_new_cases=sd(new_cases),
-                                   CV_new_cases=sd(new_cases)/mean(new_cases)*100,
-                                   Min_new_cases=min(new_cases),
-                                   Max_new_cases=max(new_cases))
-
-Tasa_de_casos_IND23 <- IND23 %>% summarise(Promedio_total_cases=mean(total_cases_per_million),
-                                           D.Est_total_cases=sd(total_cases_per_million),
-                                           CV_total_cases=
+Tasa_de_casos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_cases_per_million),
+                                           D.Est_total=sd(total_cases_per_million),
+                                           CV_total=
                                              sd(total_cases_per_million)/mean(total_cases_per_million)*100,
-                                           Min_total_cases=min(total_cases_per_million),
-                                           Max_total_cases=max(total_cases_per_million),
-                                           Promedio_new_cases=mean(new_cases_per_million),
-                                           D.Est_new_cases=sd(new_cases_per_million),
-                                           CV_new_cases=
+                                           Min_total=min(total_cases_per_million),
+                                           Max_total=max(total_cases_per_million),
+                                           Promedio_new=mean(new_cases_per_million),
+                                           D.Est_new=sd(new_cases_per_million),
+                                           CV_new=
                                              sd(new_cases_per_million)/mean(new_cases_per_million)*100,
-                                           Min_new_cases=min(new_cases_per_million),
-                                           Max_new_cases=max(new_cases_per_million))
-
+                                           Min_new=min(new_cases_per_million),
+                                           Max_new=max(new_cases_per_million))
 #Vacunaciones 
-Vacunas_IND20 <- IND20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Vacunas_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                     D.Est_total=sd(total_vaccinations),
+                                     CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total=min(total_vaccinations),
+                                     Max_total=max(total_vaccinations),
+                                     Promedio_new=mean(new_vaccinations),
+                                     D.Est_new=sd(new_vaccinations),
+                                     CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new=min(new_vaccinations),
+                                     Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_IND20 <- IND20 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
+Tasa_de_vacunas_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                             D.Est_total=sd(total_vaccinations_per_hundred),
+                                             CV_total=
                                                sd(total_vaccinations_per_hundred)/
                                                mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
+                                             Min_total=min(total_vaccinations_per_hundred),
+                                             Max_total=max(total_vaccinations_per_hundred),
+                                             Promedio_new=mean(new_vaccinations_per_hundred),
+                                             D.Est_new=sd(new_vaccinations_per_hundred),
+                                             CV_new=
                                                sd(new_vaccinations_per_hundred)/
                                                mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                             Min_new=min(new_vaccinations_per_hundred),
+                                             Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_IND21 <- IND21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Vacunas_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                     D.Est_total=sd(total_vaccinations),
+                                     CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total=min(total_vaccinations),
+                                     Max_total=max(total_vaccinations),
+                                     Promedio_new=mean(new_vaccinations),
+                                     D.Est_new=sd(new_vaccinations),
+                                     CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new=min(new_vaccinations),
+                                     Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_IND21 <- IND21 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
+Tasa_de_vacunas_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                             D.Est_total=sd(total_vaccinations_per_hundred),
+                                             CV_total=
                                                sd(total_vaccinations_per_hundred)/
                                                mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
+                                             Min_total=min(total_vaccinations_per_hundred),
+                                             Max_total=max(total_vaccinations_per_hundred),
+                                             Promedio_new=mean(new_vaccinations_per_hundred),
+                                             D.Est_new=sd(new_vaccinations_per_hundred),
+                                             CV_new=
                                                sd(new_vaccinations_per_hundred)/
                                                mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                             Min_new=min(new_vaccinations_per_hundred),
+                                             Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_IND22 <- IND22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Vacunas_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                     D.Est_total=sd(total_vaccinations),
+                                     CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total=min(total_vaccinations),
+                                     Max_total=max(total_vaccinations),
+                                     Promedio_new=mean(new_vaccinations),
+                                     D.Est_new=sd(new_vaccinations),
+                                     CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new=min(new_vaccinations),
+                                     Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_IND22 <- IND22 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
+Tasa_de_vacunas_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                             D.Est_total=sd(total_vaccinations_per_hundred),
+                                             CV_total=
                                                sd(total_vaccinations_per_hundred)/
                                                mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
+                                             Min_total=min(total_vaccinations_per_hundred),
+                                             Max_total=max(total_vaccinations_per_hundred),
+                                             Promedio_new=mean(new_vaccinations_per_hundred),
+                                             D.Est_new=sd(new_vaccinations_per_hundred),
+                                             CV_new=
                                                sd(new_vaccinations_per_hundred)/
                                                mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                             Min_new=min(new_vaccinations_per_hundred),
+                                             Max_new=max(new_vaccinations_per_hundred))
 
-Vacunas_IND23 <- IND23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations),
-                                     D.Est_total_vaccinations=sd(total_vaccinations),
-                                     CV_total_vaccinations=sd(total_vaccinations)/mean(total_vaccinations)*100,
-                                     Min_total_vaccinations=min(total_vaccinations),
-                                     Max_total_vaccinations=max(total_vaccinations),
-                                     Promedio_new_vaccinations=mean(new_vaccinations),
-                                     D.Est_new_vaccinations=sd(new_vaccinations),
-                                     CV_new_vaccinations=sd(new_vaccinations)/mean(new_vaccinations)*100,
-                                     Min_new_vaccinations=min(new_vaccinations),
-                                     Max_new_vaccinations=max(new_vaccinations))
+Vacunas_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_vaccinations),
+                                     D.Est_total=sd(total_vaccinations),
+                                     CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
+                                     Min_total=min(total_vaccinations),
+                                     Max_total=max(total_vaccinations),
+                                     Promedio_new=mean(new_vaccinations),
+                                     D.Est_new=sd(new_vaccinations),
+                                     CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
+                                     Min_new=min(new_vaccinations),
+                                     Max_new=max(new_vaccinations))
 
-Tasa_de_vacunas_IND23 <- IND23 %>% summarise(Promedio_total_vaccinations=mean(total_vaccinations_per_hundred),
-                                             D.Est_total_vaccinations=sd(total_vaccinations_per_hundred),
-                                             CV_total_vaccinations=
+Tasa_de_vacunas_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
+                                             D.Est_total=sd(total_vaccinations_per_hundred),
+                                             CV_total=
                                                sd(total_vaccinations_per_hundred)/
                                                mean(total_vaccinations_per_hundred)*100,
-                                             Min_total_vaccinations=min(total_vaccinations_per_hundred),
-                                             Max_total_vaccinations=max(total_vaccinations_per_hundred),
-                                             Promedio_new_vaccinations=mean(new_vaccinations_per_hundred),
-                                             D.Est_new_vaccinations=sd(new_vaccinations_per_hundred),
-                                             CV_new_vaccinations=
+                                             Min_total=min(total_vaccinations_per_hundred),
+                                             Max_total=max(total_vaccinations_per_hundred),
+                                             Promedio_new=mean(new_vaccinations_per_hundred),
+                                             D.Est_new=sd(new_vaccinations_per_hundred),
+                                             CV_new=
                                                sd(new_vaccinations_per_hundred)/
                                                mean(new_vaccinations_per_hundred)*100,
-                                             Min_new_vaccinations=min(new_vaccinations_per_hundred),
-                                             Max_new_vaccinations=max(new_vaccinations_per_hundred))
+                                             Min_new=min(new_vaccinations_per_hundred),
+                                             Max_new=max(new_vaccinations_per_hundred))
+#IND, Decesos
 
-#Decesos
+Decesos_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_deaths),
+                                     D.Est_total=sd(total_deaths),
+                                     CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total=min(total_deaths),
+                                     Max_total=max(total_deaths),
+                                     Promedio_new=mean(new_deaths),
+                                     D.Est_new=sd(new_deaths),
+                                     CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new=min(new_deaths),
+                                     Max_new=max(new_deaths))
 
-Decesos_IND20 <- IND20 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
-
-Tasa_de_decesos_IND20 <- IND20 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
+Tasa_de_decesos_IND20 <- IND20 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                             D.Est_total=sd(total_deaths_per_million),
+                                             CV_total=
                                                sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
+                                             Min_total=min(total_deaths_per_million),
+                                             Max_total=max(total_deaths_per_million),
+                                             Promedio_new=mean(new_deaths_per_million),
+                                             D.Est_new=sd(new_deaths_per_million),
+                                             CV_new=
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+                                             Min_new=min(new_deaths_per_million),
+                                             Max_new=max(new_deaths_per_million))
 
-Decesos_IND21 <- IND21 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_deaths),
+                                     D.Est_total=sd(total_deaths),
+                                     CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total=min(total_deaths),
+                                     Max_total=max(total_deaths),
+                                     Promedio_new=mean(new_deaths),
+                                     D.Est_new=sd(new_deaths),
+                                     CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new=min(new_deaths),
+                                     Max_new=max(new_deaths))
 
-Tasa_de_decesos_IND21 <- IND21 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
+Tasa_de_decesos_IND21 <- IND21 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                             D.Est_total=sd(total_deaths_per_million),
+                                             CV_total=
                                                sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
+                                             Min_total=min(total_deaths_per_million),
+                                             Max_total=max(total_deaths_per_million),
+                                             Promedio_new=mean(new_deaths_per_million),
+                                             D.Est_new=sd(new_deaths_per_million),
+                                             CV_new=
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+                                             Min_new=min(new_deaths_per_million),
+                                             Max_new=max(new_deaths_per_million))
 
-Decesos_IND22 <- IND22 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_deaths),
+                                     D.Est_total=sd(total_deaths),
+                                     CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total=min(total_deaths),
+                                     Max_total=max(total_deaths),
+                                     Promedio_new=mean(new_deaths),
+                                     D.Est_new=sd(new_deaths),
+                                     CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new=min(new_deaths),
+                                     Max_new=max(new_deaths))
 
-Tasa_de_decesos_IND22 <- IND22 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
+Tasa_de_decesos_IND22 <- IND22 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                             D.Est_total=sd(total_deaths_per_million),
+                                             CV_total=
                                                sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
+                                             Min_total=min(total_deaths_per_million),
+                                             Max_total=max(total_deaths_per_million),
+                                             Promedio_new=mean(new_deaths_per_million),
+                                             D.Est_new=sd(new_deaths_per_million),
+                                             CV_new=
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+                                             Min_new=min(new_deaths_per_million),
+                                             Max_new=max(new_deaths_per_million))
 
-Decesos_IND23 <- IND23 %>% summarise(Promedio_total_deaths=mean(total_deaths),
-                                     D.Est_total_deaths=sd(total_deaths),
-                                     CV_total_deaths=sd(total_deaths)/mean(total_deaths)*100,
-                                     Min_total_deaths=min(total_deaths),
-                                     Max_total_deaths=max(total_deaths),
-                                     Promedio_new_deaths=mean(new_deaths),
-                                     D.Est_new_deaths=sd(new_deaths),
-                                     CV_new_deaths=sd(new_deaths)/mean(new_deaths)*100,
-                                     Min_new_deaths=min(new_deaths),
-                                     Max_new_deaths=max(new_deaths))
+Decesos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_deaths),
+                                     D.Est_total=sd(total_deaths),
+                                     CV_total=sd(total_deaths)/mean(total_deaths)*100,
+                                     Min_total=min(total_deaths),
+                                     Max_total=max(total_deaths),
+                                     Promedio_new=mean(new_deaths),
+                                     D.Est_new=sd(new_deaths),
+                                     CV_new=sd(new_deaths)/mean(new_deaths)*100,
+                                     Min_new=min(new_deaths),
+                                     Max_new=max(new_deaths))
 
-Tasa_de_decesos_IND23 <- IND23 %>% summarise(Promedio_total_deaths=mean(total_deaths_per_million),
-                                             D.Est_total_deaths=sd(total_deaths_per_million),
-                                             CV_total_deaths=
+Tasa_de_decesos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_deaths_per_million),
+                                             D.Est_total=sd(total_deaths_per_million),
+                                             CV_total=
                                                sd(total_deaths_per_million)/mean(total_deaths_per_million)*100,
-                                             Min_total_deaths=min(total_deaths_per_million),
-                                             Max_total_deaths=max(total_deaths_per_million),
-                                             Promedio_new_deaths=mean(new_deaths_per_million),
-                                             D.Est_new_deaths=sd(new_deaths_per_million),
-                                             CV_new_deaths=
+                                             Min_total=min(total_deaths_per_million),
+                                             Max_total=max(total_deaths_per_million),
+                                             Promedio_new=mean(new_deaths_per_million),
+                                             D.Est_new=sd(new_deaths_per_million),
+                                             CV_new=
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
-                                             Min_new_deaths=min(new_deaths_per_million),
-                                             Max_new_deaths=max(new_deaths_per_million))
+                                             Min_new=min(new_deaths_per_million),
+                                             Max_new=max(new_deaths_per_million))
 
 
 #Se muestran los NA en el primer año de Covid en CHN
