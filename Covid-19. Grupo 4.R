@@ -5440,7 +5440,25 @@ Tasa_de_decesos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total=mean(total_deaths_
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
 
-
+TablaCHN20 <- rbind(Casos = casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
+TablaCHN21 <- rbind(Casos = casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
+TablaCHN22 <- rbind(Casos = casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
+TablaCHN23 <- rbind(Casos = casos_DfCHN23, Decesos = Decesos_DfCHN23, Vacunados = Vacunas_DfCHN23)
+#RUS
+TablaRUS20 <- rbind(Casos = Casos_DfRUS20, Decesos = Decesos_DfRUS20, Vacunados = Vacunas_DfRUS20)
+TablaRUS21 <- rbind(Casos = Casos_DfRUS21, Decesos = Decesos_DfRUS21, Vacucunados = Vacunas_DfRUS21)
+TablaRUS22 <- rbind(Casos = Casos_DfRUS22, Decesos = Decesos_DfRUS22, Vacunados = Vacunas_DfRUS22)
+TablaRUS23 <- rbind(Casos = Casos_DfRUS23, Decesos = Decesos_DfRUS23, Vacunados = Vacunas_DfRUS23)
+#IRN
+TablaIRN20 <- rbind(Casos = Casos_DfIRN20, Decesos = Decesos_DfIRN20, Vacunados = Vacunas_DfIRN20)
+TablaIRN21 <- rbind(Casos = Casos_DfIRN21, Decesos = Decesos_DfIRN21, Vacunados = Vacunas_DfIRN21)
+TablaIRN22 <- rbind(Casos = Casos_DfIRN22, Decesos = Decesos_DfIRN22, Vacunados = Vacunas_DfIRN22)
+TablaIRN23 <- rbind(Casos = Casos_DfIRN23, Decesos = Decesos_DfIRN23, Vacunados = Vacunas_DfIRN23)
+#CUB
+TablaCUB20 <- rbind(Casos = Casos_DfCUB20, Decesos = Decesos_DfCUB20, Vacunados = Vacunas_DfCUB20)
+TablaCUB21 <- rbind(Casos = Casos_DfCUB21, Decesos = Decesos_DfCUB21, Vacunados = Vacunas_DfCUB21)
+TablaCUB22 <- rbind(Casos = Casos_DfCUB22, Decesos = Decesos_DfCUB22, Vacunados = Vacunas_DfCUB22)
+TablaCUB23 <- rbind(Casos = Casos_DfCUB23, Decesos = Decesos_DfCUB23, Vacunados = Vacunas_DfCUB23)
 
 
 
