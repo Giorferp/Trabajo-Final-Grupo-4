@@ -481,6 +481,8 @@ DfTUR22 [327:365,17] <- 67.89
 DfTUR22 [327:365,18] <- 85341248
 DfTUR22 [327:365,19] <- 0.0800128913
 
+apply(DfTUR22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
+
 DfTUR23 <- data.frame(DfTUR [DfTUR$date>"2022-12-31",])
 
 #Creacion de la variable new_vaccinations_per_hundred para cada pais
@@ -4051,6 +4053,18 @@ TablaIND22 <- rbind(Casos = Casos_IND22, Decesos = Decesos_IND22,
 
 TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
                     Vacunados = Vacunas_IND23)
+TablaUS20 <- rbind(Casos = Casos_DfUS20, Decesos = Decesos_DfUS20,
+                   Vacunados = Vacunas_DfUS20)
+
+
+TablaUS21 <- rbind(Casos = Casos_DfUS21, Decesos = Decesos_DfUS21,
+                   Vacunados = Vacunas_DfUS21)
+
+TablaUS22 <- rbind(Casos = Casos_DfUS22, Decesos = Decesos_DfUS22,
+                   Vacunados = Vacunas_DfUS22)
+
+TablaUS23 <- rbind(Casos = Casos_DfUS23, Decesos = Decesos_DfUS23,
+                   Vacunados = Vacunas_DfUS23)
 
 #Se muestran los NA en el primer año de Covid en CHN
 apply(CHN[CHN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
