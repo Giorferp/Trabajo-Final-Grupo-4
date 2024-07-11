@@ -4066,17 +4066,12 @@ CHN <- CHN %>% select(index, iso_code, continent, location, date,
 
 # Cambio de valores NA en China en el primer año
 DfCHN20 <- data.frame (CHN [CHN$date<"2021-01-01",], na.rm = TRUE)
-DfCHN20 <- CHN20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
-DfCHN20 <- CHN20 %>% mutate(total_cases_per_million =if_else(is.na(total_cases_per_million), 0, total_cases_per_million))
-DfCHN20 <- CHN20 %>% mutate(total_deaths =if_else(is.na(total_deaths), 0, total_deaths))
-DfCHN20 <- CHN20 %>% mutate(total_deaths_per_million =if_else(is.na(total_deaths_per_million), 0, total_deaths_per_million))
-DfCHN20 <- CHN20 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
-DfCHN20 <- CHN20 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
-DfCHN20 <- CHN20 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
-DfCHN20 <- CHN20 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated), 0, people_vaccinated))
-DfCHN20 <- CHN20 %>% mutate(people_fully_vaccinated =if_else(is.na(people_fully_vaccinated), 0, people_fully_vaccinated))
-DfCHN20 <- CHN20 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
-DfCHN20 <- CHN20 %>% mutate(people_fully_vaccinated_per_hundred =if_else(is.na(people_fully_vaccinated_per_hundred), 0, people_fully_vaccinated_per_hundred))
+DfCHN20 <- DfCHN20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
+DfCHN20 <- DfCHN20 %>% mutate(total_cases_per_million =if_else(is.na(total_cases_per_million), 0, total_cases_per_million))
+DfCHN20 <- DfCHN20 %>% mutate(total_deaths_per_million =if_else(is.na(total_deaths_per_million), 0, total_deaths_per_million))
+DfCHN20 <- DfCHN20 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
+DfCHN20 <- DfCHN20 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+DfCHN20 <- DfCHN20 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 
 #Se muestran los NA del segundo año en CHN
 apply(CHN[365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
