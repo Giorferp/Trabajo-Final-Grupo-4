@@ -4230,7 +4230,7 @@ DfCUB22 <- mutate(DfCUB22, new_vaccinations_per_hundred=new_vaccinations/populat
 DfCUB23 <- mutate(DfCUB23, new_vaccinations_per_hundred=new_vaccinations/population*100)
 # Estadísticas descriptivas  y tasas de DfCHN por año
 #Casos
-casos_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -4254,7 +4254,7 @@ Tasa_de_casos_DfCHN20 <-DfCHN20 %>% summarise(Promedio_total=mean(total_cases_pe
                                               Min_new=min(new_cases_per_million),
                                               Max_new=max(new_cases_per_million))
 
-casos_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -4278,7 +4278,7 @@ Tasa_de_casos_DfCHN21<-DfCHN21 %>% summarise(Promedio_total=mean(total_cases_per
                                              Min_new=min(new_cases_per_million),
                                              Max_new=max(new_cases_per_million))
 
-casos_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -4302,7 +4302,7 @@ Tasa_de_casos_DfCHN22<-DfCHN22 %>% summarise(Promedio_total=mean(total_cases_per
                                              Min_new=min(new_cases_per_million),
                                              Max_new=max(new_cases_per_million))
 
-casos_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -5440,10 +5440,10 @@ Tasa_de_decesos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total=mean(total_deaths_
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
 
-TablaCHN20 <- rbind(Casos = casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
-TablaCHN21 <- rbind(Casos = casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
-TablaCHN22 <- rbind(Casos = casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
-TablaCHN23 <- rbind(Casos = casos_DfCHN23, Decesos = Decesos_DfCHN23, Vacunados = Vacunas_DfCHN23)
+TablaCHN20 <- rbind(Casos = Casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
+TablaCHN21 <- rbind(Casos = Casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
+TablaCHN22 <- rbind(Casos = Casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
+TablaCHN23 <- rbind(Casos = Casos_DfCHN23, Decesos = Decesos_DfCHN23, Vacunados = Vacunas_DfCHN23)
 #RUS
 TablaRUS20 <- rbind(Casos = Casos_DfRUS20, Decesos = Decesos_DfRUS20, Vacunados = Vacunas_DfRUS20)
 TablaRUS21 <- rbind(Casos = Casos_DfRUS21, Decesos = Decesos_DfRUS21, Vacucunados = Vacunas_DfRUS21)

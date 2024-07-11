@@ -3791,7 +3791,6 @@ apply(CHN[CHN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% Vi
 
 #Eliminación de variables no necesarias para el trabajo
 
-
 # Cambio de valores NA en China en el primer año
 DfCHN20 <- data.frame (CHN [CHN$date<"2021-01-01",])
 DfCHN20 <- DfCHN20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
@@ -3950,7 +3949,7 @@ DfCUB22 <- mutate(DfCUB22, new_vaccinations_per_hundred=new_vaccinations/populat
 DfCUB23 <- mutate(DfCUB23, new_vaccinations_per_hundred=new_vaccinations/population*100)
 # Estadísticas descriptivas  y tasas de DfCHN por año
 #Casos
-casos_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -3974,7 +3973,7 @@ Tasa_de_casos_DfCHN20 <-DfCHN20 %>% summarise(Promedio_total=mean(total_cases_pe
                                               Min_new=min(new_cases_per_million),
                                               Max_new=max(new_cases_per_million))
 
-casos_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN21 <- DfCHN21 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -3998,7 +3997,7 @@ Tasa_de_casos_DfCHN21<-DfCHN21 %>% summarise(Promedio_total=mean(total_cases_per
                                              Min_new=min(new_cases_per_million),
                                              Max_new=max(new_cases_per_million))
 
-casos_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN22 <- DfCHN22 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -4022,7 +4021,7 @@ Tasa_de_casos_DfCHN22<-DfCHN22 %>% summarise(Promedio_total=mean(total_cases_per
                                              Min_new=min(new_cases_per_million),
                                              Max_new=max(new_cases_per_million))
 
-casos_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total=mean(total_cases),
+Casos_DfCHN23 <- DfCHN23 %>% summarise(Promedio_total=mean(total_cases),
                                        D.Est_total=sd(total_cases),
                                        CV_total=sd(total_cases)/mean(total_cases)*100,
                                        Min_total=min(total_cases),
@@ -5160,10 +5159,10 @@ Tasa_de_decesos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total=mean(total_deaths_
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
 
-TablaCHN20 <- rbind(Casos = casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
-TablaCHN21 <- rbind(Casos = casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
-TablaCHN22 <- rbind(Casos = casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
-TablaCHN23 <- rbind(Casos = casos_DfCHN23, Decesos = Decesos_DfCHN23, Vacunados = Vacunas_DfCHN23)
+TablaCHN20 <- rbind(Casos = Casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
+TablaCHN21 <- rbind(Casos = Casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
+TablaCHN22 <- rbind(Casos = Casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
+TablaCHN23 <- rbind(Casos = Casos_DfCHN23, Decesos = Decesos_DfCHN23, Vacunados = Vacunas_DfCHN23)
 #RUS
 TablaRUS20 <- rbind(Casos = Casos_DfRUS20, Decesos = Decesos_DfRUS20, Vacunados = Vacunas_DfRUS20)
 TablaRUS21 <- rbind(Casos = Casos_DfRUS21, Decesos = Decesos_DfRUS21, Vacucunados = Vacunas_DfRUS21)
@@ -5179,10 +5178,6 @@ TablaCUB20 <- rbind(Casos = Casos_DfCUB20, Decesos = Decesos_DfCUB20, Vacunados 
 TablaCUB21 <- rbind(Casos = Casos_DfCUB21, Decesos = Decesos_DfCUB21, Vacunados = Vacunas_DfCUB21)
 TablaCUB22 <- rbind(Casos = Casos_DfCUB22, Decesos = Decesos_DfCUB22, Vacunados = Vacunas_DfCUB22)
 TablaCUB23 <- rbind(Casos = Casos_DfCUB23, Decesos = Decesos_DfCUB23, Vacunados = Vacunas_DfCUB23)
-
-
-
-
 
 ```
 **Inicios de la Pandemia**
@@ -5427,4 +5422,6 @@ Pero con 1295 muertes, el índice de letalidad de Alemania se situó en 1,4 por 
 Los expertos sostienen que hay varias respuestas a estas preguntas: una combinación de tergiversaciones estadísticas y diferencias muy reales en la forma en que el país ha manejado la pandemia.
 La edad promedio de las personas contagiadas en Alemania es menor que en muchos otros países. Según Kräusslich, muchos de los primeros pacientes contrajeron el virus en centros para esquiar de Austria e Italia, así que eran relativamente jóvenes y sanos.
 (Bennhold, Por qué la tasa de mortalidad de Alemania es tan baja, 2021)
+
+
 
