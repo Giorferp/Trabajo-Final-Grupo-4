@@ -5462,3 +5462,104 @@ TablaCUB23 <- rbind(Casos = Casos_DfCUB23, Decesos = Decesos_DfCUB23, Vacunados 
 
 
 
+#Graficos de las tasas
+#Analisis de las tasas de los casos de cada país
+
+
+#Tasas por año
+#Casos
+Casos2020 <- rbind(DEU = Tasa_de_casos_DfDEU20, TUR = Tasa_de_casos_DfTUR20,
+                   US = Tasa_de_casos_DfUS20, ESP = Tasa_de_casos_ESP20,
+                   GBR = Tasa_de_casos_GBR20, IND = Tasa_de_casos_IND20)
+
+Casos2021 <- rbind(DEU = Tasa_de_casos_DfDEU21, TUR = Tasa_de_casos_DfTUR21,
+                   US = Tasa_de_casos_DfUS21, ESP = Tasa_de_casos_ESP21,
+                   GBR = Tasa_de_casos_GBR21, IND = Tasa_de_casos_IND21)
+
+Casos2022 <- rbind(DEU = Tasa_de_casos_DfDEU22, TUR = Tasa_de_casos_DfTUR22,
+                   US = Tasa_de_casos_DfUS22, ESP = Tasa_de_casos_ESP22,
+                   GBR = Tasa_de_casos_GBR22, IND = Tasa_de_casos_IND22)
+
+Casos2023 <- rbind(DEU = Tasa_de_casos_DfDEU23, TUR = Tasa_de_casos_DfTUR23,
+                   US = Tasa_de_casos_DfUS23, ESP = Tasa_de_casos_ESP23,
+                   GBR = Tasa_de_casos_GBR23, IND = Tasa_de_casos_IND23)
+
+#Graficas de barras agrupadas por año y variables
+
+#Tasas de las variables relacionadas con los casos
+#Se agrupa por Df los promedios de las tasas por año
+Casos2020 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(3819.232, 13800.735,  5451.970, 11116.641, 2082.034,  6906.571),  
+  New_cases = c(57.15514, 158.98962, 70.63666, 112.94420, 19.90240, 100.46672))
+
+Casos2021 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(45278.01, 105943.18,  64432.63, 85876.05, 17767.47,  90467.86),  
+  New_cases = c(178.45912, 275.00694, 232.66760, 262.15282, 47.50364, 438.96222))
+
+Casos2022 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(317623.68, 254279.61,  178705.23, 258585.29, 30512.97,  322052.60),  
+  New_cases = c(993.10511, 254279.61, 242.79361, 413.52475, 19.02541, 436.36417))
+
+Casos2023 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(457813.67, 302377.32,  199255.08, 258585.29, 30512.97,  322052.60),  
+  New_cases = c(73.161680, 69.177180, 0.000000, 413.52475, 19.02541, 436.36417))
+
+# Crear el gráfico de barras agrupados con ggplot2
+#2020casos 
+ggplot(data = Casos2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#2021casos  
+ggplot(data = Casos2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+
+#2022casos
+ggplot(data = Casos2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+#2023casos
+ggplot(data = Casos2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
