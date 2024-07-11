@@ -26,6 +26,20 @@ library(tinytex)
 library(dplyr)
 
 df <- read.csv("Covid G4 Base de Datos.csv")
+
+#Visializacion de variables en la Base de Datos 
+
+str(df)
+
+#Visualizacion de los paises que se tienen en el df
+
+Lista_Paises_Continente <- df %>% 
+  group_by(continent)%>% summarize (Paises= paste(unique(location),collapse = ","))
+
+#Seleccion de los paises a estudiar 
+#Ver informacion de United States, Russia, Germany, China,
+#Cuba, United Kingdom, Spain, Turkey, Iran and India
+
 df [df$location=="United States",]
 df [df$location== "Russia",]
 df [df$location== "Germany",]
@@ -66,7 +80,7 @@ str (IND)
 #Se decide hacer un ajuste en la informacion de cada pais
 #Por lo que se deja solo la informacion util para la investigacion
 
-DfCHN <- CHN %>% select(iso_code, continent, location, date, 
+CHN <- CHN %>% select(iso_code, continent, location, date, 
                         total_cases, new_cases, new_cases_per_million,
                         total_cases_per_million, 
                         total_deaths, new_deaths, new_deaths_per_million, 
@@ -166,23 +180,6 @@ DfUS <- US %>% select(iso_code, continent, location, date,
                       people_vaccinated_per_hundred, 
                       population)
 
-
-#La variable de "nuevos vacunados por cien" no existe
-
-
-#Uso de "summary" para visualizar informacion estadistica de cada pais
-
-
-summary(DfCHN, na.rm = TRUE)
-summary(DfCUB, na.rm = TRUE)
-summary(DfDEU, na.rm = TRUE)
-summary(DfESP, na.rm = TRUE)
-summary(DfGBR, na.rm = TRUE)
-summary(DfIND, na.rm = TRUE)
-summary(DfIRN, na.rm = TRUE)
-summary(DfRUS, na.rm = TRUE)
-summary(DfTUR, na.rm = TRUE)
-summary(DfUS, na.rm = TRUE)
 
 
 #Alugunos datos estadisticos de US por cada año
@@ -484,6 +481,8 @@ DfTUR22 [327:365,16] <- 57941051
 DfTUR22 [327:365,17] <- 67.89
 DfTUR22 [327:365,18] <- 85341248
 DfTUR22 [327:365,19] <- 0.0800128913
+
+apply(DfTUR22, MARGIN = 2, function(x) sum(is.na(x))) %>% view()
 
 DfTUR23 <- data.frame(DfTUR [DfTUR$date>"2022-12-31",])
 
@@ -1847,7 +1846,7 @@ ESP21 [312,15] <- 153.08
 ESP21 [312,16] <- 38100169
 ESP21 [312,17] <- 80.11 
 #Dia 313
-ESP21 [313,14] <- (72149785-72805128)
+ESP21 [313,14] <- (73149785-72805128)
 #Dias 316 al 317 
 ESP21 [316:317,13] <- 73623626
 ESP21 [316:317,14] <- 0
@@ -2306,20 +2305,20 @@ ESP22 [307:319,16] <- 41316070
 ESP22 [307:319,17] <- 86.87
 #Dia 320
 ESP22 [320,14] <- (102011601-99955993)
-#Dias 321 al 328
-ESP22 [321:328,13] <- 102011601
-ESP22 [321:328,14] <- 0
-ESP22 [321:328,15] <- 214.50
-ESP22 [321:328,16] <- 41319243
-ESP22 [321:328,17] <- 86.88
+#Dias 321 al 329
+ESP22 [321:329,13] <- 102011601
+ESP22 [321:329,14] <- 0
+ESP22 [321:329,15] <- 214.50
+ESP22 [321:329,16] <- 41319243
+ESP22 [321:329,17] <- 86.88
 #Dia 330
 ESP22 [330,14] <- (102574756-102011601)
-#Dias 330 al 334
-ESP22 [330:334,13] <- 102574756
-ESP22 [330:334,14] <- 0
-ESP22 [330:334,15] <- 215.68
-ESP22 [330:334,16] <- 41324255
-ESP22 [330:334,17] <- 86.89
+#Dias 330 al 335
+ESP22 [330:335,13] <- 102574756
+ESP22 [330:335,14] <- 0
+ESP22 [330:335,15] <- 215.68
+ESP22 [330:335,16] <- 41324255
+ESP22 [330:335,17] <- 86.89
 #Dia 335
 ESP22 [335,14] <- (103005173-102574756)
 #Dias 336 al 339
@@ -2338,14 +2337,14 @@ ESP22 [341:347,16] <- 41326755
 ESP22 [341:347,17] <- 86.90
 #Dia 348
 ESP22 [348,14] <- (103756296-103212818)
-#Dias 349 al 356
-ESP22 [349:356,13] <- 103756296
-ESP22 [349:356,14] <- 0
-ESP22 [349:356,15] <- 218.17
-ESP22 [349:356,16] <- 41330488
-ESP22 [349:356,17] <- 86.90
-#Dia 357
-ESP22 [357,14] <- (104045018-103756296)
+#Dias 349 al 357
+ESP22 [349:357,13] <- 103756296
+ESP22 [349:357,14] <- 0
+ESP22 [349:357,15] <- 218.17
+ESP22 [349:357,16] <- 41330488
+ESP22 [349:357,17] <- 86.90
+#Dia 358
+ESP22 [358,14] <- (104045018-103756296)
 #Dias 358 al 361
 ESP22 [358:361,13] <- 104045018
 ESP22 [358:361,14] <- 0
@@ -2430,20 +2429,20 @@ ESP23 [48:52,16] <- 41342436
 ESP23 [48:52,17] <- 86.93
 #Dia 53
 ESP23 [53,14] <- (105522606-105459628)
-#Dias 54 al 82
-ESP23 [54:82,13] <- 105522606
-ESP23 [54:82,14] <- 0
-ESP23 [54:82,15] <- 221.88
-ESP23 [54:82,16] <- 41343396
-ESP23 [54:82,17] <- 86.93
-#Dia 83
-ESP23 [83,14] <- (105733320-105522606)
-#Dias 84 al 115
-ESP23 [84:115,13] <- 105733320
-ESP23 [84:115,14] <- 0
-ESP23 [84:115,15] <- 222.32
-ESP23 [84:115,16] <- 41347499
-ESP23 [84:115,17] <- 86.94
+#Dias 54 al 83
+ESP23 [54:83,13] <- 105522606
+ESP23 [54:83,14] <- 0
+ESP23 [54:83,15] <- 221.88
+ESP23 [54:83,16] <- 41343396
+ESP23 [54:83,17] <- 86.93
+#Dia 84
+ESP23 [84,14] <- (105733320-105522606)
+#Dias 85 al 115
+ESP23 [85:115,13] <- 105733320
+ESP23 [85:115,14] <- 0
+ESP23 [85:115,15] <- 222.32
+ESP23 [85:115,16] <- 41347499
+ESP23 [85:115,17] <- 86.94
 #Dia 116
 ESP23 [116,14] <- (105799888-105733320)
 #Dias 117 al 143
@@ -2779,7 +2778,6 @@ Tasa_de_decesos_ESP23 <- ESP23 %>% summarise(Promedio_total=mean(total_deaths_pe
                                                  sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
-
 
 
 #Pais reino unido
@@ -3713,17 +3711,98 @@ Tasa_de_decesos_IND23 <- IND23 %>% summarise(Promedio_total=mean(total_deaths_pe
                                                sd(new_deaths_per_million)/mean(new_deaths_per_million)*100,
                                              Min_new=min(new_deaths_per_million),
                                              Max_new=max(new_deaths_per_million))
+#Tablas
+TablaDEU20 <- rbind(Casos = Casos_DfDEU20, Decesos = Decesos_DfDEU20,
+                    Vacunados = Vacunas_DfDEU20)
+
+
+TablaDEU21 <- rbind(Casos = Casos_DfDEU21, Decesos = Decesos_DfDEU21,
+                    Vacunados = Vacunas_DfDEU21)
+
+TablaDEU22 <- rbind(Casos = Casos_DfDEU22, Decesos = Decesos_DfDEU22,
+                    Vacunados = Vacunas_DfDEU22)
+
+TablaDEU23 <- rbind(Casos = Casos_DfDEU23, Decesos = Decesos_DfDEU23,
+                    Vacunados = Vacunas_DfDEU23)
+
+TablaTUR20 <- rbind(Casos = Casos_DfTUR20, Decesos = Decesos_DfTUR20,
+                    Vacunados = Vacunas_DfTUR20)
+
+
+TablaTUR21 <- rbind(Casos = Casos_DfTUR21, Decesos = Decesos_DfTUR21,
+                    Vacunados = Vacunas_DfTUR21)
+
+TablaTUR22 <- rbind(Casos = Casos_DfTUR22, Decesos = Decesos_DfTUR22,
+                    Vacunados = Vacunas_DfTUR22)
+
+TablaTUR23 <- rbind(Casos = Casos_DfTUR23, Decesos = Decesos_DfTUR23,
+                    Vacunados = Vacunas_DfTUR23)
+
+TablaESP20 <- rbind(Casos = Casos_ESP20, Decesos = Decesos_ESP20,
+                    Vacunados = Vacunas_ESP20)
+
+TablaESP21 <- rbind(Casos = Casos_ESP21, Decesos = Decesos_ESP21,
+                    Vacunados = Vacunas_ESP21)
+
+TablaESP22 <- rbind(Casos = Casos_ESP22, Decesos = Decesos_ESP22,
+                    Vacunados = Vacunas_ESP22)
+
+TablaESP23 <- rbind(Casos = Casos_ESP23, Decesos = Decesos_ESP23,
+                    Vacunados = Vacunas_ESP23)
+
+TablaGBR20 <- rbind(Casos = Casos_GBR20, Decesos = Decesos_GBR20,
+                    Vacunados = Vacunas_GBR20)
+
+TablaGBR21 <- rbind(Casos = Casos_GBR21, Decesos = Decesos_GBR21,
+                    Vacunados = Vacunas_GBR21)
+
+TablaGBR22 <- rbind(Casos = Casos_GBR22, Decesos = Decesos_GBR22,
+                    Vacunados = Vacunas_GBR22)
+
+TablaGBR23 <- rbind(Casos = Casos_GBR23, Decesos = Decesos_GBR23,
+                    Vacunados = Vacunas_GBR23)
+
+TablaIND20 <- rbind(Casos = Casos_IND20, Decesos = Decesos_IND20,
+                    Vacunados = Vacunas_IND20)
+
+TablaIND21 <- rbind(Casos = Casos_IND21, Decesos = Decesos_IND21,
+                    Vacunados = Vacunas_IND21)
+
+TablaIND22 <- rbind(Casos = Casos_IND22, Decesos = Decesos_IND22,
+                    Vacunados = Vacunas_IND22)
+
+TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
+                    Vacunados = Vacunas_IND23)
+TablaUS20 <- rbind(Casos = Casos_DfUS20, Decesos = Decesos_DfUS20,
+                   Vacunados = Vacunas_DfUS20)
+
+
+TablaUS21 <- rbind(Casos = Casos_DfUS21, Decesos = Decesos_DfUS21,
+                   Vacunados = Vacunas_DfUS21)
+
+TablaUS22 <- rbind(Casos = Casos_DfUS22, Decesos = Decesos_DfUS22,
+                   Vacunados = Vacunas_DfUS22)
+
+TablaUS23 <- rbind(Casos = Casos_DfUS23, Decesos = Decesos_DfUS23,
+                   Vacunados = Vacunas_DfUS23)
 
 #Se muestran los NA en el primer año de Covid en CHN
 apply(CHN[CHN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
+
+#Eliminación de variables no necesarias para el trabajo
+
+
 # Cambio de valores NA en China en el primer año
-DfCHN20 <- data.frame (CHN [CHN$date<"2021-01-01",], na.rm = TRUE)
+DfCHN20 <- data.frame (CHN [CHN$date<"2021-01-01",])
 DfCHN20 <- DfCHN20 %>% mutate(total_cases =if_else(is.na(total_cases), 0, total_cases))
 DfCHN20 <- DfCHN20 %>% mutate(total_cases_per_million =if_else(is.na(total_cases_per_million), 0, total_cases_per_million))
 DfCHN20 <- DfCHN20 %>% mutate(total_deaths_per_million =if_else(is.na(total_deaths_per_million), 0, total_deaths_per_million))
 DfCHN20 <- DfCHN20 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfCHN20 <- DfCHN20 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfCHN20 <- DfCHN20 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
+DfCHN20 <- DfCHN20 %>% mutate(total_deaths =if_else(is.na(total_deaths), 0, total_deaths))
+DfCHN20 <- DfCHN20 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated), 0, people_vaccinated))
+DfCHN20 <- DfCHN20 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 #Se muestran los NA del segundo año en CHN
 apply(CHN[365:729,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 #Eliminación de los mismos en el segundo año
@@ -3731,11 +3810,15 @@ DfCHN21 <- data.frame(CHN [365:729,])
 DfCHN21 <- DfCHN21 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfCHN21 <- DfCHN21 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 DfCHN21 <- DfCHN21 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+DfCHN21 <- DfCHN21 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated), 0, people_vaccinated))
+DfCHN21 <- DfCHN21 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 
 #Se muestran los NA del tercer año en CHN
 apply(CHN[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
-#No existen datos NA en el segundo año de CHN. Se crea el df del segundo año
+#Se eliminan los NA del mismo
 DfCHN22 <- data.frame(CHN [730:1094,])
+DfCHN22 <- DfCHN22 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated), 0, people_vaccinated))
+DfCHN22 <- DfCHN22 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 
 #Se muestran los NA del cuarto año de CHN
 apply(CHN[CHN$date>"2021-12-31",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
@@ -3746,6 +3829,8 @@ DfCHN23 <- DfCHN23 %>% mutate(new_cases_per_million =if_else(is.na(new_cases_per
 DfCHN23 <- DfCHN23 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfCHN23 <- DfCHN23 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 DfCHN23 <- DfCHN23 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
+DfCHN23 <- DfCHN23 %>% mutate(people_vaccinated =if_else(is.na(people_vaccinated), 0, people_vaccinated))
+DfCHN23 <- DfCHN23 %>% mutate(people_vaccinated_per_hundred =if_else(is.na(people_vaccinated_per_hundred), 0, people_vaccinated_per_hundred))
 
 apply(DfRUS [DfRUS$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 
@@ -3765,6 +3850,8 @@ DfRUS21 <- DfRUS21 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(tota
 
 apply(DfRUS[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 DfRUS22 <- data.frame(DfRUS [730:1094,])
+
+library(dplyr)
 DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfRUS22 <- DfRUS22 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
 DfRUS22 <- DfRUS22 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
@@ -3776,8 +3863,6 @@ DfRUS23 <- DfRUS23 %>% mutate(new_cases_per_million =if_else(is.na(new_cases_per
 DfRUS23 <- DfRUS23 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
 DfRUS23 <- DfRUS23 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfRUS23 <- DfRUS23 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
-DfRUS23 <- DfRUS23 %>% mutate(new_deaths = if_else(is.na(new_deaths), 0, new_deaths))
-DfRUS23 <- DfRUS23 %>% mutate(new_deaths_per_million =if_else(is.na(new_deaths_per_million), 0, new_deaths_per_million))
 
 apply(DfIRN[DfIRN$date<"2021-01-01",], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 DfIRN20 <- data.frame(DfIRN[DfIRN$date<"2021-01-01",], na.rm = TRUE)
@@ -3798,6 +3883,8 @@ DfIRN21 <- DfIRN21 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(tota
 apply(DfIRN[730:1094,], MARGIN = 2, function(x) sum(is.na(x))) %>% View()
 DfIRN22 <- data.frame(DfIRN[730:1094,])
 DfIRN22 <- DfIRN22 %>% mutate(new_vaccinations =if_else(is.na(new_vaccinations), 0, new_vaccinations))
+
+library(dplyr)
 
 DfIRN22 <- DfIRN22 %>% mutate(total_vaccinations =if_else(is.na(total_vaccinations), 0, total_vaccinations))
 DfIRN22 <- DfIRN22 %>% mutate(total_vaccinations_per_hundred =if_else(is.na(total_vaccinations_per_hundred), 0, total_vaccinations_per_hundred))
@@ -5073,83 +5160,6 @@ Tasa_de_decesos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total=mean(total_deaths_
                                                Min_new=min(new_deaths_per_million),
                                                Max_new=max(new_deaths_per_million))
 
-
-
-#Tablas
-TablaDEU20 <- rbind(Casos = Casos_DfDEU20, Decesos = Decesos_DfDEU20,
-                    Vacunados = Vacunas_DfDEU20)
-
-
-TablaDEU21 <- rbind(Casos = Casos_DfDEU21, Decesos = Decesos_DfDEU21,
-                    Vacunados = Vacunas_DfDEU21)
-
-TablaDEU22 <- rbind(Casos = Casos_DfDEU22, Decesos = Decesos_DfDEU22,
-                    Vacunados = Vacunas_DfDEU22)
-
-TablaDEU23 <- rbind(Casos = Casos_DfDEU23, Decesos = Decesos_DfDEU23,
-                    Vacunados = Vacunas_DfDEU23)
-
-TablaTUR20 <- rbind(Casos = Casos_DfTUR20, Decesos = Decesos_DfTUR20,
-                    Vacunados = Vacunas_DfTUR20)
-
-
-TablaTUR21 <- rbind(Casos = Casos_DfTUR21, Decesos = Decesos_DfTUR21,
-                    Vacunados = Vacunas_DfTUR21)
-
-TablaTUR22 <- rbind(Casos = Casos_DfTUR22, Decesos = Decesos_DfTUR22,
-                    Vacunados = Vacunas_DfTUR22)
-
-TablaTUR23 <- rbind(Casos = Casos_DfTUR23, Decesos = Decesos_DfTUR23,
-                    Vacunados = Vacunas_DfTUR23)
-
-TablaESP20 <- rbind(Casos = Casos_ESP20, Decesos = Decesos_ESP20,
-                    Vacunados = Vacunas_ESP20)
-
-TablaESP21 <- rbind(Casos = Casos_ESP21, Decesos = Decesos_ESP21,
-                    Vacunados = Vacunas_ESP21)
-
-TablaESP22 <- rbind(Casos = Casos_ESP22, Decesos = Decesos_ESP22,
-                    Vacunados = Vacunas_ESP22)
-
-TablaESP23 <- rbind(Casos = Casos_ESP23, Decesos = Decesos_ESP23,
-                    Vacunados = Vacunas_ESP23)
-
-TablaGBR20 <- rbind(Casos = Casos_GBR20, Decesos = Decesos_GBR20,
-                    Vacunados = Vacunas_GBR20)
-
-TablaGBR21 <- rbind(Casos = Casos_GBR21, Decesos = Decesos_GBR21,
-                    Vacunados = Vacunas_GBR21)
-
-TablaGBR22 <- rbind(Casos = Casos_GBR22, Decesos = Decesos_GBR22,
-                    Vacunados = Vacunas_GBR22)
-
-TablaGBR23 <- rbind(Casos = Casos_GBR23, Decesos = Decesos_GBR23,
-                    Vacunados = Vacunas_GBR23)
-
-TablaIND20 <- rbind(Casos = Casos_IND20, Decesos = Decesos_IND20,
-                    Vacunados = Vacunas_IND20)
-
-TablaIND21 <- rbind(Casos = Casos_IND21, Decesos = Decesos_IND21,
-                    Vacunados = Vacunas_IND21)
-
-TablaIND22 <- rbind(Casos = Casos_IND22, Decesos = Decesos_IND22,
-                    Vacunados = Vacunas_IND22)
-
-TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
-                    Vacunados = Vacunas_IND23)
-TablaUS20 <- rbind(Casos = Casos_DfUS20, Decesos = Decesos_DfUS20,
-                    Vacunados = Vacunas_DfUS20)
-
-TablaUS21 <- rbind(Casos = Casos_DfUS21, Decesos = Decesos_DfUS21,
-                    Vacunados = Vacunas_DfUS21)
-
-TablaUS22 <- rbind(Casos = Casos_DfUS22, Decesos = Decesos_DfUS22,
-                    Vacunados = Vacunas_DfUS22)
-
-TablaUS23 <- rbind(Casos = Casos_DfUS23, Decesos = Decesos_DfUS23,
-                    Vacunados = Vacunas_DfUS23)
-
-#CHN
 TablaCHN20 <- rbind(Casos = casos_DfCHN20, Decesos = Decesos_DfCHN20, Vacunados = Vacunas_DfCHN20)
 TablaCHN21 <- rbind(Casos = casos_DfCHN21, Decesos = Decesos_DfCHN21, Vacunados = Vacunas_DfCHN21)
 TablaCHN22 <- rbind(Casos = casos_DfCHN22, Decesos = Decesos_DfCHN22, Vacunados = Vacunas_DfCHN22)
@@ -5169,6 +5179,10 @@ TablaCUB20 <- rbind(Casos = Casos_DfCUB20, Decesos = Decesos_DfCUB20, Vacunados 
 TablaCUB21 <- rbind(Casos = Casos_DfCUB21, Decesos = Decesos_DfCUB21, Vacunados = Vacunas_DfCUB21)
 TablaCUB22 <- rbind(Casos = Casos_DfCUB22, Decesos = Decesos_DfCUB22, Vacunados = Vacunas_DfCUB22)
 TablaCUB23 <- rbind(Casos = Casos_DfCUB23, Decesos = Decesos_DfCUB23, Vacunados = Vacunas_DfCUB23)
+
+
+
+
 
 ```
 **Inicios de la Pandemia**
