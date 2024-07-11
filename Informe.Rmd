@@ -5286,11 +5286,81 @@ Los nuevos casos registrados de Covid-19 comienzan a disminuir a partir del segu
 El 77.8% de la población fue vacunada hasta el último registro, 64876299 personas vacunadas en total.
 
 **India**
-2021
-Aparición de la variante Delta
+**2020**
+India registra su primer caso de Covid-19 el 30 de enero de 2020. Ante la situación, el gobierno de India reacciona con el confinamiento. Cabe destacar que India no poseía suficientes tests para Covid durante la crisis sanitaria, por lo que puede que los datos expresados sean menores a los casos que realmente sucedieron. 
+
+Resumen de lo reportado por India en 2020:
+```{r}
+TablaIND20
+```
+
+India comienza a registrar cerca de mil casos diarios a partir de abril y esta cifra subió rápidamente a 5 mil en mayo, esto producto de que, a pesar de que se ordenó el confinamiento, en mayo el gobierno decide dividir el estado en zonas en donde el confinamiento no sería obligatorio; esto debido a que su economía estuvo al borde del colapso.
+Se registró un promedio de aproximadamente 28 mil casos nuevos diarios a en este año, un promedio de 408 muertes al día y ningún vacunado en lo que llevó de año.
+
+**2021**
+Resumen de lo reportado por India en 2021
+```{r}
+TablaIND21
+```
+
+El panorama para India en 2021 empeora, India reporta una nueva variante de Covid-19 en su territorio, dicha variante originada en el mismo. 
+Esta nueva variante supuso problemas para el país, lo cual se reflejó en el aumento del promedio de casos diarios, de 28 mil a 67 mil. Además aumentó el número de decesos, situándose en casi 900 muertes diarias.
+India inicia el proceso de vacunación en enero; el proceso es lento e ineficiente durante los primeros meses. Sin embargo logra vacunar alrededor del 60% de la población para finales de año.
+
+**2022**
+Resumen de lo reportado por India en 2022
+```{r}
+TablaIND22
+```
+Los casos de contagios siguen creciendo casi todo el primer trimestre del año, hasta que comienzan a regularse en marzo; para la fecha India había logrado vacunar al 65% de la población.
+Los casos se mantienen estables hsata septiembre, donde se aprecia la disminución de los contagios.
+India registró cerca de 130 muertes diarias durante el año, y logró disminuir su número de contagios respecto a 2021.También logra vacunar al 72% de la población. 
+**2023**
+Resumen de lo Reportado por India en 2023:
+```{r}
+TablaIND23
+```
+
+Para 2023 India ya había pasado lo peor, la tasa de contagios fue la menor en comparación a años anteriores, en promedio registraron seis muertes diarias, y para el fin de su crisis logró vacunar al 72.5% de la población
+
 **Rusia**
 
 **Reino Unido**
+**2020**
+Reino Unido reporta su primer caso de Covid-19 en febrero, los casos aumentaron de forma rápida en marzo llegando rápidamente a los 23 mil casos reportados en el primer trimestre.
+Resumen de lo registrado por Reino Unido en 2020:
+```{r, echo=TRUE}
+TablaGBR20
+```
+
+El rápido incremento de casos de debió a la tardía reacción por parte de las autoridades, pues se aninció el cierre de las escuelas el 18 de marzo.
+Tras el confinamiento, los nuevos casos fueron decreciendo hasta que alrededor de septiembre y octubre, el Reino Unido reporta una nueva variante del virus; lo que a su vez provoca un aumento en los decesos ese añoEl Reino Unido finaliza el 2020 con preocupantes cifras para el territorio, reportando aproximadamente 6 mil contagios diarios, 200 muertes diarias y ningún vacunado 
+
+**2021**
+Resumen de lo registrado en Reino Unido en 2021:
+```{r, echo=TRUE}
+TablaGBR21
+```
+
+El gobierno Británico implementó un nuevo confinamiento de la población para poder frenar la propagación del virus; sin embargo esta medida no fue del todo efectiva, pues se registraron en promedio casi 30 mil casos al día.
+En enero, Reino Unido comienza su campaña de vacunación, en tan solo un mes, Reino Unido logra vacunar al 20% de su población.
+A pesar del incremento signifiativo de casos, Reino Unido logra disminuir sus decesos diarios en comparación al año 2020.
+Reino Unido finaliza el 2021 con el 76% de la población vacunada, un aumento de los nuevos casos pero con una disminución de los fallecidos
+
+**2022**
+```{r, echo=TRUE}
+TablaGBR22
+```
+
+Los casos de Covid-19 siguen en ascenso, el promedio diario subió ligeramente frente a 2021, sin embargo los casos de muertes disminuyen.
+Reino Unido logra vacunar a casi el 80% de su población y no registra más datos al respecto a partir de noviembre. Además logra disminuir sus contagios a finales de año registrando números de cinco cifras 
+**2023**
+```{r, echo=TRUE}
+TablaGBR23
+```
+
+A finales de 2022 ya Reino Unido había logrado controlar la expansión del virus por lo que en este nuevo año se comienzan a registrar pocos casos de contagios, registrando a penas 2 mil contagios nuevos diarios, apoximadamente. El máximo de muertos en 2023 a penas rebasó los 150.
+Reino Unido acaba su crisis sanitaria el 14 de junio de 2023, hasta la fecha habían logrado vacunar al 79.71% de la población.
 
 **Irán**
 
