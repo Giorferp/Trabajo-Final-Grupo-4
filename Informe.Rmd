@@ -5137,6 +5137,17 @@ TablaIND22 <- rbind(Casos = Casos_IND22, Decesos = Decesos_IND22,
 
 TablaIND23 <- rbind(Casos = Casos_IND23, Decesos = Decesos_IND23,
                     Vacunados = Vacunas_IND23)
+TablaUS20 <- rbind(Casos = Casos_DfUS20, Decesos = Decesos_DfUS20,
+                    Vacunados = Vacunas_DfUS20)
+
+TablaUS21 <- rbind(Casos = Casos_DfUS21, Decesos = Decesos_DfUS21,
+                    Vacunados = Vacunas_DfUS21)
+
+TablaUS22 <- rbind(Casos = Casos_DfUS22, Decesos = Decesos_DfUS22,
+                    Vacunados = Vacunas_DfUS22)
+
+TablaUS23 <- rbind(Casos = Casos_DfUS23, Decesos = Decesos_DfUS23,
+                    Vacunados = Vacunas_DfUS23)
 
 
 ```
@@ -5153,6 +5164,54 @@ El 11, 20 y 27 de enero del año 2020, España, Estados Unidos y Alemania report
 **España**
 
 **Estados Unidos**
+**2020**
+El 20 de enero de  2020, Estados Unidos reporta el primer caso de Covid-19 a nivel nacional, un repartidor repatriado de Wuhan (China). Pocos días después el Estado declara emergencia de salud pública. 
+Resumen de lo registrado en Estados Unidos en 2020:
+
+```{r, echo=TRUE}
+TablaUS20
+```
+
+A pesar de la rápida alerta por parte del Estado, el virus se expandió rápidamente en el territorio, dejando contabilizar más de 100 mil contagiados a penas el primer trimestre del año.
+Alrededor del 26 de marzo de ese año, Estados Unidos se convirtió en el país con mayor número de contagios en el mundo, solo superado por China.
+La muerte por Covid-19 se convirtió rápidamente en la tercera principal causa de muerte para los estadounidenses, representó el 10% de las muertes en 2020.
+Para mediados de año, Estados Unidos ya contabilizaba más de un millón de contagios diarios. La propagación del virus fue descontrolada y el número de muertes fue alto.
+A finales de año, Estados Unidos comienza un lento proceso de vacunación.
+
+**2021**
+Resumen de lo registrado por Estados Unidos en 2021:
+
+```{r, echo=TRUE}
+TablaUS21
+```
+
+A inicios de año la situación no mejora demasiado con respecto al 2020, en enero Estados Unidos registra más de 25 millones de contagiados, además de la aparición una nueva variante de Covid-19.
+En promedio se contabilizan más de mil muertes diarias en el país.
+Se anuncian planes de vacunación a nivel nacional, y para mediados de año logran vacunar al 50% de la población.
+Se ubica un repunte de casos en julio producto de la aparición de la variante Delta en el territorio.
+Estados Unidos finaliza este periodo con números de seis cifras entre sus contagios, en lugar de siete. Con poco más del 70% de la población vacunada y con un total de 819055 muertes por Covid-19, aunque comenzando a bajar sus cifras de muertes diarias.
+
+**2022**
+Resumen de lo registrado por Estados Unidos en 2022:
+
+```{r, echo=TRUE}
+TablaUS22
+```
+
+En 2022 se comienzan a mejorar las cosas para Estados Unidos, los números de contagios promedio aumenta un poco respecto a 2021, sin embargo, el número de muertes disminuye, esto debido a que el Estado tomó acciones frente a los centros de salud pública, ya que no había equidad en los mismos.
+Además se comenzaron a comercializar los tests rápidos en los hogares.
+A finales de año se alcanza el 80% de los vacunados, y el hecho se ve directamente reflejado en la disminución de los casos de Covid-19 en los últimos meses del año, y consigo la disminución de las muertes diarias.
+
+**2023**
+Resumen de lo registrado por Estados Unidos en 2023:
+
+```{r, echo=TRUE}
+TablaUS23
+```
+
+Para inicios de 2023 ya Estados Unidos prácticamente había culminado la crisis del Covid-19, se comienzan a registrar ceros en varios días del año. 
+Con respecto a 2022, disminuye considerablemente el número de muertes y contagios, aunque a penas logra subir un 1% su tasa de vacunados. 
+Para el 14 de mayo, Estados Unidos deja de registar nuevos contagios de Covid-19
 
 **Alemania**
 **2020**
@@ -5218,6 +5277,44 @@ Aparición de la variante Delta
 **Cuba**
 
 **Turquía**
+**2020**
+Turquía reporta su primer caso de Covid-19 el 11 de marzo de 2020, producto de un viajero turco que se contagió en Europa. Inmediatamente el gobierno turco tomó acciones frente a la situación y ordenó cerrar escuelas y universidades.
+La primera muerte tuvo lugar el 17 de marzo de 2020.
+
+Resumen de lo registrado por Turquía en 2020:
+
+```{r, echo=TRUE}
+TablaTUR20
+```
+
+La propagación del virus fue rápida, para marzo de ese año Turquía reportaba más de mil contagios diarios, número que se mantuvo relativamente estable a lo largo del año.
+El número de decesos también se matuvo controlado, alrededor de las 65 muertes por día, llegando a alcanzar un máximo de 259
+El Estado realizaba desinfecciones masivas en los espacios públicos, con la esperanza de disminuir los contagios. Además de llamar al confinamiento a toda la población.
+Turquía no logra vacunar a ningún individuo en este año.
+
+**2021**
+Resumen de lo registrado por Turquía en 2021:
+
+```{r, echo=TRUE}
+TablaTUR21
+```
+
+El 17 de mayo de 2021 el Estado turco anunció el levantamiento gradual del confinamiento, esto provoca el incremento de casos de contagiados, llegando a las 5 cifras en su promedio de casos diarios.
+En febrero de 2021 Tuquía comienza a recibir vacunas y pone en marcha el proceso de vacunación.
+En junio, el gobierno turco reporta nuevas cepas del virus, por lo que a partir de la fecha se empieza a registrar un incremento en el número de contagios.
+Para finales de año, Turquía anuncia su nueva vacuna contra el Covid-19 y alcanza vacunar al 66% de la población.
+
+**2022**
+
+Resumen de lo registrado por Turquía en 2022:
+
+```{r, echo=TRUE}
+TablaTUR22
+```
+
+Turquía mantiene su promedio de contagios en cinco cifras y su promedio de muertes diarias disminuye. 
+Se anuncia el 2 de marzo el levantamiento al resto de las restricciones, mientras que el proceso de vacunación avanza lentamente.
+Poco a poco los nuevos contagios disminuyen hasta que el 13 de noviembre se dejan de reportar casos de Covid-19 en Turquía
 
 **Desempeño de los países**
 
