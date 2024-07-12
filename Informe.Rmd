@@ -3476,58 +3476,57 @@ Poco a poco los nuevos contagios disminuyen hasta que el 13 de noviembre se deja
 **Desempeño de los países**
 
 Respecto a casos:
-*2020*
-El país que tuvo menor cantidad de casos diarios durante el 2020 fue India, seguido por Alemania, Turquía, Reino Unido, España y finalmente Estados Unidos.
-Los Nuevos casos diarios corresponden a:
-India: 19 casos por millón de habitantes 
-Alemania: 57.15 casos por millón de habitantes 
-Turquía: 70.63 casos por millón de habitantes 
-Reino Unido: 100.46 casos por millón de habitantes 
-España: 112.94 casos por millón de habitantes
-Estados Unidos: 158.98 casos por millón de habitantes 
-
-*2021*
-
-*2022*
-El país con menor cantidad de contagios diarios fue India, seguido de Turquía, Estados Unidos, España, Reino Unido y Alemania:
-India: 19.02 casos por millón de habitantes 
-Turquía: 242.79 casos por millón de habitantes 
-Estados Unidos: 371.54 casos por millón de habitantes 
-España: 413.52 casos por millón de habitantes 
-Reino Unido: 436.36 casos por millón de habitantes 
-Alemania: 993.105 casos por millón de habitantes 
-
-*2023*
-Para 2023 el país que tuvo menor cantidad de casos diarios fue Turquía, seguido de India, España, Reino Unido, Estados Unidos y Alemania.
-Turquía: 0 casos por millón de habitantes 
-India: 1.26 casos por millón de habitantes 
-España: 26.99 casos por millón de habitantes 
-Reino Unido: 37.3 casos por millón de habitantes 
-Estados Unidos: 69.17 casos por millón de habitantes 
-Alemania: 73.16 casos por millón de habitantes 
+En 2020 la menor cantidad de casos los registra India, con promedio total de 2950602.82 casos por millón de habitantes, seguido por Alemania. Mientras que el país que más registró casos fue Estados Unidos, con un promedio total de 4668648.7 casos por millón de habitantes.
+En 2021 se repiten los anteriores paises, India con un promedio total de 25179574.1 casos por millón de habitantes. Mientras que Estados Unidos registra un promedio total de 35839503.8 casos por millón de habitantes.
+En 2022 India vuelve a ser quien registra menos casos, con un promedio total de 43242162.6 casos por millón de habitantes, seguido ahora por Turquía. Mientras que el país com mayores casos es Reino Unido con un promedio total de 21741428.6 casos por millón de habitantes .
+En 2023 Turquía es el país con menos registros, pues había finalizado la crisis en el territorio. Mientras que el país con más casos totales fue Alemania quien registraba un total de 38167852.6 casos por millón de habitantes.
 
 Respecto a decesos:
-*2020*
-El país con menos muertes registradas fue India, seguido por Alemania, 
 
-*2021*
-
-*2022*
-
-*2023*
+En 2020 India fue quien reportó menor cantidad de decesos, un promedio total de 46764.62 fallecidos por millón de habitantes. Mientras que Reino unido se posiciona con mayores decesos con un promedio total de 42858.05 fallecidos por millón de habitantes.
+En 2021 India reporta la menor cantidad de decesos, un promedio de 331666.4 fallecidos por millón de habitantes y quien sigue a la cabeza es Reino Unido, con un promedio total de 154147.4 fallecidos por millón de habitantes.
+En 2022 los menores casos los registra India con 521174.2 fallecidos por millón de habitantes, mientras que los casos más altos los representan Reino Unido y Estados Unidos.
+En 2023 India reporta la menor cantidad de fallecios por millón de habitantes y la lista es encabezada nuevamente por Estados Unidos y Reino Unido
 
 Respecto a vacunas:
-*2020*
+2020: Los paises que comenzaron a vacunar fueron Estados Unidos, logrando  1.68 vacunaciones por cada cien habitantes de la población y Alemania que logra el 0.25 vacunaciones por cada cien habitantes.
+2021: El país con menores vacunaciones fue India, con alrededor del con 35 vacunaciones por cada cien habitantes. Mientras que las mayores vacunas se produjeron en Reino Unido, con casi 100 vacunaciones por cada cien habitantes.
+2022: El menor número lo reporta Reino Unido con casi 140 vacunaciones por cada cien habitantes, mientras que el más alto lo registra India, con más de 200 vacunaciones por cada cien habitantes
+2023: Reino Unido reporta la menor cantidad de vacunaciones, llegando aprozimadamente a las 150 vacunaciones por cada cien habitantes, mientras que la cifra más alta la alcanza Alemania, con más de 200 vacunaciones por cada cien habitantes.
 
-*2021*
+**Conclusión**
+Con lo expresando anteriormente, se podría decir que India tuvo el mejor desempeño entre estos países, sin embargo, un aspecto a tomar en cuenta es que India ni tuvo la suficiente capacidad para addquirir pruebas rápidas de Covid-19, por lo que es seguro que no se registraron las cantidades reales de contagios en el país, además de que, al investigar por diferentes medios, se sabe que tampoco se conoce con exactitud las muertes que hubo en India durante la pandemia. 
+Reino Unido subestimó la pandemia, emitiendo de forma tardía el estado de emergencia, por lo que tuvo grandes consecuencias a nivel sanitario. Estados Unidos tuvo problemas con las intalaciones de salud, ya que se sufría de discriminación racial en los hospitales, provocando la falta de atención a ciertos individuos y por lo tanto su muerte. En Turquía la información es sumamente escasa, por lo que no se tiene sufuciente certeza de la veracidad de los datos. España fue uno de los países dentro de este estudio que supo cómo enfrentar la pandemia. Finalmente queda Alemania, que a conclusiones de los autores a través del análisis realizado y la inveestigación por medios externos, queda como el país que mejor supo controlar la epidemia, a pesar de la enorme cantidad de contagiados, la tasa de fallecidos es relativamente baja y su rapidez a la hora de vacunar fue efectiva.
 
-*2022*
-
-*2023*
-
-Con esto se puede concluir que
-Algunas fuentes indican lo siguente: 
-Pero con 1295 muertes, el índice de letalidad de Alemania se situó en 1,4 por ciento en comparación con el 12 por ciento en Italia; alrededor del 10 por ciento en España, Francia y el Reino Unido; 4 por ciento en China, y 2,5 por ciento en Estados Unidos. Incluso Corea del Sur, el país modelo en cuanto a aplanar la curva, tiene una tasa de letalidad más alta: 1,7 por ciento.
+Algunas fuentes indican que: 
+"...con 1295 muertes, el índice de letalidad de Alemania se situó en 1,4 por ciento en comparación con el 12 por ciento en Italia; alrededor del 10 por ciento en España, Francia y el Reino Unido; 4 por ciento en China, y 2,5 por ciento en Estados Unidos. Incluso Corea del Sur, el país modelo en cuanto a aplanar la curva, tiene una tasa de letalidad más alta: 1,7 por ciento.
 Los expertos sostienen que hay varias respuestas a estas preguntas: una combinación de tergiversaciones estadísticas y diferencias muy reales en la forma en que el país ha manejado la pandemia.
-La edad promedio de las personas contagiadas en Alemania es menor que en muchos otros países. Según Kräusslich, muchos de los primeros pacientes contrajeron el virus en centros para esquiar de Austria e Italia, así que eran relativamente jóvenes y sanos.
+La edad promedio de las personas contagiadas en Alemania es menor que en muchos otros países. Según Kräusslich, muchos de los primeros pacientes contrajeron el virus en centros para esquiar de Austria e Italia, así que eran relativamente jóvenes y sanos."
 (Bennhold, Por qué la tasa de mortalidad de Alemania es tan baja, 2021)
+
+**Referencias**
+
+https://www.dw.com/es/cronolog%C3%ADa-de-la-expansi%C3%B3n-del-coronavirus-en-alemania/a-58020184#:~:text=El%2027%20de%20enero%20de,darse%20la%20mano%2C%20de%20abrazarse. 
+https://www.who.int/countries/deu/
+https://www.france24.com/es/minuto-a-minuto/20211015-los-test-de-covid-19-en-europa-gratis-o-de-pago-dependiendo-del-caso-y-del-pa%C3%ADs
+https://www.reuters.com/graphics/world-coronavirus-tracker-and-maps/es/countries-and-territories/germany/
+https://es.euronews.com/2020/03/19/cual-es-el-criterio-para-hacerse-la-prueba-del-covid-19-en-los-paises-europeos-afectados
+https://es.weforum.org/agenda/2020/05/como-logro-alemania-contener-al-coronavirus/
+https://es.euronews.com/2020/01/22/desarrollan-un-test-para-frenar-el-avance-del-nuevo-coronavirus-chino-la-neumonia-de-wuhan
+https://es.euronews.com/2020/01/28/alemania-confirma-el-primer-caso-de-coronavirus-el-cuarto-en-europa
+https://www.nytimes.com/es/2020/04/06/espanol/mundo/Alemania-tasa-mortalidad-virus.html
+Se sale de control la pandemia https://www.bbc.com/mundo/noticias-internacional-59256983
+https://newsroom.questdiagnostics.com/press-releases?year=2020&keywords=covid&l=100
+https://www.deutschland.de/es/news/coronavirus-en-alemania-actualizaciones#:~:text=04.05.2022%3A%20M%C3%A1s%20de%2025,total%20de%2025.033.970%20infecciones. 
+https://iris.paho.org/handle/10665.2/52416
+https://cnnespanol.cnn.com/2021/12/22/covid-19-tercera-causa-muerte-2020-estados-unidos-trax/
+https://www.vozdeamerica.com/a/covid-19-cuarta-causa-muertes-eeuu-/7079337.html
+https://www.whitehouse.gov/es/plandelcovid/
+https://cnnespanol.cnn.com/2024/03/21/esperanza-vida-estados-unidos-mejoro-2022-aumento-muertes-infantiles-sobredosis-trax/
+https://www.swissinfo.ch/spa/las-diez-noticias-m%C3%A1s-importantes-del-a%C3%B1o-2021-en-turqu%C3%ADa/47220020
+https://www.trt.net.tr/espanol/turkiye-1/2021/05/17/turquia-levanta-gradualmente-el-confinamiento-impuesto-para-contener-la-pandemia-de-covid-19-1640601
+https://www.swissinfo.ch/spa/turqu%C3%ADa-anuncia-el-fin-de-las-restricciones-por-coronavirus/47396080
+https://www.swissinfo.ch/spa/las-diez-noticias-m%C3%A1s-importantes-del-a%C3%B1o-2021-en-el-reino-unido/47220080
+https://www.bbc.com/mundo/noticias-58969628
+https://www.bbc.com/mundo/noticias-internacional-58885495
+https://www.france24.com/es/europa/20231206-partygate-boris-johnson-pide-disculpas-y-asegura-que-subestim%C3%B3-enormemente-la-pandemia
