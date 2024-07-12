@@ -28,6 +28,8 @@ library(dplyr)
 library(knitr)
 library(gridExtra)
 library(kableExtra)
+library(ggplot2)
+library(ggplotlyExtra)
 
 df <- read.csv("Covid G4 Base de Datos.csv")
 
@@ -3157,6 +3159,296 @@ Casos2020 <- rbind(DEU = Tasa_de_casos_DfDEU20, TUR = Tasa_de_casos_DfTUR20,
                    US = Tasa_de_casos_DfUS20, ESP = Tasa_de_casos_ESP20,
                    GBR = Tasa_de_casos_GBR20, IND = Tasa_de_casos_IND20)
 
+#Casos
+Casos2020 <- rbind(DEU = Tasa_de_casos_DfDEU20, TUR = Tasa_de_casos_DfTUR20,
+                   US = Tasa_de_casos_DfUS20, ESP = Tasa_de_casos_ESP20,
+                   GBR = Tasa_de_casos_GBR20, IND = Tasa_de_casos_IND20)
+
+Casos2021 <- rbind(DEU = Tasa_de_casos_DfDEU21, TUR = Tasa_de_casos_DfTUR21,
+                   US = Tasa_de_casos_DfUS21, ESP = Tasa_de_casos_ESP21,
+                   GBR = Tasa_de_casos_GBR21, IND = Tasa_de_casos_IND21)
+
+Casos2022 <- rbind(DEU = Tasa_de_casos_DfDEU22, TUR = Tasa_de_casos_DfTUR22,
+                   US = Tasa_de_casos_DfUS22, ESP = Tasa_de_casos_ESP22,
+                   GBR = Tasa_de_casos_GBR22, IND = Tasa_de_casos_IND22)
+
+Casos2023 <- rbind(DEU = Tasa_de_casos_DfDEU23, TUR = Tasa_de_casos_DfTUR23,
+                   US = Tasa_de_casos_DfUS23, ESP = Tasa_de_casos_ESP23,
+                   GBR = Tasa_de_casos_GBR23, IND = Tasa_de_casos_IND23)
+
+#Graficas de barras agrupadas por año y variables
+
+#Tasas de las variables relacionadas con los casos
+#Se agrupa por Df los promedios de las tasas por año
+Casos2020 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(3819.232, 13800.735,  5451.970, 11116.641, 2082.034,  6906.571),  
+  New_cases = c(57.15514, 158.98962, 70.63666, 112.94420, 19.90240, 100.46672))
+
+Casos2021 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(45278.01, 105943.18,  64432.63, 85876.05, 17767.47,  90467.86),  
+  New_cases = c(178.45912, 275.00694, 232.66760, 262.15282, 47.50364, 438.96222))
+
+Casos2022 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(317623.68, 254279.61,  178705.23, 258585.29, 30512.97,  322052.60),  
+  New_cases = c(993.10511, 254279.61, 242.79361, 413.52475, 19.02541, 436.36417))
+
+Casos2023 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_cases = c(457813.67, 302377.32,  199255.08, 258585.29, 30512.97,  322052.60),  
+  New_cases = c(73.161680, 69.177180, 0.000000, 413.52475, 19.02541, 436.36417))
+
+# Crear el gráfico de barras agrupados con ggplot2
+#2020casos 
+ggplot(data = Casos2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#2021casos  
+ggplot(data = Casos2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+
+#2022casos
+ggplot(data = Casos2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+#2023casos
+ggplot(data = Casos2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+#Muertes
+Decesos2020 <- rbind(DEU = Tasa_de_decesos_DfDEU20, TUR = Tasa_de_decesos_DfTUR20,
+                     US = Tasa_de_decesos_DfUS20, ESP = Tasa_de_decesos_ESP20,
+                     GBR = Tasa_de_decesos_GBR20, IND = Tasa_de_decesos_IND20)
+
+Decesos2021 <- rbind(DEU = Tasa_de_decesos_DfDEU21, TUR = Tasa_de_decesos_DfTUR21,
+                     US = Tasa_de_decesos_DfUS21, ESP = Tasa_de_decesos_ESP21,
+                     GBR = Tasa_de_decesos_GBR21, IND = Tasa_de_decesos_IND21)
+
+Decesos2022 <- rbind(DEU = Tasa_de_decesos_DfDEU22, TUR = Tasa_de_decesos_DfTUR22,
+                     US = Tasa_de_decesos_DfUS22, ESP = Tasa_de_decesos_ESP22,
+                     GBR = Tasa_de_decesos_GBR22, IND = Tasa_de_decesos_IND22)
+
+Decesos2023 <- rbind(DEU = Tasa_de_decesos_DfDEU23, TUR = Tasa_de_decesos_DfTUR23,
+                     US = Tasa_de_decesos_DfUS23, ESP = Tasa_de_decesos_ESP23,
+                     GBR = Tasa_de_decesos_GBR23, IND = Tasa_de_decesos_IND23)
+
+
+#Graficas de barras agrupadas por año y variables
+
+#Tasas de las variables relacionadas con las muertes
+Decesos2020 <- data.frame(
+  Pais = c("DEU", "US", "TUR","ESP", "IND", "GBR" ),
+  Total_de_decesos = c(120.50975, 382.45603,  65.75641, 536.40157, 32.99851, 3634.84999),  
+  New_decesos = c(1.6625330, 2.8586484, 0.6645110, 3.1458516, 10.2883407, 3.7975110))
+
+Decesos2021 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_de_decesos = c(1084.6563, 1813.6557,  580.4605, 1712.3847, 234.0338, 2283.3626),  
+  New_decesos = c(2.2357753, 3.7825288, 1.9731342, 2.1446575, 0.6424849, 3.3885233))
+
+Decesos2022 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_de_decesos = c(1735.1902, 2955.4886,  1145.5172, 2298.0537, 367.7562, 2964.9125),  
+  New_decesos = c(1.58116712, 2.15296712, 0.62007397, 1.54734795, 0.09591507, 1.58884110))
+
+Decesos2023 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_de_decesos = c(2063.1301, 3289.8992,  1188.3940, 2525.5149, 374.8039, 3306.3618),  
+  New_decesos = c(0.564488372, 0.768145349, 0.000000000, 0.375761628, 0.004795455, 0.973930233))
+
+#Graficos de las muertes
+#2020decesos 
+ggplot(data = Decesos2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#2021decesos  
+ggplot(data = Decesos2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+
+#2022decesos
+ggplot(data = Decesos2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+#2023decesos
+ggplot(data = Decesos2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#Vacunados
+Vacunados2020 <- rbind(DEU = Tasa_de_vacunas_DfDEU20, TUR = Tasa_de_vacunas_DfTUR20,
+                       US = Tasa_de_vacunas_DfUS20, ESP = Tasa_de_vacunas_ESP20,
+                       GBR = Tasa_de_vacunas_GBR20, IND = Tasa_de_vacunas_IND20)
+
+Vacunados2021 <- rbind(DEU = Tasa_de_vacunas_DfDEU21, TUR = Tasa_de_vacunas_DfTUR21,
+                       US = Tasa_de_vacunas_DfUS21, ESP = Tasa_de_vacunas_ESP21,
+                       GBR = Tasa_de_vacunas_GBR21, IND = Tasa_de_vacunas_IND21)
+
+Vacunados2022 <- rbind(DEU = Tasa_de_vacunas_DfDEU22, TUR = Tasa_de_vacunas_DfTUR22,
+                       US = Tasa_de_vacunas_DfUS22, ESP = Tasa_de_vacunas_ESP22,
+                       GBR = Tasa_de_vacunas_GBR22, IND = Tasa_de_vacunas_IND22)
+
+Vacunados2023 <- rbind(DEU = Tasa_de_vacunas_DfDEU23, TUR = Tasa_de_vacunas_DfTUR23,
+                       US = Tasa_de_vacunas_DfUS23, ESP = Tasa_de_vacunas_ESP23,
+                       GBR = Tasa_de_vacunas_GBR23, IND = Tasa_de_vacunas_IND23)
+
+
+#Graficas de barras agrupadas por año y variables
+
+#Tasas de las variables relacionadas con las muertes
+Vacunados2020 <- data.frame(
+  Pais = c("DEU", "US", "TUR","ESP", "IND", "GBR" ),
+  Total_de_vacunas = c(0.001730769, 0.034560440,  0.0006818782, 0.0000000000, 0.000000000, 0.000000000),  
+  New_vacunas = c(0.0006818782, 0.0046422184, 0.0000000000, 0.0000000000, 0.0000000000, 0.0000000000))
+
+Vacunados2021 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_de_vacunas = c(81.47647, 89.19510,  68.98586, 85.37510, 34.31134, 101.21655),  
+  New_vacunas = c(0.5052891, 0.4179616, 0.4192288, 0.4885096, 0.2800097, 0.5410256))
+
+Vacunados2022 <- data.frame(
+  Pais = c("DEU", "US", "TUR", "ESP", "IND", "GBR"),
+  Total_de_vacunas = c(217.5435, 180.9972,  173.9787, 200.4785, 217.7314, 139.2718),  
+  New_vacunas = c(0.12363032, 0.11755709, 0.06708711, 0.11409020, 0.14540321, 0.07278997))
+
+Vacunados2023 <- data.frame(
+  Pais = c("DEU", "US", "ESP", "IND", "GBR"),
+  Total_de_vacunas = c(230.4286, 202.9768,  221.7599, 224.0400, 155.6441),  
+  New_vacunas = c(0.003987235, 0.016802264, 0.019166281, 0.000000000, 0.002293062))
+
+#Graficos de las muertes
+#2020vacunas 
+ggplot(data =Vacunados2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
+#2021vacunados  
+ggplot(data = Vacunados2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+
+#2022vacunados
+ggplot(data = Vacunados2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+#2023vacunados
+ggplot(data = Vacunados2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+
 ```
 **Inicios de la Pandemia**
 El 25 de noviembre del año 2019, China comienza a detectar un patógeno que
@@ -3475,25 +3767,193 @@ Poco a poco los nuevos contagios disminuyen hasta que el 13 de noviembre se deja
 
 **Desempeño de los países**
 
+
 Respecto a casos:
+```{r, echo=FALSE}
+ggplot(data = Casos2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 En 2020 la menor cantidad de casos los registra India, con promedio total de 2082.034 casos por millón de habitantes, seguido por Alemania. Mientras que el país que más registró casos fue Estados Unidos, con un promedio total de 	
 13800.74 casos por millón de habitantes.
+```{r, echo=FALSE}
+ggplot(data = Casos2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+```
 En 2021 se repiten los anteriores paises, India con un promedio total de 	
 17767.47 casos por millón de habitantes. Mientras que Estados Unidos registra un promedio total de 105943.2 casos por millón de habitantes.
+```{r, echo=FALSE}
+ggplot(data = Casos2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+```
 En 2022 India vuelve a ser quien registra menos casos, con un promedio total de 30512.97 casos por millón de habitantes, seguido ahora por Turquía. Mientras que el país com mayores casos es Reino Unido con un promedio total de 322052.6 casos por millón de habitantes .
+```{r, echo=FALSE}
+ggplot(data = Casos2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_cases, fill = "Total_cases"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_cases, fill = "New_cases"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 En 2023 Turquía es el país con menos registros, pues había finalizado la crisis en el territorio. Mientras que el país con más casos totales fue Alemania quien registraba un total de 3819.232 casos por millón de habitantes.
 
 Respecto a decesos:
-
+```{r, echo=FALSE}
+ggplot(data = Decesos2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 En 2020 India fue quien reportó menor cantidad de decesos, un promedio total de 32.99851 fallecidos por millón de habitantes. Mientras que Reino unido se posiciona con mayores decesos con un promedio total de 634.85 fallecidos por millón de habitantes.
+```{r, echo=FALSE}
+ggplot(data = Decesos2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 En 2021 India reporta la menor cantidad de decesos, un promedio de 234.0338 fallecidos por millón de habitantes y quien sigue a la cabeza es Reino Unido, con un promedio total de 2283.363 fallecidos por millón de habitantes.
+```{r, echo=FALSE}
+ggplot(data = Decesos2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+```
 En 2022 los menores casos los registra India con 367.7562 fallecidos por millón de habitantes, mientras que los casos más altos los representan Reino Unido y Estados Unidos con 2964.912 y 2955.489 fallecidos por millon de habitantes respectivamente.
+```{r, echo=FALSE}
+ggplot(data = Decesos2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_decesos, fill = "Total_de_decesos"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_decesos, fill = "New_decesos"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 En 2023 India reporta la menor cantidad de fallecios 374.8039 por millón de habitantes y la lista es encabezada nuevamente por Estados Unidos y Reino Unido 3289.899 y 3306.362 fallecidos por millon de habitantes respectivamente.
 
 Respecto a vacunas:
+```{r, echo=FALSE}
+ggplot(data =Vacunados2020, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2020",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 2020: Los paises que comenzaron a vacunar fueron Estados Unidos, logrando  1.68 vacunaciones por cada cien habitantes de la población y Alemania que logra el 0.25 vacunaciones por cada cien habitantes.
+```{r, echo=FALSE}
+ggplot(data = Vacunados2021, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2021",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))  
+```
 2021: El país con menores vacunaciones fue India, con alrededor del con 35 vacunaciones por cada cien habitantes. Mientras que las mayores vacunas se produjeron en Reino Unido, con casi 100 vacunaciones por cada cien habitantes.
+```{r, echo=FALSE}
+ggplot(data = Vacunados2022, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2022",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1)) 
+```
 2022: El menor número lo reporta Reino Unido con casi 140 vacunaciones por cada cien habitantes, mientras que el más alto lo registra India, con más de 200 vacunaciones por cada cien habitantes
+```{r, echo=FALSE}
+ggplot(data = Vacunados2023, aes(x = Pais)) +
+  geom_bar(aes(y = Total_de_vacunas, fill = "Total_de_vacunas"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = New_vacunas, fill = "New_vacunas"), stat = "identity", position = "dodge") + 
+  labs(title = "Tasas poblacionales del año 2023",
+       x = "País",
+       y = "Promedios de tasas") +
+  theme(legend.title = element_blank()) +
+  theme(panel.background = element_rect(fill = "#E8F5E9")) +
+  scale_fill_manual(values = c("#296656", "#7EC488")) + 
+  theme(panel.border = element_rect(fill = "transparent", 
+                                    color = "#212121",           
+                                    size = 1))
+```
 2023: Reino Unido reporta la menor cantidad de vacunaciones, llegando aprozimadamente a las 150 vacunaciones por cada cien habitantes, mientras que la cifra más alta la alcanza Alemania, con más de 200 vacunaciones por cada cien habitantes.
 
 **Conclusión**
