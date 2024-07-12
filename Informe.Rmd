@@ -4054,9 +4054,9 @@ Vacunas_DfCHN20 <- DfCHN20 %>% summarise(Promedio_total=mean(total_vaccinations)
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
-                                         Max_new=max(total_vaccinations))
+                                         Max_new=max(new_vaccinations))
 
 Tasa_de_vacunas_DfCHN20<-DfCHN20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
                                                D.Est_total=sd(total_vaccinations_per_hundred),
@@ -4357,9 +4357,9 @@ Vacunas_DfRUS20 <- DfRUS20 %>% summarise(Promedio_total=mean(total_vaccinations)
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
-                                         Max_new=max(total_vaccinations))
+                                         Max_new=max(new_vaccinations))
 
 Tasa_de_vacunas_DfRUS20<-DfRUS20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
                                                D.Est_total=sd(total_vaccinations_per_hundred),
@@ -4435,9 +4435,9 @@ Vacunas_DfRUS23 <- DfRUS23 %>% summarise(Promedio_total=mean(total_vaccinations)
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
-                                         Max_new=max(total_vaccinations))
+                                         Max_new=max(new_vaccinations))
 
 Tasa_de_vacunas_DfRUS23<-DfRUS23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
                                                D.Est_total=sd(total_vaccinations_per_hundred),
@@ -4654,14 +4654,14 @@ Tasa_de_casos_DfIRN23<-DfIRN23 %>% summarise(Promedio_total=mean(total_cases_per
 
 Vacunas_DfIRN20 <- DfIRN20 %>% summarise(Promedio_total=mean(total_vaccinations),
                                          D.Est_total=sd(total_vaccinations),
-                                         CV_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
                                          Min_total=min(total_vaccinations),
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
-                                         Max_new=max(total_vaccinations))
+                                         Max_new=max(new_vaccinations))
 
 Tasa_de_vacunas_DfIRN20 <- DfIRN20 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
                                                  D.Est_total=sd(total_vaccinations_per_hundred),
@@ -4737,9 +4737,9 @@ Vacunas_DfIRN23 <- DfIRN23 %>% summarise(Promedio_total=mean(total_vaccinations)
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
-                                         Max_new=max(total_vaccinations))
+                                         Max_new=max(new_vaccinations))
 
 Tasa_de_vacunas_DfIRN23<-DfIRN23 %>% summarise(Promedio_total=mean(total_vaccinations_per_hundred),
                                                D.Est_total=sd(total_vaccinations_per_hundred),
@@ -4958,12 +4958,12 @@ Tasa_de_Casos_DfCUB23<-DfCUB23 %>% summarise(Promedio_total=mean(total_cases_per
 
 Vacunas_DfCUB20 <- DfCUB20 %>% summarise(Promedio_total=mean(total_vaccinations),
                                          D.Est_total=sd(total_vaccinations),
-                                         CV_total=sd(total_vaccinations),
+                                         CV_total=sd(total_vaccinations)/mean(total_vaccinations)*100,
                                          Min_total=min(total_vaccinations),
                                          Max_total=max(total_vaccinations),
                                          Promedio_new=mean(new_vaccinations),
                                          D.Est_new=sd(new_vaccinations),
-                                         CV_new=sd(new_vaccinations),
+                                         CV_new=sd(new_vaccinations)/mean(new_vaccinations)*100,
                                          Min_new=min(new_vaccinations),
                                          Max_new=max(new_vaccinations))
 
@@ -5142,7 +5142,7 @@ Decesos_DfCUB23 <- DfCUB23 %>% summarise(Promedio_total=mean(total_deaths),
                                          Max_total=max(total_deaths),
                                          Promedio_new=mean(new_deaths),
                                          D.Est_new=sd(new_deaths),
-                                         CV_new=sd(new_deaths),
+                                         CV_new=sd(new_deaths)/mean(new_deaths)*100,
                                          Min_new=min(new_deaths),
                                          Max_new=max(new_deaths))
 
