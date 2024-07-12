@@ -3476,17 +3476,19 @@ Poco a poco los nuevos contagios disminuyen hasta que el 13 de noviembre se deja
 **Desempeño de los países**
 
 Respecto a casos:
-En 2020 la menor cantidad de casos los registra India, con promedio total de 2950602.82 casos por millón de habitantes, seguido por Alemania. Mientras que el país que más registró casos fue Estados Unidos, con un promedio total de 4668648.7 casos por millón de habitantes.
-En 2021 se repiten los anteriores paises, India con un promedio total de 25179574.1 casos por millón de habitantes. Mientras que Estados Unidos registra un promedio total de 35839503.8 casos por millón de habitantes.
-En 2022 India vuelve a ser quien registra menos casos, con un promedio total de 43242162.6 casos por millón de habitantes, seguido ahora por Turquía. Mientras que el país com mayores casos es Reino Unido con un promedio total de 21741428.6 casos por millón de habitantes .
-En 2023 Turquía es el país con menos registros, pues había finalizado la crisis en el territorio. Mientras que el país con más casos totales fue Alemania quien registraba un total de 38167852.6 casos por millón de habitantes.
+En 2020 la menor cantidad de casos los registra India, con promedio total de 2082.034 casos por millón de habitantes, seguido por Alemania. Mientras que el país que más registró casos fue Estados Unidos, con un promedio total de 	
+13800.74 casos por millón de habitantes.
+En 2021 se repiten los anteriores paises, India con un promedio total de 	
+17767.47 casos por millón de habitantes. Mientras que Estados Unidos registra un promedio total de 105943.2 casos por millón de habitantes.
+En 2022 India vuelve a ser quien registra menos casos, con un promedio total de 30512.97 casos por millón de habitantes, seguido ahora por Turquía. Mientras que el país com mayores casos es Reino Unido con un promedio total de 322052.6 casos por millón de habitantes .
+En 2023 Turquía es el país con menos registros, pues había finalizado la crisis en el territorio. Mientras que el país con más casos totales fue Alemania quien registraba un total de 3819.232 casos por millón de habitantes.
 
 Respecto a decesos:
 
-En 2020 India fue quien reportó menor cantidad de decesos, un promedio total de 46764.62 fallecidos por millón de habitantes. Mientras que Reino unido se posiciona con mayores decesos con un promedio total de 42858.05 fallecidos por millón de habitantes.
-En 2021 India reporta la menor cantidad de decesos, un promedio de 331666.4 fallecidos por millón de habitantes y quien sigue a la cabeza es Reino Unido, con un promedio total de 154147.4 fallecidos por millón de habitantes.
-En 2022 los menores casos los registra India con 521174.2 fallecidos por millón de habitantes, mientras que los casos más altos los representan Reino Unido y Estados Unidos.
-En 2023 India reporta la menor cantidad de fallecios por millón de habitantes y la lista es encabezada nuevamente por Estados Unidos y Reino Unido
+En 2020 India fue quien reportó menor cantidad de decesos, un promedio total de 32.99851 fallecidos por millón de habitantes. Mientras que Reino unido se posiciona con mayores decesos con un promedio total de 634.85 fallecidos por millón de habitantes.
+En 2021 India reporta la menor cantidad de decesos, un promedio de 234.0338 fallecidos por millón de habitantes y quien sigue a la cabeza es Reino Unido, con un promedio total de 2283.363 fallecidos por millón de habitantes.
+En 2022 los menores casos los registra India con 367.7562 fallecidos por millón de habitantes, mientras que los casos más altos los representan Reino Unido y Estados Unidos con 2964.912 y 2955.489 fallecidos por millon de habitantes respectivamente.
+En 2023 India reporta la menor cantidad de fallecios 374.8039 por millón de habitantes y la lista es encabezada nuevamente por Estados Unidos y Reino Unido 3289.899 y 3306.362 fallecidos por millon de habitantes respectivamente.
 
 Respecto a vacunas:
 2020: Los paises que comenzaron a vacunar fueron Estados Unidos, logrando  1.68 vacunaciones por cada cien habitantes de la población y Alemania que logra el 0.25 vacunaciones por cada cien habitantes.
