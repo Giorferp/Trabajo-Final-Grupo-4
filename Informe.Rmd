@@ -5188,9 +5188,50 @@ aparición de una enfermedad que atacaba al sistema respiratorio.
 El virus originado en la ciudad de Wuhan (China) rápidamente comenzó
 a tener el interés de la comunidad internacional.
 El 11, 20 y 27 de enero del año 2020, España, Estados Unidos y Alemania reportan los primeros casos de Covid-19 en sus territorios, por lo que el 30 de enero del mismo año la Organización Mundial de la Salud emite una declaración de emergencia de salud pública de importancia internacional. Posteriormente, otros países se fueron realizando sus reportes. El 30 de enero se reportó el primer caso en India, un día después en Rusia, el 1 de febrero en Reino Unido, 21 de febrero en Irán, 3 de marzo en Cuba, 10 de marzo en turquía, etc.
-**China**
 
 **España**
+
+**2020**
+El Covid-19 llega a España en enero, sin embargo el estado de alarma no lo decretan hasta marzo, cuando el virus se ha expandido rápidamente.
+Resumen de lo registrado por España en 2020:
+```{r}
+TablaESP20
+```
+
+El Covid avanza rápido a inicios de año, en el primer mes se empiezan a contabilizar mil contagiados por día, cifra que se mantiene durante un tiempo prolongado gracias al confinamiento.
+En octubre España empieza a contabilizar reportes con números de 5 cifras entre sus contagiados, mientras que los decesos continúan en tres cifras.
+Se contabilizaron alrededor de 5 mil casos diarios en lo que fue de año, mientras que hubo un aproximado de 150 muertes por día.
+Hasta la fecha, España no contabilizó ningún vacunado
+
+Resumen de lo registrado por España en 2021:
+**2021**
+```{r}
+TablaESP21
+```
+
+En el 2021 las cifras continúan en ascenso, pues con la llegada de las nuevas cepas del virus, los contagios aumentan rápidamente.
+A pesar del número de contagios, los decesos producto del virus decaen a lo largo del año.
+Se comienza el proceso de vacunación en enero, y este proceso avanza con rapidez. A final de año, España logra vacunar al 83% de la población
+Finaliza el año con un promedio de 12 mil casos nuevos registrados día a día, mientras que se reducían los decesos, aproximadamente 100 muertos al día
+
+Resumen de lo registrado por España en 2022: 
+**2022**
+```{r}
+TablaESP22
+```
+
+Para inicios de 2022 la cifra de contagios diarios aumenta a los 100 mil reportes mientras que las muertes fueron disminuyendo, producto de la efectividad de la vacunación.
+A mediados de año, España empieza a contabilizar sus primeros días sin contagios.
+Para finales de año, España registra un promedio de 196 mil casos diarios, mientras que los decesos siguen bajando a 73 muertes diarias. Para la fecha, se inncrementa un 3% los vacunados, logrando llegar al 86%
+
+Resumen de lo registrado por España en 2023:
+**2023**
+```{r}
+TablaESP23
+```
+
+Para inicios de año, España esaba casi totalmente normalizada, los días en los  que se contabilizaban casos eran mínimos, el 17 de junio fue el último registro de casos de Covid-19.
+Hasta la fecha, en 2023 hubo un promedio de aproximadamente 1200 casos, a penas 17 muertes en promedio y casi 87% de vacunados.
 
 **Estados Unidos**
 **2020**
@@ -5332,8 +5373,6 @@ TablaIND23
 
 Para 2023 India ya había pasado lo peor, la tasa de contagios fue la menor en comparación a años anteriores, en promedio registraron seis muertes diarias, y para el fin de su crisis logró vacunar al 72.5% de la población
 
-**Rusia**
-
 **Reino Unido**
 **2020**
 Reino Unido reporta su primer caso de Covid-19 en febrero, los casos aumentaron de forma rápida en marzo llegando rápidamente a los 23 mil casos reportados en el primer trimestre.
@@ -5370,10 +5409,6 @@ TablaGBR23
 
 A finales de 2022 ya Reino Unido había logrado controlar la expansión del virus por lo que en este nuevo año se comienzan a registrar pocos casos de contagios, registrando a penas 2 mil contagios nuevos diarios, apoximadamente. El máximo de muertos en 2023 a penas rebasó los 150.
 Reino Unido acaba su crisis sanitaria el 14 de junio de 2023, hasta la fecha habían logrado vacunar al 79.71% de la población.
-
-**Irán**
-
-**Cuba**
 
 **Turquía**
 **2020**
