@@ -3954,17 +3954,24 @@ ggplot(data = Vacunados2023, aes(x = Pais)) +
                                     color = "#212121",           
                                     size = 1))
 ```
+
+
 2023: Reino Unido reporta la menor cantidad de vacunaciones, llegando aprozimadamente a las 150 vacunaciones por cada cien habitantes, mientras que la cifra más alta la alcanza Alemania, con más de 200 vacunaciones por cada cien habitantes.
+
+
 
 **Conclusión**
 Con lo expresando anteriormente, se podría decir que India tuvo el mejor desempeño entre estos países, sin embargo, un aspecto a tomar en cuenta es que India ni tuvo la suficiente capacidad para addquirir pruebas rápidas de Covid-19, por lo que es seguro que no se registraron las cantidades reales de contagios en el país, además de que, al investigar por diferentes medios, se sabe que tampoco se conoce con exactitud las muertes que hubo en India durante la pandemia. 
 Reino Unido subestimó la pandemia, emitiendo de forma tardía el estado de emergencia, por lo que tuvo grandes consecuencias a nivel sanitario. Estados Unidos tuvo problemas con las intalaciones de salud, ya que se sufría de discriminación racial en los hospitales, provocando la falta de atención a ciertos individuos y por lo tanto su muerte. En Turquía la información es sumamente escasa, por lo que no se tiene sufuciente certeza de la veracidad de los datos. España fue uno de los países dentro de este estudio que supo cómo enfrentar la pandemia. Finalmente queda Alemania, que a conclusiones de los autores a través del análisis realizado y la inveestigación por medios externos, queda como el país que mejor supo controlar la epidemia, a pesar de la enorme cantidad de contagiados, la tasa de fallecidos es relativamente baja y su rapidez a la hora de vacunar fue efectiva.
+
+
 
 Algunas fuentes indican que: 
 "...con 1295 muertes, el índice de letalidad de Alemania se situó en 1,4 por ciento en comparación con el 12 por ciento en Italia; alrededor del 10 por ciento en España, Francia y el Reino Unido; 4 por ciento en China, y 2,5 por ciento en Estados Unidos. Incluso Corea del Sur, el país modelo en cuanto a aplanar la curva, tiene una tasa de letalidad más alta: 1,7 por ciento.
 Los expertos sostienen que hay varias respuestas a estas preguntas: una combinación de tergiversaciones estadísticas y diferencias muy reales en la forma en que el país ha manejado la pandemia.
 La edad promedio de las personas contagiadas en Alemania es menor que en muchos otros países. Según Kräusslich, muchos de los primeros pacientes contrajeron el virus en centros para esquiar de Austria e Italia, así que eran relativamente jóvenes y sanos."
 (Bennhold, Por qué la tasa de mortalidad de Alemania es tan baja, 2021)
+
 
 **Referencias**
 
